@@ -394,6 +394,28 @@
           </div>
         </div>
       </div>
+
+
+      <!-- Modal delete cart-->
+      <div > <!--class="modal fade" id="cartModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"-->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Delete Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you really sure you want to delete this cart?
+            </div>
+            <div class="modal-footer">
+              <a href="#"  class="btn btn-danger"  >Delete</a>
+              <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
 
 
@@ -728,9 +750,150 @@
               </div>
             </div>
           </div>
-
-
-
         </div>
+
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-lg-5 col-md-6 m-auto card p-4">
+                    <div class="text-center" style="margin: 0 20px;">
+                        <h1>Sing Up</h1>
+                    </div>
+                    <form action="/auth/registration_customer" method="POST" class="card-body" enctype="multipart/form-data"  novalidate>
+                        <div class="form-group mb-6">
+                            <label class="sr-only" for="email">email</label>
+                            <input class="form-control" id="email" maxlength="20" minlength="5" name="email" placeholder="Email" required type="text" value="">
+                        </div>
+                        <div class="form-group mb-6">
+                            <label class="sr-only" for="pwd">password</label>
+                            <input class="form-control" id="pwd" maxlength="20" minlength="8" name="pwd" placeholder="Password" required type="password" value="">
+                        </div>
+                        <div class="form-group mb-6">
+                            <label class="sr-only" for="cpwd">confirm_password</label>
+                            <input class="form-control" id="cpwd" maxlength="20" minlength="8" name="cpwd" placeholder="Confirm Password" required type="password" value="">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="text" for="avatar" style="color: grey; margin-left: 20px;">Avatar</label>
+                            <input class="form-control" id="formFile" name="avatar" placeholder="Avatar" type="file" value="">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-block btn-primary mb-3">Submit</button>
+                         </div>
+                        <div class="text-center">
+                                Already have an account?
+                                <a href="/auth/login">Login</a>
+                                <p><small>Want to registered as a Seller? Press <a href="/auth/registration_seller">here</a></small></p>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="cart_block" class="col-md-5 mx-auto my-auto">
+            <!-- Heading -->
+            <h4 class="d-flex justify-content-between align-items-center mb-3 mt-5">
+              <span class="text-muted">Your cart</span>
+              <div>
+                <span id="total_amount" class="badge badge-primary badge-pill">3</span>
+                <button class="button close pull-right " type="button" data-toggle="modal" data-target="#cartModalCenter" style="margin-left: 10px;">
+                  <span class="badge badge-danger badge-pill">x</span>
+                </button>
+              </div>
+            </h4>
+            <!-- Cart -->
+            <ul id="ul_cart" class="list-group mb-3 z-depth-1">
+
+              <li id="order_block{{order.id}}" class="justify-content-between lh-condensed p-3" style="border-bottom: 1px solid rgb(224, 221, 221); display: flex;">
+                  <div class="row">
+                    <div class="col-3">
+                        <a href="#">
+                            <img style="max-width: 100%;" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="APE">
+                        </a>
+                    </div>
+                    <div class="col-8" style="max-width: 400px;">
+                        <h4 class="my-0">Product name</h4>
+                        <small class="text-muted">Description</small>
+                    </div>
+                  </div>
+
+                    <a style="margin-right: 5px; padding-left: 10px;">
+                    <span id="add_product" class="badge badge-warning badge-pill">-</span>
+                    </a>
+                    <a style="margin-right: 20px;  width: 10px;">
+                      <span id="add_product" class="badge badge-success badge-pill">+</span>
+                    </a>
+                    <span id="order{{order.id}}" class="text-muted">1</span>
+                    <span class="text-muted px-1" style="font-size: small;">  x  </span>
+                    <p>
+                      <span id="order_price{{order.id}}" style="color: red; text-decoration: line-through;">325</span>
+                    </span>
+                    </p>
+                    <span id="order_price{{order.id}}" class="text-muted">325</span>
+              </li>
+              <li id="order_edit_btn{{order.id}}" class="p-3" style="list-style-type: none; margin-top: -60px">
+                <button class="button close pull-right" type="button" data-toggle="modal" data-target="#exampleModalCenter{{order.id}}" style="color: red; font-size: 26px;"> x
+                </button>
+              </li>
+                <!-- Modal delete order-->
+                <div class="modal fade" id="exampleModalCenter{{order.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Delete Product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Are you really sure you want to delete this Product/s from your cart?
+                      </div>
+                      <div class="modal-footer">
+                        <a data-dismiss="modal">Delete </a>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              <li class="d-flex justify-content-between p-3">
+
+                <span id="total_description">Total (USD):  <strong id="total_price" style='text-decoration: line-through; color: red;'>325</strong>
+                  <span id="discount_description">
+                    |
+                  <strong id="total_discount_price">311</strong>
+                   <span style="font-size: small; color: grey"> 10%</span>
+                  </strong>
+                </span>
+                </span>
+                <span>Total (USD):  <strong id="total_price">311</strong></span>
+                <a href="#" class="btn btn-primary btn-md waves-effect m-0" type="button">Buy</a>
+              </li>
+            </ul>
+            <!-- Cart -->
+              <div class="input-group"  style="max-width: 400px;">
+                <input id="code" type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <a id="find_promotion" class="btn btn-primary btn-md waves-effect m-0" onclick="findCoupon()" type="button">Find Promotion</a>
+                  <a id="apply_promotion" class="btn btn-primary btn-md waves-effect m-0" onclick="applyPromotion()" type="button" style="display: none;">Apply</a>
+                  <input id="id_coupon" type="hidden">
+                </div>
+              </div>
+              <p id="promotion_message" style="display: none; color: red; margin: 10px;">* No Promotion Found</p>
+
+          </div>
+
+        <div id="empty_cart" class="row">
+            <div class="center-block">
+              <div class="col-md-12 mx-auto center-block" style="margin-top: 30%;">
+                <i class="fas fa-shopping-cart" style="font-size: 1040%; margin-bottom: 30%; margin-left: 20px; color: rgb(191, 188, 188); text-shadow: 2px 3px rgb(167, 166, 166);"></i>
+                <h2 style="color: rgb(191, 188, 188);">Your cart is empty</h2>
+              </div>
+            </div>
+          </div>
 </body>
 </html>

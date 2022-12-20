@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="http://localhost:3000/static/css/mdb.min.css">
     <title>Templates</title>
 </head>
 <body>
@@ -895,5 +896,144 @@
               </div>
             </div>
           </div>
+
+
+          <main class="mt-5 pt-4 content_">
+
+            <main class="mt-5 pt-4">
+              <div class="container wow fadeIn">
+                <h2 class="my-5 h2 text-center">Make Payment</h2>
+
+                <div class="row">
+
+                  <div class="col-md-8 mb-4">
+                    <div class="card">
+                      <form class="card-body" novalidate>
+
+                        <div class="row">
+
+                          <div class="col-md-6 mb-2">
+                            <div class="md-form input-group pl-0 mb-5">
+                              <input type="text" class="form-control py-0" placeholder="First name" aria-describedby="basic-addon1">
+                            </div>
+                          </div>
+
+                          <div class="col-md-6 mb-2">
+                            <div class="md-form input-group pl-0 mb-5">
+                              <input type="text" class="form-control py-0" placeholder="Last name" aria-describedby="basic-addon1">
+                            </div>
+                          </div>
+
+                        </div>
+
+
+                        <div class="md-form input-group pl-0 mb-5">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                          </div>
+                          <input type="text" class="form-control py-0" placeholder="Email" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="md-form mb-5">
+                          <input type="text" id="address" class="form-control" placeholder="Main St">
+                          <label for="address" class="">Address</label>
+                        </div>
+
+
+                        <div class="row">
+
+                          <div class="col-lg-6 col-md-12 mb-4">
+                            <label for="country">Country</label>
+                            <select class="custom-select d-block w-100" id="country" required>
+                              <option value="">Choose...</option>
+                              <option>United States</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Please select a valid country.
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6 col-md-6 mb-4">
+                            <label for="zip">Zip</label>
+                            <input type="text" class="form-control" id="zip" placeholder="" required>
+                            <div class="invalid-feedback">
+                              Zip code required.
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div id="card-element" style="padding-left: 25px;">
+                          <!-- A TCO IFRAME will be inserted here. -->
+                        </div>
+                        <p style="color: grey; font-size: smaller; text-align: center;">We don't handle cart sensitive data. <br>
+                          Doesn't rely on us? Use official 2checkout payment
+                          <a href="">service</a></p>
+
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Pay</button>
+
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                      <span class="text-muted">Your cart</span>
+                      <span class="badge badge-primary badge-pill">1</span>
+                    </h4>
+
+
+                    <ul class="list-group mb-3 z-depth-1">
+
+                      <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                          <h6 class="my-0">Product 1</h6>
+                          <small class="text-muted">Product description</small>
+                        </div>
+                        <span class="text-muted">1 x 125</span>
+                      </li>
+
+
+
+                      <!-- if prom applied -->
+                      <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                          <h6 class="my-0">Promo code</h6>
+                          <small>EXAMPLECODE</small>
+                        </div>
+                        <span class="text-success">-$5</span>
+                      </li>
+
+                      <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong>125.0</strong>
+                      </li>
+                    </ul>
+
+                    <form class="card p-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary btn-md waves-effect m-0" type="button">Redeem</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </main>
+
+
+          </main>
+
+
+
+
+<script type="text/javascript" src="https://unpkg.com/jquery@3.6.2/dist/jquery.js"></script>
+<script type="text/javascript" src="https://unpkg.com/popper.js@1.12.8/dist/popper.min.js"></script>
+<script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="http://localhost:3000/static/js/mdb.min.js"></script>
 </body>
 </html>

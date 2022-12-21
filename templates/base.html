@@ -1225,7 +1225,136 @@
 </main>
 
 
+<main class="mt-5 pt-4 content_">
 
+
+
+
+
+  <h1>Product 1</h1>
+
+  <div class="container dark-grey-text mt-5">
+    <div class="row wow fadeIn">
+
+      <div class="col-md-6 mb-4">
+
+        <div id="carouselExampleControls"  class="carousel slide " data-ride="carousel" style="margin-bottom: 18px;"
+            data-interval="2000">
+
+            <div class="carousel-inner" style="height: 350px;">
+
+
+                <div class="carousel-item active"  style="max-height: 350px; background-size: contain;">
+                    <img class="d-block w-100" style="height: 350px;" src="/static/img/Colorcard-hex_ffd166-www.colorbook.io_-_Copy.png" alt="Second slide">
+                </div>
+
+
+
+                <div class="carousel-item "  style="max-height: 350px; background-size: contain;">
+                    <img class="d-block w-100" style="height: 350px;" src="/static/img/Colorcard-hex_ffd166-www.colorbook.io (1).png" alt="Second slide">
+                </div>
+
+
+
+                <div class="carousel-item "  style="max-height: 350px; background-size: contain;">
+                    <img class="d-block w-100" style="height: 350px;" src="/static/img/Colorcard-hex_ffd166-www.colorbook.io_-_Copy_(3).png" alt="Second slide">
+                </div>
+
+
+
+                <div class="carousel-item "  style="max-height: 350px; background-size: contain;">
+                    <img class="d-block w-100" style="height: 350px;" src="/static/img/Colorcard-hex_ffd166-www.colorbook.io_-_Copy.png" alt="Second slide">
+                </div>
+
+
+
+                <div class="carousel-item "  style="max-height: 350px; background-size: contain;">
+                    <img class="d-block w-100" style="height: 350px;" src="/static/img/Colorcard-hex_ffd166-www.colorbook.io.png" alt="Second slide">
+                </div>
+
+
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="height: 350px;"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" style="height: 350px;"></span>
+                <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+
+
+      <div class="col-md-6 mb-4">
+        <div class="p-4">
+          <div class="mb-3">
+
+            <a href="/1">
+              <span class="badge badge-pill badge-info mr-3">Category1</span>
+            </a>
+
+          </div>
+
+          <p class="lead"><span>Price: 125.0 USD</span></p>
+
+          <p><span>Quantity: 98</span></p>
+          <p class="my-2">Owner: <a href="#">None</a></p>
+          <p class="my-2">Created: a day ago</p>
+          <div>
+            <p style="color:rgb(242, 74, 74)" class="mb-0">
+              <button class="btn btn-link p-0"  data-toggle="modal" data-target="#exampleModal">
+                <i class="fa fa-heart"  id="like1"  style="color:  grey ;"></i>
+              </button>
+              <span style="font-size: smaller;"  id="like_num1">0</span><span style="font-size: smaller;"> likes</span>
+            </p>
+          </div>
+
+          <p class="lead font-weight-bold">Description</p>
+          <p>Product description</p>
+
+          <span id="myDIV" style="display: none;"></span>
+          <button onclick="myFunction()" class="btn btn-link mb-4 p-0" style="color:blue">Show</button>
+
+          <form class="d-flex justify-content-left" method="POST">
+
+            <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px" name="quantity">
+
+              <a class="btn btn-primary btn-md my-0 p" data-toggle="modal" data-target="#exampleModal">Add to cart
+                <i class="fas fa-shopping-cart ml-1"></i></a>
+            </a>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Please Log In to provide some activities
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-black" data-dismiss="modal">Back</button>
+            <a href='/auth/login' class="btn btn-light">Log In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
 
 
 

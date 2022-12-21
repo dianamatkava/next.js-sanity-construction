@@ -1363,6 +1363,147 @@
 
 
 
+  <main class="mt-5 pt-4 content_">
+
+    <main class="mt-5 pt-4">
+        <div class="container wow fadeIn">
+          <h2 class="my-5 h2 text-center">Create Promotion</h2>
+
+          <div class="row">
+
+            <div class="col-8 mx-auto">
+              <div class="card">
+                <form class="card-body" novalidate action="" method="POST">
+
+
+                    <div class="md-form input-group pl-0 mb-5">
+                        <label for="title">Title</label>
+                        <input class="form-control py-2" id="title" maxlength="225" minlength="0" name="title" required type="text" value="">
+                    </div>
+
+
+                    <div class="md-form input-group pl-0 mb-5">
+                        <label for="description">Description</label>
+                        <input class="form-control py-2" id="description" maxlength="1124" minlength="0" name="description" type="text" value="">
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4">
+
+                            <div class="md-form input-group pl-0 mb-5">
+                                <label for="discount_value">Discount value</label>
+                                <input class="form-control py-2" id="discount_value" name="discount_value" type="number" value="">
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 mb-4">
+                          <div class="form-group">
+                          <label class="text-muted" for="currency">Currency</label>
+                          <select class="form-control" id="currency" name="currency"><option value="1">USD</option></select>
+                          </div>
+
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="form-group">
+                                <label class="text-muted" for="discount_type">Discount type</label>
+                                <select class="form-control" id="discount_type" name="discount_type" required><option value="fixed">fixed</option><option value="persent">persent</option></select>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 mb-4">
+                            <div class="form-group">
+                                <label class="text-muted" for="coupon_type">Coupon type</label>
+                                <select class="form-control" id="m_select" name="coupon_type"><option value="single">single</option><option value="multiple">multiple</option></select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-5 col-md-6 mb-4" id="m_quantity" style="display: none;">
+                            <div class="form-group">
+                              <label for="quantity" class="text-muted">Quantity</label>
+                              <input type="number" id="coupon_quantity" name="quantity" placeholder="" class="form-control" min="0">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-1 col-md-6 mb-4 mt-4" id="m_button" style="display: none;">
+                          <a onclick="generateCoupons()" class="text-muted" style="font-size: large;"><i id="g_button" class="fa fa-check"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="form-group mb-5" id="m_coupon" style="display: none;">
+                      <textarea id="m_coupons"  name="coupons" id="" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+
+
+                  <div class="form-group" style="max-width: 330px;">
+                      <label class="text-muted" for="products">Apply discount for: </label>
+                      <select class="form-control" id="products" multiple name="products" style="height: 250px"><option selected value="1">Product 1</option></select>
+                  </div>
+
+
+                  <div class="row" style="margin-top: 40px;">
+
+                    <div class="col-lg-6 col-md-6 mb-4">
+                      <div class="form-group datetime">
+                        <label for="start_day" class="text-muted"> Start at</label>
+                        <div>
+                          <input type="datetime-local" id="start_day"
+                        name="start_day"">
+                        </div>
+                      </div>
+                    </div>
+
+                      <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="form-group">
+                          <label for="end_day" class="text-muted">End at</label>
+                          <div>
+                            <input type="datetime-local" id="end_day"
+                          name="end_day">
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+
+                  <div class="md-form input-group pl-0 mb-4" id="instant">
+                    <label for="instant_discount">Apply instantly for every selected products</label>
+                    <input class="form-control py-2 mt-4" id="instant_discount" name="instant_discount" type="checkbox" value="True">
+                  </div>
+
+
+                <div class="md-form input-group pl-0 mb-5">
+                  <label for="active">Active</label>
+                  <input class="form-control py-2 mt-4" id="active" name="active" type="checkbox" value="True">
+                </div>
+
+                  <hr class="mb-4">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <button class="btn btn-info" type="submit">Submit</button>
+                      <a class="btn btn-light" href="/create_product">Back</a>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </main>
+
+
 
 
 <script type="text/javascript" src="https://unpkg.com/jquery@3.6.2/dist/jquery.js"></script>

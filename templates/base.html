@@ -1559,7 +1559,132 @@
 
       </div>
 
+      <div class="container">
+        <div class="d-flex flex-wrap">
+          <div class="col my-auto text-center">
+              <div class="w-75 mx-auto get-started">
+                  <h2>Start sell online</h2>
+                  <p class="p-2">Register as a Seller to start your Business.</p>
+                  <div class="col pt-3 pb-1 my-auto mx-auto bg-light-o-50 rounded-lg border-light background-hidden"
+                      style="width: 265px; z-index: 1">
+                  <a href="#" data-toggle="modal" data-target="#modalDefaultUser" class="nav-link border border-dark btn-dark rounded waves-effect">
+                      <span style="color: #fff">Get Started</span>
+                  </a>
+                  <p>
+                      <small class="text-muted">Already have an account?
+                          <a href="#">Login</a>
+                      </small>
+                  </p>
+              </div>
+              </div>
+          </div>
+          <img src="static\img\app\become_seller.svg" alt="seller" class="col-lg-6" width="500" height="500">
+      </div>
+      </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="modalDefaultUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mx-auto" style="max-width: 345px" role="document">
+      <div class="modal-content rounded-lg">
+        <div class="col text-center mt-4">
+          <h3 class="modal-title font-weight-bold" id="exampleModalLongTitle">Just reviewing?</h5>
+          <p class="pt-2 w-75 mx-auto" style="font-size: 14px;">Use a default users prepared for you to review all of the features in my application</p>
+        </div>
+        <div class="col text-center">
+            <div class="col text-center">
+                <a href="#" data-toggle="modal" data-target="#modalDefaultUser" class="nav-link border border-dark btn-dark rounded waves-effect">
+                    <span style="color: #fff">Use Default User</span>
+                </a>
+                <a href="#" class="nav-link border border-light rounded waves-effect mr-2">Back</a>
+                <p>
+                    <small class="text-muted">Already have an account?
+                        <a href="#">Login</a>
+                    </small>
+                </p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-6 col-md-9 m-auto card p-4">
+            <form method="POST" enctype="multipart/form-data" novalidate>
+                {{ form.csrf_token }}
+                <div class="form-group mx-auto text-center">
+                    <label for="logo"></label>
+                    <img style="min-height: 200px; object-fit: contain; border-radius: 100px"
+                        id="user-img" src="{{ url_for( 'static', filename='img/app/default-user.jpg')}}"
+                        alt="your image" width="200" height="200" onclick="document.getElementById('logo').click();" />
+                    <input type='file' id='logo' hidden onchange=readURL(this); />
+                </div>
+
+                <div class="form-group col-md-9 mx-auto" style="margin-top: -40px;">
+                    <label for="name"></label>
+                    <input
+                        class="form-control shadow-none border-0" type="text" id="name"
+                        placeholder="Company Name*" autofocus="autofocus" required
+                    >
+                </div>
+                <div class="form-group col-md-9 mx-auto">
+                    <label for="description"><small>Description</small></label>
+                    <textarea
+                        class="form-control shadow-none border-dark" type="textarea" id="description"
+                        placeholder="Describe your company in a couple of sentences"
+                    ></textarea>
+                </div>
+
+                <div class="form-group col-md-9 mx-auto">
+                    <label for="email"><small>Email*</small></label>
+                    <input
+                        class="form-control shadow-none border-dark" type="text" id="email"
+                        placeholder="example@gmail.com"
+                    />
+                </div>
+                <div class="form-group col-md-9 mx-auto">
+                    <label for="pwd"><small>Password*</small></label>
+                    <input
+                        class="form-control shadow-none border-dark" type="text" id="pwd"
+                        placeholder="********"
+                    />
+                </div>
+                <div class="form-group col-md-9 mx-auto">
+                    <label for="rpwd"><small>Repeat password*</small></label>
+                    <input
+                        class="form-control shadow-none border-dark" type="text" id="rpwd"
+                        placeholder="********"
+                    />
+                </div>
+                <button type="submit" class="nav-link border border-dark btn-dark rounded waves-effect m-2 col-md-3 mx-auto">Submit</button>
+                <p class="text-center">
+                    <small class="text-muted">Already have an account?
+                        <a href="#">Login</a>
+                    </small>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#user-img')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
 
 <script type="text/javascript" src="https://unpkg.com/jquery@3.6.2/dist/jquery.js"></script>
 <script type="text/javascript" src="https://unpkg.com/popper.js@1.12.8/dist/popper.min.js"></script>

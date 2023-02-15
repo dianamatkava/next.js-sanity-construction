@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --main-bg: rgba(12, 8, 21);
+    --content-bg: rgba(190, 191, 211, 0.12);
+}
+
+.main-body-bg-dark {
+    background-color: var(--main-bg);
+}
+
+.content-body-bg-dark {
+    background-color: var(--content-bg);
+}
+
+.h-main {
+    min-height: 80vh;
+    margin: 8vh 10%;
+}

@@ -8,7 +8,7 @@
     --content-bg: rgba(190, 191, 211, 0.12);
 }
 
-.main-body-bg-dark {
+html {
     background-color: var(--main-bg);
 }
 
@@ -17,6 +17,8 @@
 }
 
 .h-main {
-    min-height: 80vh;
-    margin: 8vh 10%;
+    height: 80vh;
+    position: relative;
+    top: 8vh;
 }
+

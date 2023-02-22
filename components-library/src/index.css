@@ -1,24 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-:root {
-    --main-bg: rgba(12, 8, 21);
-    --content-bg: rgba(190, 191, 211, 0.12);
-}
-
-html {
-    background-color: var(--main-bg);
-}
-
-.content-body-bg-dark {
-    background-color: var(--content-bg);
-}
-
-.h-main {
-    height: 80vh;
-    position: relative;
-    top: 8vh;
-}
-

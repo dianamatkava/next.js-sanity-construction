@@ -21,9 +21,9 @@ interface Item extends BaseBlock, BaseInLine {
 }
 
 
-interface Header extends BaseBlock {
+interface HeaderInterface extends BaseBlock {
     items: Item[] | null
 }
 
 
-export default Header
+export default HeaderInterface

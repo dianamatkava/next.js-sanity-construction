@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "./components/header/Header"
+import HeaderInterface from "./interfaces/HeaderInterfaces"
 
-const DefaultHeaderProps: Header = {
+const DefaultHeaderProps: HeaderInterface = {
   bgColor: 'slate-600',
   borderColor: 'transparent',
   round: 'none',
@@ -12,10 +13,9 @@ const DefaultHeaderProps: Header = {
   items: null
 }
 
-
 function App() {
   return (
-      <Header props={DefaultHeaderProps} />
+      <Header {...DefaultHeaderProps} />
   )
 }
 

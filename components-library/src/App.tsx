@@ -3,13 +3,13 @@ import Header from "./components/header/Header"
 import HeaderInterface from "./interfaces/HeaderInterfaces"
 
 const DefaultHeaderProps: HeaderInterface = {
-  bgColor: 'slate-600',
+  bgColor: 'sky-800',
   borderColor: 'transparent',
   round: 'none',
   marginX: '0',
   marginY: '0',
-  width: 'none',
-  height: 'none',
+  width: null,
+  height: null,
   items: null
 }
 

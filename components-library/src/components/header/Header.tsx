@@ -7,13 +7,22 @@ import HeaderInterface from "../../interfaces/HeaderInterfaces";
 
 
 
-export default function Header(props: HeaderInterface) {
-    console.log(props);
+
+export default function Header({
+    bgColor, 
+    borderColor, 
+    height, 
+    items, 
+    marginX, 
+    marginY, 
+    round, 
+    width
+}: HeaderInterface) {
     return (
-        <header>
-            <nav className="bg-{slate-600} border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+        <header className="print">
+            <nav className={`bg-${bgColor} border-${borderColor} px-4 lg:px-6 py-2.5 dark:bg-gray-800`}>
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <p className={`wrapper searchDiv ${props.bgColor}`}></p>
+                    <p className={`wrapper searchDiv ${bgColor}`}></p>
                     <a 
                         href="/#" 
                         className="flex items-center"> 

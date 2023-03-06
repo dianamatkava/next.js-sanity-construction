@@ -4,8 +4,8 @@ interface BaseBlock {
     round: string,
     marginX: string,
     marginY: string,
-    width: string,
-    height: string,
+    width?: string | null,
+    height?: string | null,
 }
 
 interface BaseInLine {
@@ -22,7 +22,7 @@ interface Item extends BaseBlock, BaseInLine {
 
 
 interface HeaderInterface extends BaseBlock {
-    items: Item[] | null
+    items?: Item[] | null
 }
 
 

@@ -1,29 +1,33 @@
 interface BaseBlock {
     bgColor: string,
     borderColor: string,
-    round: string,
-    marginX: string,
-    marginY: string,
-    width?: string | null,
-    height?: string | null,
+    round?: string,
+    marginX?: string,
+    marginY?: string,
+    paddingX?: string,
+    paddingY?: string,
+    width?: string,
+    height?: string,
 }
 
 interface BaseInLine {
-    color: string,
-    size: string,
+    color?: string,
+    size?: string,
+    text: string,
 }
 
 
-interface Item extends BaseBlock, BaseInLine {
-    metaName: string | null,
-    icon: string | null,
-    title: string,
+export interface BlockItem extends BaseBlock {
+    metaName?: string,
+    icon?: string,
+    text: string,
 }
 
-
-interface HeaderInterface extends BaseBlock {
-    items?: Item[] | null
+export interface InlineItem extends BaseInLine {
+    metaName?: string,
+    icon?: string,
 }
 
-
-export default HeaderInterface
+export interface HeaderInterface extends BaseBlock {
+    items?: BlockItem[] | InlineItem[] | null
+}

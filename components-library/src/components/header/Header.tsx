@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 import {FaCubes} from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
-import HeaderInterface from "../../interfaces/HeaderInterfaces";
+import {HeaderInterface} from "../../interfaces/HeaderInterfaces";
 
 
 
@@ -15,14 +15,15 @@ export default function Header({
     items, 
     marginX, 
     marginY, 
+    paddingX, 
+    paddingY, 
     round, 
     width
 }: HeaderInterface) {
     return (
         <header className="print">
-            <nav className={`bg-${bgColor} border-${borderColor} px-4 lg:px-6 py-2.5 dark:bg-gray-800`}>
-                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <p className={`wrapper searchDiv ${bgColor}`}></p>
+            <nav className={`border-${borderColor} bg-${bgColor} px-4 lg:px-6 py-2.5 dark:bg-gray-800`}>
+                <div className="flex flex-wrap justify-between items-center mx-auto">
                     <a 
                         href="/#" 
                         className="flex items-center"> 

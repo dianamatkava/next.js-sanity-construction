@@ -8,26 +8,17 @@ import {HeaderInterface} from "../../interfaces/HeaderInterfaces";
 
 
 
-export default function Header({
-    bgColor, 
-    borderColor, 
-    height, 
-    items, 
-    marginX, 
-    marginY, 
-    paddingX, 
-    paddingY, 
-    round, 
-    width
-}: HeaderInterface) {
+export default function Header({...props}: HeaderInterface) {
+    console.log(props.round)
     return (
         <header className="print">
-            <nav className={`border-${borderColor} bg-${bgColor} px-4 lg:px-6 py-2.5 dark:bg-gray-800`}>
+            <nav className={`${[props.borderColor, props.bgColor, props.paddingX].filter(Boolean)} lg:px-6 py-2.5`}> 
+            {/* TODO: dark:bg-gray-800, lg:px-6: dinamicly change size when screen lg */}
                 <div className="flex flex-wrap justify-between items-center mx-auto">
                     <a 
                         href="/#" 
                         className="flex items-center"> 
-                            <FaCubes className="text-[2rem]" />
+                            <FaCubes className={props.items[0].icon} />
                             <span className="self-center text-xl font-semibold whitespace-nowrap mx-6">logoType</span>
                     </a>
                     

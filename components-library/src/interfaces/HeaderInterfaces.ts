@@ -1,7 +1,7 @@
 interface BaseBlock {
     bgColor: string,
     borderColor: string,
-    round?: string,
+    round?: string | "",
     marginX?: string,
     marginY?: string,
     paddingX?: string,
@@ -29,5 +29,5 @@ export interface InlineItem extends BaseInLine {
 }
 
 export interface HeaderInterface extends BaseBlock {
-    items?: BlockItem[] | InlineItem[] | null
+    items?: BlockItem[] | InlineItem[]
 }

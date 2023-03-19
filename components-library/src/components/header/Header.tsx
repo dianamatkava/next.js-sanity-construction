@@ -1,10 +1,17 @@
 import React from "react";
 import "./Header.css";
-import {FaCubes} from "react-icons/fa";
+import {icons} from "../../defaults/iconMapper"
 import { AiOutlineMenu } from "react-icons/ai";
+import { FaCubes } from "react-icons/fa";
+
+
 import {HeaderInterface} from "../../interfaces/HeaderInterfaces";
 
 
+// function get_Icon(name: string) {
+//     const Icon = icons.name;
+//     return
+// }
 
 
 
@@ -12,13 +19,14 @@ export default function Header({...props}: HeaderInterface) {
     console.log(props.round)
     return (
         <header className="print">
+            
             <nav className={`${[props.borderColor, props.bgColor, props.paddingX].filter(Boolean)} lg:px-6 py-2.5`}> 
             {/* TODO: dark:bg-gray-800, lg:px-6: dinamicly change size when screen lg */}
                 <div className="flex flex-wrap justify-between items-center mx-auto">
                     <a 
                         href="/#" 
                         className="flex items-center"> 
-                            <FaCubes className={props.items[0].icon} />
+                            <FaCubes className={props.items ? props.items[0].icon : ""} />
                             <span className="self-center text-xl font-semibold whitespace-nowrap mx-6">logoType</span>
                     </a>
                     

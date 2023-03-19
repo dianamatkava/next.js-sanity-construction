@@ -1,6 +1,6 @@
 interface BaseBlock {
-    bgColor: string,
-    borderColor: string,
+    bgColor?: string,
+    borderColor?: string,
     round?: string | "",
     marginX?: string,
     marginY?: string,
@@ -21,6 +21,7 @@ export interface BlockItem extends BaseBlock {
     metaName?: string,
     icon?: string,
     text: string,
+    children?: this | InlineItem
 }
 
 export interface InlineItem extends BaseInLine {

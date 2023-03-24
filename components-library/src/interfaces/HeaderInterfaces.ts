@@ -1,4 +1,8 @@
-interface BaseBlock {
+interface Meta {
+    component: string
+}
+
+export interface BaseBlock {
     bgColor?: string,
     borderColor?: string,
     round?: string | "",
@@ -10,25 +14,23 @@ interface BaseBlock {
     height?: string,
 }
 
-interface BaseInLine {
+export interface BaseInLine {
     color?: string,
     size?: string,
     text: string,
 }
 
 
-export interface BlockItem extends BaseBlock {
-    metaName?: string,
+export interface BlockItem extends BaseBlock, Meta {
     icon?: string,
     text: string,
     children?: this | InlineItem
 }
 
-export interface InlineItem extends BaseInLine {
-    metaName?: string,
+export interface InlineItem extends BaseInLine, Meta {
     icon?: string,
 }
 
 export interface HeaderInterface extends BaseBlock {
-    items?: BlockItem[] | InlineItem[]
+    items: BlockItem[] | InlineItem[] | []
 }

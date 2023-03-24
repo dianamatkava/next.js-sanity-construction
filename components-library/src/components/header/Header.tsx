@@ -1,35 +1,56 @@
 import React, { useState } from "react";
 import "./Header.css";
-import {icons} from "../../defaults/iconMapper"
-import { AiOutlineMenu } from "react-icons/ai";
-import { FaCubes } from "react-icons/fa";
+// import {icons} from "../../defaults/iconMapper"
+// import { AiOutlineMenu } from "react-icons/ai";
+// import { FaCubes } from "react-icons/fa";
 
 
-import {HeaderInterface, BaseBlock} from "../../interfaces/HeaderInterfaces";
+import {HeaderInterface, BaseBlock, BaseInLine} from "../../interfaces/HeaderInterfaces";
 
 
-
-export default function Block({...props}: BaseBlock) {
-    return ()
+export function Inline({...props}: BaseInLine) {
+    return ('');
 }
 
+export function Block({...props}: BaseBlock) {
+    return ('');
+}
 
-export default function Header({...props}: HeaderInterface) {
+const Components = {
+    block: Block,
+    inline: Inline
+  };
 
-    const [style, setProps] = useState(props)
+export function Header({...props}: HeaderInterface) {
+
+    const [navStyle, setProps] = useState(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
+
+    // const [bgColor, setBgColor] = useState(props.bgColor)
     
     const tesBbtn = () => {
-        style.bgColor = 'bg-sky-800'
-        setProps(style)
-        console.log('HERE')
+        props.bgColor = props.bgColor == 'bg-blue-400' ? 'bg-transparent' : 'bg-blue-400'
+        setProps(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
     }
 
     return (
-
+        <header className="print">
+            <nav className={`${navStyle}`}> 
+                {
+                    props.items.map(
+                        function(object, i) {
+                            console.log(object, i);
+                            return 'Hello';
+                        }
+                    )
+                }
+            </nav>
+            <button onClick={tesBbtn}>TEST</button>
+        </header>
         
-        // <header className="print">
+        
+        // 
             
-        //     <nav className={`${[props.borderColor, style.bgColor, props.paddingX].filter(Boolean)} lg:px-6 py-2.5`}> 
+        //     
         //     {/* TODO: dark:bg-gray-800, lg:px-6: dinamicly change size when screen lg */}
         //         <div className="flex flex-wrap justify-between items-center mx-auto">
         //             <a 

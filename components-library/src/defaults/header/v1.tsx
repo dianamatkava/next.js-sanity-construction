@@ -15,7 +15,7 @@ export const DefaultHeaderInlineItem2: InlineItem = {
 
 export const DefaultHeaderItemLogo: InlineItem = {
     text: "Test2",
-    component: "Logo",
+    component: "logo",
     icon: "FaCubes",
     size: "text-[2rem]"
 }

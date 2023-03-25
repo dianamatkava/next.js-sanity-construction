@@ -34,31 +34,77 @@ const Components: ComponentKey = {
 export function Header({...props}: HeaderInterface) {
     
 
-    const [navStyle, setProps] = useState(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
+    // const [navStyle, setProps] = useState(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
+    // const tesBbtn = () => {
+    //     props.bgColor = props.bgColor == 'bg-blue-400' ? 'bg-transparent' : 'bg-blue-400'
+    //     setProps(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
+    // }
 
-    // const [bgColor, setBgColor] = useState(props.bgColor)
-    
-    const tesBbtn = () => {
-        props.bgColor = props.bgColor == 'bg-blue-400' ? 'bg-transparent' : 'bg-blue-400'
-        setProps(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
+
+    const [bgColor, setBgColor] = useState(props.bgColor)
+    const [borderColor, setBorderColor] = useState(props.borderColor)
+    const [paddingX, setPaddingX] = useState(props.paddingX)
+
+
+    function updateScale() {
+        const widthValue = document.getElementById('width') as HTMLInputElement;
+        const heightValue = document.querySelector('[id="height"]') as HTMLInputElement;
+        const paddingXValue = document.querySelector('[id="paddingX"]') as HTMLInputElement;
+        const paddingYValue = document.querySelector('[id="paddingY"]') as HTMLInputElement;
+        const marginXValue = document.querySelector('[id="marginX"]') as HTMLInputElement;
+        const marginYValue = document.querySelector('[id="marginY"]') as HTMLInputElement;
+
+        console.log(widthValue.value)
     }
 
     return (
+        <>
         <header className="print">
-            <nav className={`${navStyle}`}> 
+            <nav className={`${bgColor} ${borderColor} ${paddingX}`}> 
                 {
                     props.items.map(
                         function(object) {
                             console.log(object);
-                            
                             const DynamicComponent = Components[object.component];
                             return DynamicComponent ? <DynamicComponent {...object} /> : null;
                         }
                     )
                 }
             </nav>
-            <button onClick={tesBbtn}>TEST</button>
+            <button onClick={() => setBgColor(bgColor == 'bg-transparent' ? 'bg-sky-400' : 'bg-transparent')}>bgColor to blue</button>
         </header>
+
+        <div>
+            SETTINGS:
+            <p>Update scale</p>
+            <div className="m-4">
+                <label htmlFor="width">width: </label>
+                <input id='width' value='qw' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
+                <label htmlFor="width">heigh: </label>
+                <input id='heigh' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
+                <label htmlFor="width">paddingX: </label>
+                <input id='paddingX' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
+                <label htmlFor="width">paddingY: </label>
+                <input id='paddingY' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
+                <label htmlFor="width">marginX: </label>
+                <input id='marginX' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
+                <label htmlFor="width">marginY: </label>
+                <input id='marginY' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <button onClick={updateScale} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">Apply</button>
+        </div>
+        
+        </>
         
         
         // 

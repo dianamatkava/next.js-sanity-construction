@@ -43,10 +43,20 @@ export function Header({...props}: HeaderInterface) {
 
     const [bgColor, setBgColor] = useState(props.bgColor)
     const [borderColor, setBorderColor] = useState(props.borderColor)
+    const [round, setRound] = useState(props.round)
+    const [marginX, setMarginX] = useState(props.marginX)
+    const [marginY, setMarginY] = useState(props.marginY)
     const [paddingX, setPaddingX] = useState(props.paddingX)
+    const [paddingY, setPaddingY] = useState(props.paddingY)
+    const [width, setWidth] = useState(props.width)
+    const [height, setHeight] = useState(props.height)
 
 
     function updateScale() {
+
+        const bgColorValue = document.querySelector('[id="bgColor"]') as HTMLInputElement;
+        const borderColorValue = document.querySelector('[id="borderColor"]') as HTMLInputElement;
+        const roundValue = document.querySelector('[id="round"]') as HTMLInputElement;
         const widthValue = document.getElementById('width') as HTMLInputElement;
         const heightValue = document.querySelector('[id="height"]') as HTMLInputElement;
         const paddingXValue = document.querySelector('[id="paddingX"]') as HTMLInputElement;
@@ -54,23 +64,32 @@ export function Header({...props}: HeaderInterface) {
         const marginXValue = document.querySelector('[id="marginX"]') as HTMLInputElement;
         const marginYValue = document.querySelector('[id="marginY"]') as HTMLInputElement;
 
-        console.log(widthValue.value)
+        setBgColor(bgColorValue.value)
+        setBorderColor(borderColorValue.value)
+        setRound(roundValue.value)
+        setMarginX(marginXValue.value)
+        setMarginY(marginYValue.value)
+        setPaddingX(paddingXValue.value)
+        setPaddingY(paddingYValue.value)
+        setWidth(widthValue.value)
+        // setHeight(heightValue.value)
+
     }
 
     return (
         <>
-        <header className="print">
-            <nav className={`${bgColor} ${borderColor} ${paddingX}`}> 
+        <header>
+            <div className={`${bgColor} border ${borderColor} ${round} ${width} ${height} ${paddingX} ${paddingY} ${marginX} ${marginY}`}> 
                 {
                     props.items.map(
                         function(object) {
                             console.log(object);
                             const DynamicComponent = Components[object.component];
-                            return DynamicComponent ? <DynamicComponent {...object} /> : null;
+                            return <div><DynamicComponent {...object} /></div>;
                         }
                     )
                 }
-            </nav>
+            </div>
             <button onClick={() => setBgColor(bgColor == 'bg-transparent' ? 'bg-sky-400' : 'bg-transparent')}>bgColor to blue</button>
         </header>
 
@@ -78,31 +97,45 @@ export function Header({...props}: HeaderInterface) {
             SETTINGS:
             <p>Update scale</p>
             <div className="m-4">
+                <label htmlFor="bgColor">bgColor: </label>
+                <input id='bgColor' defaultValue={bgColor} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
+                <label htmlFor="borderColor">borderColor: </label>
+                <input id='borderColor' defaultValue={borderColor} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
+                <label htmlFor="round">round: </label>
+                <input id='round' defaultValue={round} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+            </div>
+            <div className="m-4">
                 <label htmlFor="width">width: </label>
-                <input id='width' value='qw' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <input id='width' defaultValue={width} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <div className="m-4">
-                <label htmlFor="width">heigh: </label>
-                <input id='heigh' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <label htmlFor="height">height: </label>
+                <input id='heigh' defaultValue={height} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <div className="m-4">
-                <label htmlFor="width">paddingX: </label>
-                <input id='paddingX' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <label htmlFor="paddingX">paddingX: </label>
+                <input id='paddingX' defaultValue={paddingX} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <div className="m-4">
-                <label htmlFor="width">paddingY: </label>
-                <input id='paddingY' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <label htmlFor="paddingY">paddingY: </label>
+                <input id='paddingY' defaultValue={paddingY} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <div className="m-4">
-                <label htmlFor="width">marginX: </label>
-                <input id='marginX' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <label htmlFor="marginX">marginX: </label>
+                <input id='marginX' defaultValue={marginX} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <div className="m-4">
-                <label htmlFor="width">marginY: </label>
-                <input id='marginY' className="bg-gray-100 w-[100px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <label htmlFor="marginY">marginY: </label>
+                <input id='marginY' defaultValue={marginY} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <button onClick={updateScale} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">Apply</button>
         </div>
+
+        <div className="bg-blue-200 border-red-700"></div>
         
         </>
         

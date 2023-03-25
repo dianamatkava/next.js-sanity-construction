@@ -35,9 +35,15 @@ export const DefaultHeaderBlockItem1: BlockItem = {
 
 export const DefaultHeaderProps: HeaderInterface = {
     // Base block params
-    bgColor: "bg-transparent",
-    borderColor: "border-gray-200",
-    paddingX: "px-4",
+    bgColor: "bg-red-200",
+    borderColor: "border-black",
+    round: "",
+    marginX: "",
+    marginY: "",
+    paddingX: "px-[20px]",
+    paddingY: "",
+    width: "",
+    height: "",
     
     // Items
     items: [

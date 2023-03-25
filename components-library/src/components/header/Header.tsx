@@ -9,19 +9,30 @@ import {HeaderInterface, BaseBlock, BaseInLine} from "../../interfaces/HeaderInt
 
 
 export function Inline({...props}: BaseInLine) {
-    return ('');
+    return <>INLINE works</>;
 }
 
 export function Block({...props}: BaseBlock) {
-    return ('');
+    return <>BLOCK works</>;
 }
 
-const Components = {
-    block: Block,
-    inline: Inline
+export function Logo(text: string) {
+    return <>LOGO works</>;
+}
+
+
+type ComponentKey = {
+    [key: string]: React.ComponentType<any>;
   };
 
+const Components: ComponentKey = {
+    block: Block,
+    inline: Inline,
+    logo: Logo
+};
+  
 export function Header({...props}: HeaderInterface) {
+    
 
     const [navStyle, setProps] = useState(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
 
@@ -37,9 +48,11 @@ export function Header({...props}: HeaderInterface) {
             <nav className={`${navStyle}`}> 
                 {
                     props.items.map(
-                        function(object, i) {
-                            console.log(object, i);
-                            return 'Hello';
+                        function(object) {
+                            console.log(object);
+                            
+                            const DynamicComponent = Components[object.component];
+                            return DynamicComponent ? <DynamicComponent {...object} /> : null;
                         }
                     )
                 }

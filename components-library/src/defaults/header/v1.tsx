@@ -41,6 +41,8 @@ export const DefaultHeaderProps: HeaderInterface = {
     
     // Items
     items: [
+        DefaultHeaderInlineItem2,
+        DefaultHeaderBlockItem1,
         DefaultHeaderItemLogo,
     ]
 

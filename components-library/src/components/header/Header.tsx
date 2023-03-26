@@ -1,29 +1,16 @@
 import React, { useState } from "react";
 import "./Header.css";
-// import {icons} from "../../defaults/iconMapper"
-// import { AiOutlineMenu } from "react-icons/ai";
-// import { FaCubes } from "react-icons/fa";
+import Block from "./base/Block"
+import Inline from "./base/Inline"
+import Logo from "./base/Logo"
 
 
 import {HeaderInterface, BaseBlock, BaseInLine} from "../../interfaces/HeaderInterfaces";
 
 
-export function Inline({...props}: BaseInLine) {
-    return <>INLINE works</>;
-}
-
-export function Block({...props}: BaseBlock) {
-    return <>BLOCK works</>;
-}
-
-export function Logo(text: string) {
-    return <>LOGO works</>;
-}
-
-
 type ComponentKey = {
-    [key: string]: React.ComponentType<any>;
-  };
+    [key: string]: any;
+};
 
 const Components: ComponentKey = {
     block: Block,
@@ -95,7 +82,7 @@ export function Header({...props}: HeaderInterface) {
 
         <div>
             SETTINGS:
-            <p>Update scale</p>
+            <p>Update block scale</p>
             <div className="m-4">
                 <label htmlFor="bgColor">bgColor: </label>
                 <input id='bgColor' defaultValue={bgColor} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />

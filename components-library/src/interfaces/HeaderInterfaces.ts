@@ -1,5 +1,5 @@
 interface Meta {
-    component: string
+    component: string 
 }
 
 export interface BaseBlock {
@@ -18,17 +18,21 @@ export interface BaseInLine {
     color?: string,
     size?: string,
     text: string,
+
 }
 
 
 export interface BlockItem extends BaseBlock, Meta {
-    icon?: string,
     text: string,
     children?: this | InlineItem
 }
 
 export interface InlineItem extends BaseInLine, Meta {
     icon?: string,
+}
+
+export interface LogoItem extends BaseInLine {
+    icon: string
 }
 
 export interface HeaderInterface extends BaseBlock {

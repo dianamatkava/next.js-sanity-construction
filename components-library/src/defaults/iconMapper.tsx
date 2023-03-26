@@ -1,7 +1,12 @@
 import {FaCubes} from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 
-export const icons = {
+
+export type IconKey = {
+    [key: string]: React.ComponentType<any>;
+};
+
+export const IconComponent: IconKey = {
     FaCubes: FaCubes,
     AiOutlineMenu: AiOutlineMenu,
 }

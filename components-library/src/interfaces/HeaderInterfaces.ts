@@ -2,6 +2,7 @@ interface Meta {
     component: string 
 }
 
+// --------- Base interfaces ---------------
 export interface BaseBlock {
     bgColor?: string,
     borderColor?: string,
@@ -17,24 +18,32 @@ export interface BaseBlock {
 export interface BaseInLine {
     color?: string,
     size?: string,
-    text: string,
-
+    text?: string,
 }
 
+export interface BaseLogo extends Meta, BaseInLine{
+    icon: string
+}
+// --------- Base interfaces END -----------
 
+
+
+// --------- Base Items --------------------
 export interface BlockItem extends BaseBlock, Meta {
     text: string,
     children?: this | InlineItem
 }
 
 export interface InlineItem extends BaseInLine, Meta {
-    icon?: string,
+    tag: string,
+    icon?: BaseLogo,
+    link?: string,
+    children?: this 
 }
 
-export interface LogoItem extends BaseInLine {
-    icon: string
-}
+// --------- Base Items END ----------------
+
 
 export interface HeaderInterface extends BaseBlock {
-    items: BlockItem[] | InlineItem[] | []
+    items: (BlockItem | InlineItem | BaseLogo)[]
 }

@@ -1,23 +1,23 @@
 import React from "react";
-import {HeaderInterface, BlockItem, InlineItem} from "../../interfaces/HeaderInterfaces"
+import {HeaderInterface, BlockItem, InlineItem, BaseLogo} from "../../interfaces/HeaderInterfaces"
 
 
 // --------- Header inline items --------------------
 export const DefaultHeaderInlineItem1: InlineItem = {
     component: 'inline',
+    tag: 'span',
     text: "Test1"
 }
 
 export const DefaultHeaderInlineItem2: InlineItem = {
     component: 'inline',
+    tag: 'span',
     text: "Test2"
 }
 
-export const DefaultHeaderItemLogo: InlineItem = {
-    text: "Test2",
-    component: "logo",
+export const DefaultHeaderItemLogo: BaseLogo = {
+    component: 'logo',
     icon: "FaCubes",
-    size: "text-[2rem]"
 }
 
 // --------- Header inline items end ----------------

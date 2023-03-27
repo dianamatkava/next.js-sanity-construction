@@ -1,23 +1,11 @@
 import React, { useState } from "react";
 import "./Header.css";
-import Block from "./base/Block"
-import Inline from "./base/Inline"
-import Logo from "./base/Logo"
+import { Components } from "../../defaults/componentsMapper"
 
 
 import {HeaderInterface, BaseBlock, BaseInLine} from "../../interfaces/HeaderInterfaces";
 
 
-type ComponentKey = {
-    [key: string]: any;
-};
-
-const Components: ComponentKey = {
-    block: Block,
-    inline: Inline,
-    logo: Logo
-};
-  
 export function Header({...props}: HeaderInterface) {
     
 

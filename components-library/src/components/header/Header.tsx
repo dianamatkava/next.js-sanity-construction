@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Components } from "../../defaults/componentsMapper"
-
-
-import {HeaderInterface, BaseBlock, BaseInLine} from "../../interfaces/HeaderInterfaces";
+import { Components, DynamicComponentRenderer } from "./base/DynamicComponent"
+import {HeaderInterface} from "../../interfaces/HeaderInterfaces";
 
 
 export function Header({...props}: HeaderInterface) {
@@ -55,15 +53,7 @@ export function Header({...props}: HeaderInterface) {
         <>
         <header>
             <div className={`${bgColor} border ${borderColor} ${round} ${width} ${height} ${paddingX} ${paddingY} ${marginX} ${marginY}`}> 
-                {
-                    props.items.map(
-                        function(object) {
-                            console.log(object);
-                            const DynamicComponent = Components[object.component];
-                            return <div><DynamicComponent {...object} /></div>;
-                        }
-                    )
-                }
+                <DynamicComponentRenderer items={props.items} />
             </div>
             <button onClick={() => setBgColor(bgColor == 'bg-transparent' ? 'bg-sky-400' : 'bg-transparent')}>bgColor to blue</button>
         </header>

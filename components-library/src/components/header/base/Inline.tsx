@@ -1,16 +1,15 @@
 import { InlineItem } from "../../../interfaces/HeaderInterfaces";
-import {IconComponent, IconKey} from "../../../defaults/iconMapper"
 import { useState } from "react";
 
 
 export default function Inline({...props}: InlineItem) {
     const InlineTag = props.tag as keyof JSX.IntrinsicElements;
-    const [color, setColor] = useState(props.color)
+    
     return (
         props.link ? (
-            <InlineTag href={props.link} />
+            <InlineTag href={props.link}>{props.text}</InlineTag>
         ) : (
-            <InlineTag href={props.link} />
+            <InlineTag />
         )
             
         

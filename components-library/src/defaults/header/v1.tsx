@@ -11,8 +11,9 @@ export const DefaultHeaderInlineItem1: InlineItem = {
 
 export const DefaultHeaderInlineItem2: InlineItem = {
     component: 'inline',
-    tag: 'span',
-    text: "Test2"
+    tag: 'a',
+    text: "Test2",
+    link: "/#"
 }
 
 export const DefaultHeaderItemLogo: BaseLogo = {

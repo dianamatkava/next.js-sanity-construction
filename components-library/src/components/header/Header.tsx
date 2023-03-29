@@ -48,7 +48,6 @@ export function Header({...props}: HeaderInterface) {
         // setHeight(heightValue.value)
 
     }
-
     return (
         <>
         <header>

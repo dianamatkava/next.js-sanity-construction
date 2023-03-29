@@ -15,7 +15,8 @@ export const Components: ComponentKey = {
 };
   
 
-export function DynamicComponentRenderer({...items}: (BlockItem | InlineItem | BaseLogo)[]) {
+export function DynamicComponentRenderer({items}: {items: (BlockItem | InlineItem | BaseLogo)[]}) {
+    console.log(items)
     return (
       <>
         {items.map(

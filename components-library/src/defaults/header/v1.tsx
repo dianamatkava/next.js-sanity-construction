@@ -5,15 +5,10 @@ import {HeaderInterface, BlockItem, InlineItem, BaseLogo} from "../../interfaces
 // --------- Header inline items --------------------
 export const DefaultHeaderInlineItem1: InlineItem = {
     component: 'inline',
-    tag: 'span',
-    text: "Test1"
-}
-
-export const DefaultHeaderInlineItem2: InlineItem = {
-    component: 'inline',
     tag: 'a',
-    text: "Test2",
-    link: "/#"
+    link: '/#',
+    
+    text: "Test1"
 }
 
 export const DefaultHeaderItemLogo: BaseLogo = {
@@ -21,14 +16,26 @@ export const DefaultHeaderItemLogo: BaseLogo = {
     icon: "FaCubes",
 }
 
+export const DefaultHeaderInlineItemLogo: InlineItem = {
+    component: 'inline',
+    tag: 'a',
+    link: "/#",
+    children: [DefaultHeaderItemLogo]
+}
+
 // --------- Header inline items end ----------------
 
 
 
 // --------- Header block items ---------------------
-export const DefaultHeaderBlockItem1: BlockItem = {
+export const DefaultHeaderBlockItems: BlockItem = {
     component: 'block',
-    text: "Test2"
+    text: "Test2",
+    children: [
+        DefaultHeaderInlineItem1,
+        DefaultHeaderInlineItem1,
+        DefaultHeaderInlineItem1
+    ]
 }
 // --------- Header block items end -----------------
 
@@ -48,9 +55,8 @@ export const DefaultHeaderProps: HeaderInterface = {
     
     // Items
     items: [
-        DefaultHeaderInlineItem2,
-        DefaultHeaderBlockItem1,
-        DefaultHeaderItemLogo,
+        DefaultHeaderInlineItemLogo,
+        DefaultHeaderBlockItems,
     ]
 
 }

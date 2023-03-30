@@ -1,15 +1,21 @@
 import { InlineItem } from "../../../interfaces/HeaderInterfaces";
 import { useState } from "react";
+import { DynamicComponentRenderer } from "./DynamicComponent";
 
 
 export default function Inline({...props}: InlineItem) {
     const InlineTag = props.tag as keyof JSX.IntrinsicElements;
-    
+    console.log(props, props.children)
     return (
-        props.link ? (
-            <InlineTag href={props.link}>{props.text}</InlineTag>
+        props.link ? (//flex items-center
+            <InlineTag href={props.link} className=''> 
+                {props.text}
+                {props.children && <DynamicComponentRenderer items={(props.children)} />}
+            </InlineTag>
         ) : (
-            <InlineTag />
+            <InlineTag>
+                {/* <DynamicComponentRenderer /> */}
+            </InlineTag>
         )
             
         

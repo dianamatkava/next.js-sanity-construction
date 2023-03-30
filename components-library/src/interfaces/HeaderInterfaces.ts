@@ -31,14 +31,14 @@ export interface BaseLogo extends Meta, BaseInLine{
 // --------- Base Items --------------------
 export interface BlockItem extends BaseBlock, Meta {
     text: string,
-    children?: this | InlineItem
+    children?: (BlockItem | InlineItem | BaseLogo)[]
 }
 
 export interface InlineItem extends BaseInLine, Meta {
     tag: string,
     icon?: BaseLogo,
     link?: string,
-    children?: this 
+    children?: (BlockItem | InlineItem | BaseLogo)[]
 }
 
 // --------- Base Items END ----------------

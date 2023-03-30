@@ -15,14 +15,13 @@ export const Components: ComponentKey = {
 };
   
 
-export function DynamicComponentRenderer({items}: {items: (BlockItem | InlineItem | BaseLogo)[]}) {
-    console.log(items)
+export function DynamicComponentRenderer({items}: {items: (BlockItem | InlineItem | BaseLogo)[] | undefined}) {
     return (
       <>
-        {items.map(
+        {items && items.map(
             function(props) {
                 const DynamicComponent = Components[props.component];
-                return <div><DynamicComponent {...props} /></div>;
+                return <DynamicComponent {...props} />;
             }
         )}
       </>

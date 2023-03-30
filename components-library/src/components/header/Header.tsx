@@ -51,7 +51,7 @@ export function Header({...props}: HeaderInterface) {
     return (
         <>
         <header>
-            <div className={`${bgColor} border ${borderColor} ${round} ${width} ${height} ${paddingX} ${paddingY} ${marginX} ${marginY}`}> 
+            <div className={`${bgColor} border ${borderColor} ${round} ${width} ${height} ${paddingX} ${paddingY} ${marginX} ${marginY} flex flex-wrap justify-between items-center mx-auto`}> 
                 <DynamicComponentRenderer items={props.items} />
             </div>
             <button onClick={() => setBgColor(bgColor == 'bg-transparent' ? 'bg-sky-400' : 'bg-transparent')}>bgColor to blue</button>

@@ -21,7 +21,7 @@ export interface BaseInLine {
     text?: string,
 }
 
-export interface BaseLogo extends Meta, BaseInLine{
+export interface BaseLogo extends BaseInLine{
     icon: string
 }
 // --------- Base interfaces END -----------

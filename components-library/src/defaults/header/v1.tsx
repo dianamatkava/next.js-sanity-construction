@@ -7,7 +7,6 @@ export const DefaultHeaderInlineItem1: InlineItem = {
     component: 'inline',
     tag: 'a',
     link: '/#',
-    
     text: "Test1"
 }
 

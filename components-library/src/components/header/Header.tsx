@@ -100,6 +100,10 @@ export function Header({...props}: HeaderInterface) {
         </div>
 
         <div className="bg-blue-200 border-red-700"></div>
+
+        <a href="#content" className="not-sr-only">
+            Skip to content
+        </a>
         
         </>
         

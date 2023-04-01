@@ -1,32 +1,21 @@
-import InlineInterface from "./Inline.interface"
-import FaIconInterface from "./FaIcon.interface"
-import BaseCSSInterface from "../CSSInterfaces/BaseCSS.interface"
 import BlockCSSInterface from "../CSSInterfaces/BlockCSS.interface"
+import BaseInterface from "./Base.interface"
 
 
-export default interface BlockInterface {
+export default interface BlockInterface extends BaseInterface {
     /**
      * Component name to use
      */
     component: 'block'
 
     /**
-     * Block text
-     */
-    text?: string,
-
-    /**
      * CSS style
      */
-    style?: BaseCSSInterface | BlockCSSInterface,
+    style?: BlockCSSInterface,
 
     /**
      * CSS tag attributes
      */
     blockAttributes?: any[],
 
-    /**
-     * Block children
-     */
-    children?: this | InlineInterface | FaIconInterface
 }

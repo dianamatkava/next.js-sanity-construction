@@ -1,4 +1,4 @@
-import BaseCSSInterface from "../CSSInterfaces/BaseCSS.interface"
+import BlockCSSInterface from "../CSSInterfaces/BlockCSS.interface"
 
 export default interface FaIconInterface {
     /**
@@ -9,5 +9,5 @@ export default interface FaIconInterface {
     /**
      * Fa icon style
      */
-    style?: BaseCSSInterface
+    style?: BlockCSSInterface
 }

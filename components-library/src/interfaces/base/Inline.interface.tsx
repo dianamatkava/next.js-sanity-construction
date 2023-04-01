@@ -1,9 +1,7 @@
-import BlockInterface from "./Block.interface"
-import FaIconInterface from "./FaIcon.interface"
-import BaseCSSInterface from "../CSSInterfaces/BaseCSS.interface"
+import BaseInterface from "./Base.interface"
 import InlineCSSInterface from "../CSSInterfaces/InlineCSS.interface"
 
-export default interface InlineInterface {
+export default interface InlineInterface extends BaseInterface {
     /**
      * Component name to use
      */
@@ -12,25 +10,23 @@ export default interface InlineInterface {
     /**
      * HTML tag name
      */
-    tag: string,
-
-    /**
-     * inline text
-     */
-    text?: string,
+    tag: 
+    | 'a'
+    | 'p'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'li'
+    | 'span'
 
     /**
      * CSS style
      */
-    style?: BaseCSSInterface | InlineCSSInterface,
+    style?: InlineCSSInterface,
 
     /**
-     * CSS tag attributes
+     * CSS tag attributes (href, data, blank)
      */
     tagAttributes?: any[],
 
-    /**
-     * Inline children
-     */
-    children?: this | BlockInterface | FaIconInterface
 }

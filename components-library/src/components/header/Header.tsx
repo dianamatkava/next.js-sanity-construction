@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Components, DynamicComponentRenderer } from "./base/DynamicComponent"
+import { Components, DynamicComponentRenderer } from "../base/DynamicComponent"
 import {HeaderInterface} from "../../interfaces/HeaderInterfaces";
 
 

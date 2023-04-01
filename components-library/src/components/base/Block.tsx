@@ -1,4 +1,4 @@
-import { BlockItem } from "../../../interfaces/HeaderInterfaces";
+import { BlockItem } from "../../interfaces/HeaderInterfaces";
 import { DynamicComponentRenderer } from "./DynamicComponent";
 
 export default function Block({...props}: BlockItem) {

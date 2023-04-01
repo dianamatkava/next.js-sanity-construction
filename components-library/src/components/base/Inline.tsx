@@ -1,4 +1,4 @@
-import { InlineItem } from "../../../interfaces/HeaderInterfaces";
+import { InlineItem } from "../../interfaces/HeaderInterfaces";
 import { useState } from "react";
 import { DynamicComponentRenderer } from "./DynamicComponent";
 

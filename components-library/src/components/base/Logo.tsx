@@ -1,5 +1,5 @@
-import { BaseLogo } from "../../../interfaces/HeaderInterfaces"
-import { IconComponent } from "../base/DynamicIcon"
+import { BaseLogo } from "../../interfaces/HeaderInterfaces"
+import { IconComponent } from "./DynamicIcon"
 import { useState } from "react";
 
 export default function Logo({...props}: BaseLogo) {

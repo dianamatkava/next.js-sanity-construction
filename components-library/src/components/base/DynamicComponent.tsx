@@ -1,4 +1,4 @@
-import { BlockItem, InlineItem, BaseLogo } from "../../../interfaces/HeaderInterfaces";
+import { BlockItem, InlineItem, BaseLogo } from "../../interfaces/HeaderInterfaces";
 import Block from "./Block"
 import Inline from "./Inline"
 import Logo from "./Logo"

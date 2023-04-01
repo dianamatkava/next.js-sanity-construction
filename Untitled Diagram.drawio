@@ -1,166 +1,190 @@
-<mxfile host="app.diagrams.net" modified="2023-03-31T21:33:42.250Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="miisfqp0jsZyqqN3846H" version="21.1.1" type="github">
-  <diagram id="yPxyJZ8AM_hMuL3Unpa9" name="complex gitflow">
-    <mxGraphModel dx="1509" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-13" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="225" y="30" width="200" height="220" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-5" value="Inline" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-13">
-          <mxGeometry width="200" height="220" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-8" value="props:&lt;br&gt;&lt;br&gt;Tag: str&lt;br&gt;text: str&lt;br&gt;InlineCSS{}, &lt;br&gt;InlineAttributes{}&lt;br&gt;InlineChildrens{}" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-5">
-          <mxGeometry y="110" width="200" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-11" value="Static props:&lt;br&gt;&lt;br&gt;component: InlineComponent" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-13">
-          <mxGeometry y="20" width="200" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-14" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="455" y="30" width="200" height="220" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-15" value="Block" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-14">
-          <mxGeometry width="200" height="220.00000000000003" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-16" value="props:&lt;br&gt;&lt;br&gt;text: str&lt;br&gt;BlockCSS{}, &lt;br&gt;BlockAttributes{}&lt;br&gt;BlockChildrens{}" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-15">
-          <mxGeometry y="121.00000000000001" width="200" height="99.00000000000001" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-17" value="Static props:&lt;br&gt;&lt;br&gt;component: BlockComponent" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-14">
-          <mxGeometry y="22" width="200" height="99.00000000000001" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-18" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="680" y="30" width="200" height="220" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-19" value="FaIcons" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-18">
-          <mxGeometry width="200" height="220.00000000000003" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-20" value="props:&lt;br&gt;&lt;br&gt;iconName: str" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-19">
-          <mxGeometry y="22" width="200" height="198.00000000000003" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-23" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="455" y="290" width="200" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-24" value="InlineCSS extends CommonCSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-23">
-          <mxGeometry width="200" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-25" value="props:&lt;br&gt;&lt;br&gt;// basic inline&lt;br&gt;&lt;br&gt;text-align&lt;br&gt;&lt;br&gt;// other inline&lt;br&gt;font-style&lt;br&gt;font-family&lt;br&gt;font-weight&lt;br&gt;text-decoration&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;text-transform&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;letter-spacing&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;word-spacing&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;line-height" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-24">
-          <mxGeometry y="17.65" width="200" height="282.35" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-27" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="460" y="630" width="200" height="270" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-28" value="HoverCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-27">
-          <mxGeometry x="-5" width="200" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-33" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="460" y="410" width="200" height="350" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-34" value="FocusCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-33">
-          <mxGeometry x="-5" y="300" width="200" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-41" value="" style="group" vertex="1" connectable="0" parent="nIs_TiCdEZjcmo3SVBWc-34">
-          <mxGeometry y="-250" width="200" height="270" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-42" value="LgCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-41">
-          <mxGeometry y="330" width="200" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-43" value="min-width&lt;br&gt;max-width" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-42">
-          <mxGeometry y="20" width="200" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-37" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="680" y="630" width="200" height="250" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-38" value="DarkCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-37">
-          <mxGeometry width="200" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-39" value="" style="group" vertex="1" connectable="0" parent="nIs_TiCdEZjcmo3SVBWc-37">
-          <mxGeometry y="80" width="200" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-40" value="CustomBgCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-39">
-          <mxGeometry width="200" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-49" value="MdCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-39">
-          <mxGeometry y="80" width="200" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-50" value="min-width&lt;br&gt;max-width" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-49">
-          <mxGeometry y="20" width="200" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-51" value="CommonCSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="225" y="290" width="200" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-52" value="props:&lt;br&gt;&lt;br&gt;align-items&lt;br&gt;display&lt;br&gt;margin&lt;br&gt;padding&lt;br&gt;&lt;br&gt;color&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;font-size&lt;br&gt;background-color&lt;br&gt;border&lt;br&gt;&lt;br&gt;hover: HoverCSS&lt;br&gt;focus: FocusCSS&lt;br&gt;dark: DarkCSS&lt;br&gt;&lt;br&gt;// other&lt;br&gt;outline" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-51">
-          <mxGeometry y="20" width="200" height="280" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-53" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="680" y="290" width="200" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-54" value="BlockCSS extends CommonCSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-53">
-          <mxGeometry width="200" height="300" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-55" value="props:&lt;br&gt;&lt;br&gt;width&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;height&lt;br&gt;&lt;br&gt;justify-content&lt;br&gt;flex-direction" style="whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-54">
-          <mxGeometry y="17.65" width="200" height="282.35" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-56" target="nIs_TiCdEZjcmo3SVBWc-58">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1250" y="110" />
-              <mxPoint x="1090" y="110" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-56" target="nIs_TiCdEZjcmo3SVBWc-59">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-56" value="Block:div" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1190" y="50" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-58" target="nIs_TiCdEZjcmo3SVBWc-62">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-58" target="nIs_TiCdEZjcmo3SVBWc-63">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-58" value="Block: div" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1030" y="130" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-59" target="nIs_TiCdEZjcmo3SVBWc-64">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-59" target="nIs_TiCdEZjcmo3SVBWc-65">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-59" value="Inline: props.tag (a)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1360" y="130" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-62" value="Inline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="950" y="210" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-63" value="Inline" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="210" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-64" target="nIs_TiCdEZjcmo3SVBWc-70">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-64" value="Inline: props.tag(span)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="210" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-65">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1570" y="290" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="nIs_TiCdEZjcmo3SVBWc-65">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1450" y="290" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-65" value="Block: div" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1440" y="210" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="nIs_TiCdEZjcmo3SVBWc-70" value="FaIcon" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="280" width="120" height="40" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="yPxyJZ8AM_hMuL3Unpa9" name="complex gitflow">
+        <mxGraphModel dx="1787" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-33" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="460" y="410" width="1165" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-13" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1" connectable="0">
+                    <mxGeometry x="-160" y="-330" width="200" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-5" value="Inline" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-13" vertex="1">
+                    <mxGeometry width="200" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-8" value="props:&lt;br&gt;&lt;br&gt;Tag: str&lt;br&gt;text: str&lt;br&gt;InlineCSS{}, &lt;br&gt;InlineAttributes{}&lt;br&gt;InlineChildrens{}" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-5" vertex="1">
+                    <mxGeometry y="110" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-11" value="Static props:&lt;br&gt;&lt;br&gt;component: InlineComponent" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-13" vertex="1">
+                    <mxGeometry y="20" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-14" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1" connectable="0">
+                    <mxGeometry x="70" y="-330" width="200" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-15" value="Block" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-14" vertex="1">
+                    <mxGeometry width="200" height="220.00000000000003" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-16" value="props:&lt;br&gt;&lt;br&gt;text: str&lt;br&gt;BlockCSS{}, &lt;br&gt;BlockAttributes{}&lt;br&gt;BlockChildrens{}" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-15" vertex="1">
+                    <mxGeometry y="121.00000000000001" width="200" height="99.00000000000001" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-17" value="Static props:&lt;br&gt;&lt;br&gt;component: BlockComponent" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-14" vertex="1">
+                    <mxGeometry y="22" width="200" height="99.00000000000001" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-18" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1" connectable="0">
+                    <mxGeometry x="295" y="-330" width="200" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-19" value="FaIcons" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-18" vertex="1">
+                    <mxGeometry width="200" height="220.00000000000003" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-20" value="props:&lt;br&gt;&lt;br&gt;iconName: str&lt;br&gt;&lt;br&gt;style" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-19" vertex="1">
+                    <mxGeometry y="22" width="200" height="198.00000000000003" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-23" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1" connectable="0">
+                    <mxGeometry x="70" y="-70" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-24" value="InlineCSS extends CommonCSS" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-23" vertex="1">
+                    <mxGeometry width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-25" value="props:&lt;br&gt;&lt;br&gt;// basic inline&lt;br&gt;&lt;br&gt;text-align&lt;br&gt;&lt;br&gt;// other inline&lt;br&gt;font-style&lt;br&gt;font-family&lt;br&gt;font-weight&lt;br&gt;text-decoration&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;text-transform&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;letter-spacing&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;word-spacing&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;line-height" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-24" vertex="1">
+                    <mxGeometry y="17.65" width="200" height="282.35" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-27" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1" connectable="0">
+                    <mxGeometry x="560" y="-20" width="200" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-28" value="HoverCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-27" vertex="1">
+                    <mxGeometry x="-5" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-41" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-27" vertex="1" connectable="0">
+                    <mxGeometry x="-5" y="-110" width="200" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-42" value="SizeCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-41" vertex="1">
+                    <mxGeometry y="330" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-43" value="min-width&lt;br&gt;max-width" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-42" vertex="1">
+                    <mxGeometry y="20" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="prefixt" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-41">
+                    <mxGeometry x="65" y="130" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="prefixt" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-41">
+                    <mxGeometry x="65" y="210" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-34" value="FocusCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="555" y="60" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-37" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1" connectable="0">
+                    <mxGeometry x="780" y="-20" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-38" value="DarkCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-37" vertex="1">
+                    <mxGeometry width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="prefixt" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-38">
+                    <mxGeometry x="70" y="20" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-39" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-37" vertex="1" connectable="0">
+                    <mxGeometry y="80" width="200" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-40" value="CustomThemeCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;fillColor=#999999;" parent="nIs_TiCdEZjcmo3SVBWc-39" vertex="1">
+                    <mxGeometry width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="prefixt" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-40">
+                    <mxGeometry x="70" y="20" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-49" value="SmCSS extends CSS extends Size" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-39" vertex="1">
+                    <mxGeometry y="80" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-50" value="prefix" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-49" vertex="1">
+                    <mxGeometry y="20" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="LgCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-39">
+                    <mxGeometry y="160" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="prefix" style="whiteSpace=wrap;html=1;" vertex="1" parent="5">
+                    <mxGeometry y="20" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-51" value="CommonCSS" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="-160" y="-70" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-52" value="props:&lt;br&gt;&lt;br&gt;align-items&lt;br&gt;display&lt;br&gt;margin&lt;br&gt;padding&lt;br&gt;&lt;br&gt;color&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;font-size&lt;br&gt;background-color&lt;br&gt;border&lt;br&gt;&lt;br&gt;hover: HoverCSS&lt;br&gt;focus: FocusCSS&lt;br&gt;dark: DarkCSS&lt;br&gt;&lt;br&gt;&lt;b&gt;// other&lt;br&gt;outline&lt;/b&gt;" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-51" vertex="1">
+                    <mxGeometry y="20" width="200" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-53" value="" style="group" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1" connectable="0">
+                    <mxGeometry x="295" y="-70" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-54" value="BlockCSS extends CommonCSS" style="swimlane;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-53" vertex="1">
+                    <mxGeometry width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-55" value="props:&lt;br&gt;&lt;br&gt;width&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;height&lt;br&gt;&lt;br&gt;justify-content&lt;br&gt;flex-direction" style="whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-54" vertex="1">
+                    <mxGeometry y="17.65" width="200" height="282.35" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-56" value="Block:div" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="795" y="-330" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-58" value="Block: div" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="635" y="-250" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-56" target="nIs_TiCdEZjcmo3SVBWc-58" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="855" y="-270"/>
+                            <mxPoint x="695" y="-270"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-59" value="Inline: props.tag (a)" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="965" y="-250" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-56" target="nIs_TiCdEZjcmo3SVBWc-59" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-62" value="Inline: p" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="555" y="-170" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-58" target="nIs_TiCdEZjcmo3SVBWc-62" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-63" value="Inline: p" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="705" y="-170" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-58" target="nIs_TiCdEZjcmo3SVBWc-63" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-64" value="Inline: props.tag(span)" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="895" y="-170" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-59" target="nIs_TiCdEZjcmo3SVBWc-64" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1175" y="-90" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1055" y="-90" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-65" value="Block: div" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="1045" y="-170" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-59" target="nIs_TiCdEZjcmo3SVBWc-65" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-70" value="FaIcon" style="rounded=1;whiteSpace=wrap;html=1;" parent="nIs_TiCdEZjcmo3SVBWc-33" vertex="1">
+                    <mxGeometry x="895" y="-100" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="nIs_TiCdEZjcmo3SVBWc-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="nIs_TiCdEZjcmo3SVBWc-33" source="nIs_TiCdEZjcmo3SVBWc-64" target="nIs_TiCdEZjcmo3SVBWc-70" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="MdCSS extends CSS" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="nIs_TiCdEZjcmo3SVBWc-33">
+                    <mxGeometry x="780" y="300" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="prefix" style="whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry y="20" width="200" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>

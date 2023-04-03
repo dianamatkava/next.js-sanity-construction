@@ -1,3 +1,8 @@
+import ThemesCSSInterface from "./ThemesCSS.interface"
+import PseudoClassesCSSInterface from "./PseudoClassesCSS.interface"
+import OnSizeCSSInterface from "./SizeCSS.interface"
+
+
 export default interface BaseCSSInterface {
     
     /**
@@ -41,17 +46,17 @@ export default interface BaseCSSInterface {
     border?: string,
 
     /**
-     * hover
+     * pseudoClasses
      */
-    hover?: any[],
+    pseudoClasses?: PseudoClassesCSSInterface[],
 
     /**
-     * focus
+     * onSize
      */
-    focus?: any[],
+    onSize?: OnSizeCSSInterface[],
 
     /**
-     * CSS on dark theme
+     * themes
      */
-    dark?: any[],
+    themes?: ThemesCSSInterface[],
 }

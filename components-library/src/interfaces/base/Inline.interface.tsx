@@ -18,6 +18,7 @@ export default interface InlineInterface extends BaseInterface {
     | 'h3'
     | 'li'
     | 'span'
+    | 'button'
 
     /**
      * CSS style

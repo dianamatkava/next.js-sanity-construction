@@ -2,7 +2,7 @@ import InlineInterface from "../../interfaces/base/Inline.interface"
 import BlockInterface from "../../interfaces/base/Block.interface"
 import FaIconInterface from "../../interfaces/base/FaIcon.interface"
 
-import {MainHeaderBlockStyles} from './v1HeaderStyles'
+import {HeaderActionBtnsPropsStyles, HeaderHiddenMenuBlockStyles, HeaderLogoBlockStyles, HeaderMenuBlockStyles, MainHeaderBlockStyles} from './v1HeaderStyles'
 import { Children } from "react"
 
 
@@ -19,7 +19,7 @@ const HeaderLogoLinkProps: InlineInterface = {
 
 const HeaderLogoBlockProps: BlockInterface = {
     component: "block",
-    // TODO: style
+    style: HeaderLogoBlockStyles,
     children: [HeaderLogoLinkProps]
 }
 
@@ -63,7 +63,7 @@ const HeaderMenuDropdownProps: BlockInterface = {
 
 const HeaderMenuBlockProps: BlockInterface = {
     component: "block",
-    // TODO: style
+    style: HeaderMenuBlockStyles,
     children: [
         HeaderMenuDropdownProps,
         HeaderMenuItemProps,
@@ -86,26 +86,31 @@ const HeaderMenuHiddenBtnProps: InlineInterface = {
 
 const HeaderHiddenMenuBlockProps: BlockInterface = {
     component: "block",
-    // TODO: style
+    style: HeaderHiddenMenuBlockStyles,
     children: [HeaderMenuHiddenBtnProps]
 }
 
 
-
-const HeaderActionBtnsProps: BlockInterface = {
-    component: "block"
-    // TODO: style
+const HeaderActionBtnItemProps: InlineInterface = {
+    component: "inline",
+    text: 'DefaultItem',
+    tag: "a",
+    // TODO: style 
 }
 
-
+const HeaderActionBtnsProps: BlockInterface = {
+    component: "block",
+    style: HeaderActionBtnsPropsStyles,
+    children: [HeaderMenuHiddenBtnProps]
+}
 
 export const DefaultHeaderV1Props: BlockInterface = {
     component: 'block',
     style: MainHeaderBlockStyles,
     children: [
         HeaderLogoBlockProps,
-        HeaderMenuBlockProps,
         HeaderHiddenMenuBlockProps,
+        HeaderMenuBlockProps,
         HeaderActionBtnsProps
     ],
 }

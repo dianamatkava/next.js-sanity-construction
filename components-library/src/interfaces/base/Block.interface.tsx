@@ -16,6 +16,6 @@ export default interface BlockInterface extends BaseInterface {
     /**
      * CSS tag attributes
      */
-    blockAttributes?: any[],
+    blockAttributes?: any[], // TODO: 
 
 }

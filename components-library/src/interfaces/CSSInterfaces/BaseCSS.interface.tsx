@@ -58,7 +58,37 @@ export default interface BaseCSSInterface {
     /**
      * columnGap
      */
-    columnGap?: string
+    columnGap?: string,
+
+    /**
+     * columnGap
+     */
+    lineHeight?: string,
+
+    /**
+     * top
+     */
+    top?: string,
+    
+    /**
+     * bottom
+     */
+    bottom?: string,
+    
+    /**
+     * left
+     */
+    left?: string,
+    
+    /**
+     * right
+     */
+    right?: string,
+
+    /**
+     * zIndex
+     */
+    zIndex?: string,
 
     /**
      * pseudoClasses

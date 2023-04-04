@@ -17,7 +17,6 @@ const HeaderLogoLinkProps: InlineInterface = {
     children: [HeaderLogoIcon]
 }
 
-
 const HeaderLogoBlockProps: BlockInterface = {
     component: "block",
     // TODO: style
@@ -25,10 +24,52 @@ const HeaderLogoBlockProps: BlockInterface = {
 }
 
 
+const HeaderMenuItemProps: InlineInterface = {
+    component: 'inline',
+    text: 'DefaultItem',
+    tag: "a",
+    // TODO: style
+}
+
+const HeaderHiddenDropdownBlockProps: BlockInterface = {
+    component: "block",
+    // TODO: style
+    children: [ // TODO: use complex dropdown items
+        HeaderMenuItemProps,
+        HeaderMenuItemProps,
+        HeaderMenuItemProps,
+        HeaderMenuItemProps
+    ]
+}
+
+const HeaderDropdownIcon: FaIconInterface = {
+    iconName: "" // TODO:
+}
+
+const HeaderDropdownBtnProps: InlineInterface = {
+    component: "inline",
+    tag: "button",
+    children: [HeaderDropdownIcon]
+}
+
+const HeaderMenuDropdownProps: BlockInterface = {
+    component: "block",
+    // TODO: style
+    children: [
+        HeaderDropdownBtnProps,
+        HeaderHiddenDropdownBlockProps
+    ]
+}
 
 const HeaderMenuBlockProps: BlockInterface = {
-    component: "block"
+    component: "block",
     // TODO: style
+    children: [
+        HeaderMenuDropdownProps,
+        HeaderMenuItemProps,
+        HeaderMenuItemProps,
+        HeaderMenuItemProps
+    ]
 }
 
 
@@ -37,13 +78,11 @@ const HeaderMenuHiddenIcon: FaIconInterface = {
     iconName: "" // TODO:
 }
 
-
 const HeaderMenuHiddenBtnProps: InlineInterface = {
     component: "inline",
     tag: "button",
     children: [HeaderMenuHiddenIcon]
 }
-
 
 const HeaderHiddenMenuBlockProps: BlockInterface = {
     component: "block",

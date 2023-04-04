@@ -27,6 +27,6 @@ export default interface InlineInterface extends BaseInterface {
     /**
      * CSS tag attributes (href, data, blank)
      */
-    tagAttributes?: any[],
+    tagAttributes?: any[], // TODO: 
 
 }

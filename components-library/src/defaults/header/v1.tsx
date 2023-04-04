@@ -1,61 +1,72 @@
-import React from "react";
-import {HeaderInterface, BlockItem, InlineItem, BaseLogo} from "../../interfaces/HeaderInterfaces"
+import InlineInterface from "../../interfaces/base/Inline.interface"
+import BlockInterface from "../../interfaces/base/Block.interface"
+import FaIconInterface from "../../interfaces/base/FaIcon.interface"
+
+import {MainHeaderBlockStyles} from './v1HeaderStyles'
+import { Children } from "react"
 
 
-// --------- Header inline items --------------------
-export const DefaultHeaderInlineItem1: InlineItem = {
-    component: 'inline',
-    tag: 'a',
-    link: '/#',
-    text: "Test1"
+const HeaderLogoIcon: FaIconInterface = {
+    iconName: "" // TODO:
 }
 
-export const DefaultHeaderItemLogo: BaseLogo = {
-    component: 'logo',
-    icon: "FaCubes",
+const HeaderLogoLinkProps: InlineInterface = {
+    component: "inline",
+    tag: "a",
+    // TODO: style
+    children: [HeaderLogoIcon]
 }
 
-export const DefaultHeaderInlineItemLogo: InlineItem = {
-    component: 'inline',
-    tag: 'a',
-    link: "/#",
-    children: [DefaultHeaderItemLogo]
+
+const HeaderLogoBlockProps: BlockInterface = {
+    component: "block",
+    // TODO: style
+    children: [HeaderLogoLinkProps]
 }
 
-// --------- Header inline items end ----------------
+
+
+const HeaderMenuBlockProps: BlockInterface = {
+    component: "block"
+    // TODO: style
+}
 
 
 
-// --------- Header block items ---------------------
-export const DefaultHeaderBlockItems: BlockItem = {
+const HeaderMenuHiddenIcon: FaIconInterface = {
+    iconName: "" // TODO:
+}
+
+
+const HeaderMenuHiddenBtnProps: InlineInterface = {
+    component: "inline",
+    tag: "button",
+    children: [HeaderMenuHiddenIcon]
+}
+
+
+const HeaderHiddenMenuBlockProps: BlockInterface = {
+    component: "block",
+    // TODO: style
+    children: [HeaderMenuHiddenBtnProps]
+}
+
+
+
+const HeaderActionBtnsProps: BlockInterface = {
+    component: "block"
+    // TODO: style
+}
+
+
+
+export const DefaultHeaderV1Props: BlockInterface = {
     component: 'block',
-    text: "Test2",
+    style: MainHeaderBlockStyles,
     children: [
-        DefaultHeaderInlineItem1,
-        DefaultHeaderInlineItem1,
-        DefaultHeaderInlineItem1
-    ]
-}
-// --------- Header block items end -----------------
-
-
-
-export const DefaultHeaderProps: HeaderInterface = {
-    // Base block params
-    bgColor: "bg-red-200",
-    borderColor: "border-black",
-    round: "",
-    marginX: "",
-    marginY: "",
-    paddingX: "px-[20px]",
-    paddingY: "",
-    width: "",
-    height: "",
-    
-    // Items
-    items: [
-        DefaultHeaderInlineItemLogo,
-        DefaultHeaderBlockItems,
-    ]
-
+        HeaderLogoBlockProps,
+        HeaderMenuBlockProps,
+        HeaderHiddenMenuBlockProps,
+        HeaderActionBtnsProps
+    ],
 }

@@ -2,12 +2,13 @@ import InlineInterface from "../../interfaces/base/Inline.interface"
 import BlockInterface from "../../interfaces/base/Block.interface"
 import FaIconInterface from "../../interfaces/base/FaIcon.interface"
 
-import {HeaderActionBtnsPropsStyles, HeaderHiddenMenuBlockStyles, HeaderLogoBlockStyles, HeaderMenuBlockStyles, MainHeaderBlockStyles} from './v1HeaderStyles'
+import {HeaderActionBtnsPropsStyles, HeaderDropdownBtnStyles, HeaderDropdownIconStyles, HeaderHiddenDropdownBlockStyles, HeaderHiddenMenuBlockStyles, HeaderLogoBlockStyles, HeaderLogoIconStyles, HeaderMenuBlockStyles, HeaderMenuDropdownStyles, HeaderMenuHiddenBtnStyles, HeaderMenuHiddenIconStyles, HeaderMenuItemStyles, MainHeaderBlockStyles} from './v1HeaderStyles'
 import { Children } from "react"
 
 
 const HeaderLogoIcon: FaIconInterface = {
-    iconName: "" // TODO:
+    iconName: "", // TODO;
+    style: HeaderLogoIconStyles,
 }
 
 const HeaderLogoLinkProps: InlineInterface = {
@@ -28,12 +29,12 @@ const HeaderMenuItemProps: InlineInterface = {
     component: 'inline',
     text: 'DefaultItem',
     tag: "a",
-    // TODO: style
+    style: HeaderMenuItemStyles
 }
 
 const HeaderHiddenDropdownBlockProps: BlockInterface = {
     component: "block",
-    // TODO: style
+    style: HeaderHiddenDropdownBlockStyles,
     children: [ // TODO: use complex dropdown items
         HeaderMenuItemProps,
         HeaderMenuItemProps,
@@ -43,18 +44,20 @@ const HeaderHiddenDropdownBlockProps: BlockInterface = {
 }
 
 const HeaderDropdownIcon: FaIconInterface = {
-    iconName: "" // TODO:
+    iconName: "", // TODO:
+    style: HeaderDropdownIconStyles
 }
 
 const HeaderDropdownBtnProps: InlineInterface = {
     component: "inline",
     tag: "button",
+    style: HeaderDropdownBtnStyles,
     children: [HeaderDropdownIcon]
 }
 
 const HeaderMenuDropdownProps: BlockInterface = {
     component: "block",
-    // TODO: style
+    style: HeaderMenuDropdownStyles,
     children: [
         HeaderDropdownBtnProps,
         HeaderHiddenDropdownBlockProps
@@ -75,12 +78,14 @@ const HeaderMenuBlockProps: BlockInterface = {
 
 
 const HeaderMenuHiddenIcon: FaIconInterface = {
-    iconName: "" // TODO:
+    iconName: "", // TODO:
+    style: HeaderMenuHiddenIconStyles
 }
 
 const HeaderMenuHiddenBtnProps: InlineInterface = {
     component: "inline",
     tag: "button",
+    style: HeaderMenuHiddenBtnStyles,
     children: [HeaderMenuHiddenIcon]
 }
 
@@ -95,13 +100,13 @@ const HeaderActionBtnItemProps: InlineInterface = {
     component: "inline",
     text: 'DefaultItem',
     tag: "a",
-    // TODO: style 
+    style:  
 }
 
 const HeaderActionBtnsProps: BlockInterface = {
     component: "block",
     style: HeaderActionBtnsPropsStyles,
-    children: [HeaderMenuHiddenBtnProps]
+    children: [HeaderActionBtnItemProps]
 }
 
 export const DefaultHeaderV1Props: BlockInterface = {

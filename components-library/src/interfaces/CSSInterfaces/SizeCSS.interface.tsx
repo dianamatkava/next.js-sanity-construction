@@ -13,10 +13,10 @@ export default interface OnSizeCSSInterface extends ExtraCSSInterface {
     /**
      * minWidth
      */
-    minWidth: string,
+    minWidth?: string,
     
     /**
      * maxWidth
      */
-    maxWidth: string
+    maxWidth?: string
 }

@@ -36,6 +36,11 @@ export default interface BaseCSSInterface {
     fontSize?: string,
 
     /**
+     * fontWeight
+     */
+    fontWeight?: string,
+
+    /**
      * background color
      */
     bgColor?: string,
@@ -44,6 +49,16 @@ export default interface BaseCSSInterface {
      * border
      */
     border?: string,
+
+    /**
+     * round
+     */
+    round?: string,
+
+    /**
+     * columnGap
+     */
+    columnGap?: string
 
     /**
      * pseudoClasses

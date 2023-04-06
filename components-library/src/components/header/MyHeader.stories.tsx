@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Header } from './Header';
-import {DefaultHeaderProps} from "../../defaults/header/v1"
+import {DefaultHeaderV1Props} from "../../defaults/header/v1"
 
 export default {
   title: 'myHeader',
@@ -10,5 +10,5 @@ export default {
 
 const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 export const myHeader = Template.bind({});
-myHeader.args = DefaultHeaderProps;
+myHeader.args = DefaultHeaderV1Props;
 

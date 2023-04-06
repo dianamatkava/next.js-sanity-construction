@@ -2,8 +2,23 @@ import InlineInterface from "../../interfaces/base/Inline.interface"
 import BlockInterface from "../../interfaces/base/Block.interface"
 import FaIconInterface from "../../interfaces/base/FaIcon.interface"
 
-import {HeaderActionBtnsPropsStyles, HeaderDropdownBtnStyles, HeaderDropdownIconStyles, HeaderHiddenDropdownBlockStyles, HeaderHiddenMenuBlockStyles, HeaderLogoBlockStyles, HeaderLogoIconStyles, HeaderMenuBlockStyles, HeaderMenuDropdownStyles, HeaderMenuHiddenBtnStyles, HeaderMenuHiddenIconStyles, HeaderMenuItemStyles, MainHeaderBlockStyles} from './v1HeaderStyles'
-import { Children } from "react"
+import {
+    HeaderActionBtnItemStyles,
+    HeaderActionBtnsPropsStyles, 
+    HeaderDropdownBtnStyles, 
+    HeaderDropdownIconStyles, 
+    HeaderHiddenDropdownBlockStyles, 
+    HeaderHiddenMenuBlockStyles, 
+    HeaderLogoBlockStyles, 
+    HeaderLogoIconStyles, 
+    HeaderLogoLinkStyles, 
+    HeaderMenuBlockStyles, 
+    HeaderMenuDropdownStyles, 
+    HeaderMenuHiddenBtnStyles, 
+    HeaderMenuHiddenIconStyles, 
+    HeaderMenuItemStyles, 
+    MainHeaderBlockStyles
+} from './v1HeaderStyles'
 
 
 const HeaderLogoIcon: FaIconInterface = {
@@ -14,7 +29,7 @@ const HeaderLogoIcon: FaIconInterface = {
 const HeaderLogoLinkProps: InlineInterface = {
     component: "inline",
     tag: "a",
-    // TODO: style
+    style: HeaderLogoLinkStyles,
     children: [HeaderLogoIcon]
 }
 
@@ -100,7 +115,7 @@ const HeaderActionBtnItemProps: InlineInterface = {
     component: "inline",
     text: 'DefaultItem',
     tag: "a",
-    style:  
+    style: HeaderActionBtnItemStyles
 }
 
 const HeaderActionBtnsProps: BlockInterface = {

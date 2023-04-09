@@ -51,6 +51,11 @@ export default interface BaseCSSInterface {
     border?: string,
 
     /**
+     * borderColor
+     */
+    borderColor?: string,
+
+    /**
      * round
      */
     round?: string,

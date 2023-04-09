@@ -11,7 +11,7 @@ export default interface BlockInterface extends BaseInterface {
     /**
      * CSS style
      */
-    style?: BlockCSSInterface,
+    style: BlockCSSInterface,
 
     /**
      * CSS tag attributes

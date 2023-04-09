@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { Components, DynamicComponentRenderer } from "../base/DynamicComponent"
-import {HeaderInterface} from "../../interfaces/HeaderInterfaces";
+import BlockInterface from "../../interfaces/base/Block.interface";
 
 
-export function Header({...props}: HeaderInterface) {
+export function Header({...props}: BlockInterface) {
+
+    console.log(props.style)
     
 
     // const [navStyle, setProps] = useState(`${[props.borderColor, props.bgColor, props.paddingX, 'lg:px-6 py-2.5'].filter(Boolean)}`.replaceAll(",", " "))
@@ -14,15 +16,13 @@ export function Header({...props}: HeaderInterface) {
     // }
 
 
-    const [bgColor, setBgColor] = useState(props.bgColor)
-    const [borderColor, setBorderColor] = useState(props.borderColor)
-    const [round, setRound] = useState(props.round)
-    const [marginX, setMarginX] = useState(props.marginX)
-    const [marginY, setMarginY] = useState(props.marginY)
-    const [paddingX, setPaddingX] = useState(props.paddingX)
-    const [paddingY, setPaddingY] = useState(props.paddingY)
-    const [width, setWidth] = useState(props.width)
-    const [height, setHeight] = useState(props.height)
+    const [bgColor, setBgColor] = useState(props.style.bgColor)
+    const [borderColor, setBorderColor] = useState(props.style.borderColor)
+    const [round, setRound] = useState(props.style.round)
+    const [margin, setMarginX] = useState(props.style.margin)
+    const [padding, setPaddingX] = useState(props.style.padding)
+    const [width, setWidth] = useState(props.style.width)
+    const [height, setHeight] = useState(props.style.height)
 
 
     function updateScale() {
@@ -41,9 +41,7 @@ export function Header({...props}: HeaderInterface) {
         setBorderColor(borderColorValue.value)
         setRound(roundValue.value)
         setMarginX(marginXValue.value)
-        setMarginY(marginYValue.value)
         setPaddingX(paddingXValue.value)
-        setPaddingY(paddingYValue.value)
         setWidth(widthValue.value)
         // setHeight(heightValue.value)
 
@@ -51,8 +49,8 @@ export function Header({...props}: HeaderInterface) {
     return (
         <>
         <header>
-            <div className={`${bgColor} border ${borderColor} ${round} ${width} ${height} ${paddingX} ${paddingY} ${marginX} ${marginY} flex flex-wrap justify-between items-center mx-auto`}> 
-                <DynamicComponentRenderer items={props.items} />
+            <div className={`${bgColor} border ${borderColor} ${round} ${width} ${height} ${padding} ${margin} flex flex-wrap justify-between items-center mx-auto`}> 
+                <DynamicComponentRenderer items={props.children} />
             </div>
             <button onClick={() => setBgColor(bgColor == 'bg-transparent' ? 'bg-sky-400' : 'bg-transparent')}>bgColor to blue</button>
         </header>
@@ -81,20 +79,12 @@ export function Header({...props}: HeaderInterface) {
                 <input id='heigh' defaultValue={height} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <div className="m-4">
-                <label htmlFor="paddingX">paddingX: </label>
-                <input id='paddingX' defaultValue={paddingX} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <label htmlFor="padding">padding: </label>
+                <input id='padding' defaultValue={padding} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <div className="m-4">
-                <label htmlFor="paddingY">paddingY: </label>
-                <input id='paddingY' defaultValue={paddingY} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
-            </div>
-            <div className="m-4">
-                <label htmlFor="marginX">marginX: </label>
-                <input id='marginX' defaultValue={marginX} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
-            </div>
-            <div className="m-4">
-                <label htmlFor="marginY">marginY: </label>
-                <input id='marginY' defaultValue={marginY} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
+                <label htmlFor="margin">margin: </label>
+                <input id='margin' defaultValue={margin} className="bg-gray-100 w-[200px] text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" />
             </div>
             <button onClick={updateScale} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">Apply</button>
         </div>

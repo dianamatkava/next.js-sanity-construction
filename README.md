@@ -44,3 +44,29 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+# Open server directory
+npx browser-sync start --server --no-open --no-notify --directory ./temp/
+
+# Configure Tailwind
+npm install -D tailwindcss
+npx tailwindcss init
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+# Run Storybook in dev mode
+npm run storybook -- --debug-webpack
+
+# Configure Tailwind with Storybook
+npm add -D @storybook/addon-styling postcss autoprefixer postcss-loader

@@ -3,77 +3,8 @@ function Test () {
     <div className="w-full bg-white flex-col justify-start items-start gap-[59px] inline-flex">
 
 
-      <div className="self-stretch h-[632px] bg-[#f5efe7] justify-between items-start inline-flex">
-        <div className="w-[819px] h-[632px] flex-col justify-start items-start gap-2.5 inline-flex">
-          <img className="self-stretch grow shrink basis-0" src="https://via.placeholder.com/819x632"/>
-        </div>
-        <div className="grow shrink basis-0 self-stretch px-10 justify-start items-center gap-[30px] flex">
-          <div className="w-px self-stretch justify-between items-center flex">
-            <div className="w-[178.77px] h-[0px] origin-top-left -rotate-90 border-2 border-[#414141]"></div>
-            <div className="w-[632px] self-stretch origin-top-left -rotate-90 border-2 border-[#e2e2e2]"></div>
-          </div>
-          <div className="w-[727px] flex-col justify-start items-start gap-[139px] inline-flex">
-            <div className="flex-col justify-start items-start gap-[25px] flex">
-              <div
-                className="w-[559px] text-[#424242] text-[64px] font-semibold font-playfair leading-[68px]">Water
-                Damage Restoration
-              </div>
-              <div className="w-[719px] h-[91.98px]"><span
-                className="text-[#505050] text-lg font-normal font-['Open Sans'] leading-loose">Lorem ipsum (</span><span
-                className="text-[#505050] text-lg font-normal font-['Open Sans'] underline leading-loose">/ˌlɔː.rəm ˈɪp.səm/</span><span
-                className="text-[#505050] text-lg font-normal font-['Open Sans'] leading-loose"> </span><span
-                className="text-[#505050] text-lg font-normal font-['Open Sans'] underline leading-loose">LOR-əm IP-səm</span><span
-                className="text-[#505050] text-lg font-normal font-['Open Sans'] leading-loose">) is a dummy or placeholder text commonly us a dummy or placeholder text commonly us  placeholder text commonly us a dummy or placeholder text commonly us           </span>
-              </div>
-              <div
-                className="w-[440.13px] h-[91.98px] text-[#505050] text-lg font-normal font-['Open Sans'] leading-loose">+
-                dummy or placeholder + dummy or placeholder + dummy or placeholder<br/></div>
-            </div>
-            <div className="justify-start items-center gap-[30px] inline-flex">
-              <div className="w-[297px] h-[63.44px] relative">
-                <div className="w-[297px] h-[63.44px] left-0 top-0 absolute bg-[#6f1d1b] rounded-[70px]"/>
-                <div
-                  className="w-[174.54px] h-[18.68px] left-[51.11px] top-[22.34px] absolute text-center text-white text-2xl font-semibold font-['Open Sans'] leading-tight tracking-tight">Contact
-                </div>
-              </div>
-              <div className="w-[38.18px] h-5 justify-start items-center gap-2.5 flex">
-                <div className="text-[#414141] text-lg font-bold font-['Open Sans'] leading-tight">Read More</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="self-stretch h-[787px] px-[60px] py-5 flex-col justify-start items-start gap-[50px] flex">
-        <div><span className="text-[#424242] text-[64px] font-normal font-playfair leading-[76px]">A Group of Companies providing </span><span
-          className="text-[#424242] text-[64px] font-extrabold font-playfair leading-[76px]">Repair Services</span>
-        </div>
-        <div className="self-stretch h-[621px] justify-start items-start gap-[94px] inline-flex">
-          <div className="grow shrink basis-0 flex-col justify-start items-start gap-[30px] inline-flex">
-            <div
-              className="self-stretch h-[47.02px] text-[#424242] text-2xl font-bold font-['Open Sans'] leading-[76px]">About
-              Us
-            </div>
-            <div
-              className="self-stretch h-[98.99px] text-[#414040] text-xl font-normal font-['Open Sans'] leading-loose">As
-              a group of companies, we offer a wide range of water restoration, leak detection, mold remediation and
-              reconstruction services, including residential and commercial reconstruction, remodeling, and renovations.
-            </div>
-            <img className="self-stretch h-[410px]" src="https://via.placeholder.com/757x410"/>
-          </div>
-          <div className="grow shrink basis-0 flex-col justify-start items-start gap-[30px] inline-flex">
-            <div className="w-[690px] h-[47px] text-[#424242] text-2xl font-bold font-['Open Sans'] leading-[76px]">Our
-              History
-            </div>
-            <div className="w-[706px]"><span
-              className="text-[#414040] text-xl font-normal font-['Open Sans'] leading-loose">American Essential Construction Group (</span><span
-              className="text-[#414040] text-xl font-bold font-['Open Sans'] leading-loose">AMESC Group</span><span
-              className="text-[#414040] text-xl font-normal font-['Open Sans'] leading-loose">) was founded as a group of water restoration and reconstruction companies in 2023 in California. <br/><br/>Since then, we have grown into one of the most trusted names in leak detection, water damage and reconstruction industries in Southern California.           We have completed many projects and have a reputation for excellence.<br/><br/>American Essential Construction Group (</span><span
-              className="text-[#414040] text-xl font-bold font-['Open Sans'] leading-loose">AMESC Group</span><span
-              className="text-[#414040] text-xl font-normal font-['Open Sans'] leading-loose">) was founded as a group of water restoration and reconstruction companies in 2023 in California. <br/><br/>Since then, we have grown into one of the most trusted names in leak detection, water damage and reconstruction industries in Southern California. </span>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
       <div className="self-stretch h-[483px] px-[60px] flex-col justify-start items-end gap-[33px] flex">
         <div className="self-stretch h-[140px] flex-col justify-start items-start gap-[9px] flex">
           <div className="self-stretch text-[#424242] text-2xl font-bold font-['Open Sans'] leading-[76px]">Blog and

@@ -2,6 +2,7 @@ import AppHeader from "@/components/Header";
 import AppFooter from "@/components/Footer";
 import ServiceList from "@/components/ServiceList";
 import ServicePreview from "@/components/ServicePreview";
+import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <div className="w-full flex flex-col justify-between gap-6 p-[60px]">
           <ServiceList/>
           <ServicePreview/>
+          <AboutUs/>
         </div>
       </main>
       <footer className="w-full gap-6 flex-wrap items-center justify-center">

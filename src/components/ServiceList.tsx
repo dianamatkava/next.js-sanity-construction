@@ -4,7 +4,7 @@ function ServiceList () {
   return (
     <div className="self-stretch flex-col justify-start items-start flex gap-5">
       <div className="self-stretch justify-between items-center inline-flex">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 w-2/3">
           <div
             className="text-[#414040] text-sm font-bold">Services
             we provide:

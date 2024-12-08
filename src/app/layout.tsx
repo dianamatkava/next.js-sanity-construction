@@ -11,7 +11,7 @@ const playfair = Playfair_Display({
 
 const openSans = Open_Sans({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '600', '700', '800'],
   variable: '--font-open-sans',
 });
 

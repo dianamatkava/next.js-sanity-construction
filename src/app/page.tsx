@@ -1,17 +1,21 @@
-import Image from "next/image";
-import Test from "../components/figma.jsx"
 import AppHeader from "@/components/Header";
 import AppFooter from "@/components/Footer";
+import ServiceList from "@/components/ServiceList";
+import ServicePreview from "@/components/ServicePreview";
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="w-full">
+    <div className="w-full flex flex-col justify-between gap-6">
+      <main className="">
         <header>
           <AppHeader/>
         </header>
+        <div className="w-full flex flex-col justify-between gap-6 p-[60px]">
+          <ServiceList/>
+          <ServicePreview/>
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <footer className="w-full gap-6 flex-wrap items-center justify-center">
         <AppFooter/>
       </footer>
     </div>

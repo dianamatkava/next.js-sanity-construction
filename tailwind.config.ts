@@ -17,10 +17,11 @@ export default {
         sans: ['var(--font-open-sans)', 'sans-serif'],
       },
       fontSize: {
-        'sm': '1.125rem', // 18px
-        'md': '1.25rem',   // 24px
-        'lg': '4rem',     // 64px
-        'xlg': '5rem',     // 80px
+        'xsm': '12px',
+        'sm': '1rem', // 18px
+        'md': '1.125rem',   // 24px
+        'lg': '3rem',     // 64px
+        'xlg': '4rem',     // 80px
       },
     },
   },

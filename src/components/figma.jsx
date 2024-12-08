@@ -5,72 +5,12 @@ function Test () {
 
 
 
-      <div className="self-stretch h-[483px] px-[60px] flex-col justify-start items-end gap-[33px] flex">
-        <div className="self-stretch h-[140px] flex-col justify-start items-start gap-[9px] flex">
-          <div className="self-stretch text-[#424242] text-2xl font-bold font-['Open Sans'] leading-[76px]">Blog and
-            News
-          </div>
-          <div
-            className="self-stretch grow shrink basis-0 text-[#424242] text-[64px] font-medium font-playfair leading-10">Latest
-            News and Articles
-          </div>
-        </div>
-        <div className="self-stretch justify-start items-center gap-[55px] inline-flex">
-          <div className="w-[672px] h-[310px] border border-[#e2e2e2] justify-start items-center gap-5 flex">
-            <div className="w-[353px] self-stretch p-5 flex-col justify-between items-start inline-flex">
-              <div className="flex-col justify-start items-start gap-10 flex">
-                <div className="w-[313px] h-10 justify-start items-start gap-5 inline-flex">
-                  <div className="px-5 bg-[#6f1d1b] justify-center items-center gap-2.5 flex">
-                    <div className="text-[#f5efe7] text-base font-bold font-['Open Sans'] leading-10">Articles</div>
-                  </div>
-                  <div className="justify-start items-center gap-[5px] flex">
-                    <div className="w-[18px] h-[18px] relative"/>
-                    <div className="text-[#424242] text-lg font-semibold font-['Open Sans'] leading-10">December 04,
-                      2024
-                    </div>
-                  </div>
-                </div>
-                <div className="w-[313px] text-[#424242] text-[28px] font-bold font-['Open Sans'] leading-10">A Group of
-                  Companies providing Repair Services
-                </div>
-              </div>
-              <div className="self-stretch grow shrink basis-0 justify-start items-center gap-2.5 inline-flex">
-                <div className="text-[#414141] text-lg font-bold font-['Open Sans'] leading-tight">Read More</div>
-              </div>
-            </div>
-            <img className="grow shrink basis-0 self-stretch" src="https://via.placeholder.com/299x310"/>
-          </div>
-          <div className="w-[672px] h-[310px] border border-[#e2e2e2] justify-start items-center gap-5 flex">
-            <div className="w-[353px] self-stretch p-5 flex-col justify-between items-start inline-flex">
-              <div className="flex-col justify-start items-start gap-10 flex">
-                <div className="w-[313px] h-10 justify-start items-start gap-5 inline-flex">
-                  <div className="px-5 bg-[#6f1d1b] justify-center items-center gap-2.5 flex">
-                    <div className="text-[#f5efe7] text-base font-bold font-['Open Sans'] leading-10">Articles</div>
-                  </div>
-                  <div className="justify-start items-center gap-[5px] flex">
-                    <div className="w-[18px] h-[18px] relative"/>
-                    <div className="text-[#424242] text-lg font-semibold font-['Open Sans'] leading-10">December 04,
-                      2024
-                    </div>
-                  </div>
-                </div>
-                <div className="w-[313px] text-[#424242] text-[28px] font-bold font-['Open Sans'] leading-10">A Group of
-                  Companies providing Repair Services
-                </div>
-              </div>
-              <div className="self-stretch grow shrink basis-0 justify-start items-center gap-2.5 inline-flex">
-                <div className="text-[#414141] text-lg font-bold font-['Open Sans'] leading-tight">Read More</div>
-              </div>
-            </div>
-            <img className="grow shrink basis-0 self-stretch" src="https://via.placeholder.com/299x310"/>
-          </div>
-        </div>
-      </div>
+
       <div className="self-stretch h-[1002px] py-5 flex-col justify-start items-center gap-[30px] flex">
         <div className="self-stretch h-[125px] px-[60px] flex-col justify-start items-start gap-[9px] flex">
           <div className="self-stretch text-[#424242] text-2xl font-bold font-['Open Sans'] leading-[76px]">Contact Us
           </div>
-          <div className="self-stretch text-[#424242] text-[64px] font-medium font-playfair leading-10">Lets
+          <div className="self-stretch text-[#424242] text-lg font-medium font-playfair leading-10">Lets
             get Started
           </div>
         </div>

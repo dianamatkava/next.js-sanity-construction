@@ -3,6 +3,7 @@ import AppFooter from "@/components/Footer";
 import ServiceList from "@/components/ServiceList";
 import ServicePreview from "@/components/ServicePreview";
 import AboutUs from "@/components/AboutUs";
+import News from "@/components/News";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <ServiceList/>
           <ServicePreview/>
           <AboutUs/>
+          <News/>
         </div>
       </main>
       <footer className="w-full gap-6 flex-wrap items-center justify-center">

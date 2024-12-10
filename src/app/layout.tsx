@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Playfair_Display, Open_Sans } from 'next/font/google';
+import AppHeader from "@/components/Header";
+import AppFooter from "@/components/Footer";
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -31,8 +33,21 @@ export default function RootLayout({
     <body
       className={`${playfair.variable} ${openSans.variable} antialiased`}
     >
-    {children}
+    <div className="w-full flex flex-col justify-between gap-6">
+      <main className="">
+        <header>
+          <AppHeader/>
+        </header>
+        <div className="w-full flex flex-col justify-between gap-12 p-[60px]">
+          {children}
+        </div>
+
+      </main>
+      <footer className="w-full gap-6 flex-wrap items-center justify-center">
+        <AppFooter/>
+      </footer>
+    </div>
     </body>
     </html>
-  );
+);
 }

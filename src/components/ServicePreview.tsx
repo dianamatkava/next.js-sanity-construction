@@ -1,4 +1,5 @@
-import {MdOutlineArrowOutward} from "react-icons/md";
+import ReadMoreLink from "@/components/ReadMoreLink";
+import ContactButton from "@/components/ContactButton";
 
 function ServicePreview () {
   return (
@@ -19,19 +20,8 @@ function ServicePreview () {
             <div className="leading-2 w-4/5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Morbi venenatis ante eu tempor fringilla. Integer id venenatis justo. Donec egestas scelerisque lectus quis consequat. Nam eleifend est non cursus semper, rutrum ornare sapien volutpat ut.</div>
           </div>
           <div className="justify-start items-center gap-4 inline-flex">
-            <div className="flex-col justify-center items-center gap-2.5 inline-flex">
-              <div
-                className="self-stretch px-5 py-4 bg-[#6f1d1b] rounded-[50px] justify-center items-center gap-2.5 inline-flex">
-                <div
-                  className="min-w-fit text-center text-[#f5efe7] text-sm font-semibold leading-tight tracking-tight text-nowrap">Schedule
-                  Appointment
-                </div>
-              </div>
-            </div>
-            <div className="justify-start items-center gap-0.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12}/></span>
-            </div>
+            <ContactButton/>
+            <ReadMoreLink href='/services'/>
           </div>
         </div>
       </div>

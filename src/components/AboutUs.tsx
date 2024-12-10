@@ -1,8 +1,10 @@
 import {MdOutlineArrowOutward} from "react-icons/md";
+import ReadMoreLink from "@/components/ReadMoreLink";
 
 function AboutUs () {
+
   return (
-    <div className="self-stretch px-4 py-5 flex-col justify-start items-start gap-4 flex">
+    <div className="self-stretch px-4 py-5 flex-col justify-start items-start gap-4 flex" id="About">
       <div className="leading-[50px] text-[#424242] text-lg font-medium font-playfair"><span className="font-normal">A Group of Companies providing </span><span
         className="font-extrabold">Repair Services</span>
       </div>
@@ -31,10 +33,7 @@ function AboutUs () {
               className="text-[#414040] text-sm font-bold leading-1">AMESC Group</span><span
               className="text-[#414040] text-sm font-normal leading-1">) was founded as a group of water restoration and reconstruction companies in 2023 in California. <br/><br/>Since then, we have grown into one of the most trusted names in leak detection, water damage and reconstruction industries in Southern California. </span>
             </div>
-            <div className="justify-start items-center gap-0.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12}/></span>
-            </div>
+            <ReadMoreLink href='/aboutus'/>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
-import { MdOutlineArrowOutward } from "react-icons/md";
+import ReadMoreLink from  '../components/ReadMoreLink'
+import ContactButton from "@/components/ContactButton";
+
 
 function ServiceList () {
   return (
@@ -22,19 +24,11 @@ function ServiceList () {
             remediation measures.
           </div>
         </div>
-        <div className="flex-col justify-center items-center gap-2.5 inline-flex">
-          <div
-            className="self-stretch px-5 py-4 bg-[#6f1d1b] rounded-[50px] justify-center items-center gap-2.5 inline-flex">
-            <div
-              className="min-w-fit text-center text-[#f5efe7] text-sm font-semibold leading-tight tracking-tight text-nowrap">Schedule
-              Appointment
-            </div>
-          </div>
-        </div>
+      <ContactButton/>
       </div>
       <div className="self-stretch justify-between items-start grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div
-          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex">
+        <siv href='/services'
+          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex hover:shadow-lg">
           <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
           <div className="self-stretch flex-col justify-start items-start gap-2 flex">
             <div className="self-stretch flex-col justify-start items-start gap-1 flex">
@@ -46,14 +40,75 @@ function ServiceList () {
                 Ipsum is a dummy or placeholder text commonly used in graphic design
               </div>
             </div>
-            <div className="justify-start items-center gap-0.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12} /></span>
+            <ReadMoreLink href='/services'/>
+          </div>
+        </siv>
+        <siv href='/services'
+          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex hover:shadow-lg">
+          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
+          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
+            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
+              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
+                Construction
+              </div>
+              <div
+                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
+                Ipsum is a dummy or placeholder text commonly used in graphic design
+              </div>
             </div>
+            <ReadMoreLink href='/services'/>
+          </div>
+        </siv>
+        <siv href='/services'
+          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex hover:shadow-lg">
+          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
+          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
+            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
+              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
+                Construction
+              </div>
+              <div
+                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
+                Ipsum is a dummy or placeholder text commonly used in graphic design
+              </div>
+            </div>
+            <ReadMoreLink href='/services'/>
+          </div>
+        </siv>
+        <div href='/services'
+          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex hover:shadow-lg">
+          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
+          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
+            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
+              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
+                Construction
+              </div>
+              <div
+                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
+                Ipsum is a dummy or placeholder text commonly used in graphic design
+              </div>
+            </div>
+            <ReadMoreLink href='/services'/>
+          </div>
+        </div>
+        <div href='/services'
+          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex hover:shadow-lg">
+          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
+          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
+            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
+              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
+                Construction
+              </div>
+              <div
+                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
+                Ipsum is a dummy or placeholder text commonly used in graphic design
+              </div>
+            </div>
+            <ReadMoreLink href='/services'/>
           </div>
         </div>
         <div
-          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex">
+          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex hover:shadow-lg">
           <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
           <div className="self-stretch flex-col justify-start items-start gap-2 flex">
             <div className="self-stretch flex-col justify-start items-start gap-1 flex">
@@ -65,86 +120,7 @@ function ServiceList () {
                 Ipsum is a dummy or placeholder text commonly used in graphic design
               </div>
             </div>
-            <div className="justify-start items-center gap-2.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12}/></span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex">
-          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
-          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
-              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
-                Construction
-              </div>
-              <div
-                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
-                Ipsum is a dummy or placeholder text commonly used in graphic design
-              </div>
-            </div>
-            <div className="justify-start items-center gap-2.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12}/></span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex">
-          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
-          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
-              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
-                Construction
-              </div>
-              <div
-                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
-                Ipsum is a dummy or placeholder text commonly used in graphic design
-              </div>
-            </div>
-            <div className="justify-start items-center gap-2.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12}/></span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex">
-          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
-          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
-              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
-                Construction
-              </div>
-              <div
-                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
-                Ipsum is a dummy or placeholder text commonly used in graphic design
-              </div>
-            </div>
-            <div className="justify-start items-center gap-2.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12}/></span>
-            </div>
-          </div>
-        </div>
-        <div
-          className="border-r border-b border-[#e2e2e2] flex-col justify-center items-start pb-3 gap-2 inline-flex">
-          <img className="self-stretch" src="https://via.placeholder.com/454x289"/>
-          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-            <div className="self-stretch flex-col justify-start items-start gap-1 flex">
-              <div className="self-stretch text-[#414040] text-md font-bold leading-loose">General
-                Construction
-              </div>
-              <div
-                className="self-stretch text-[#606060] leading-1 text-sm">Lorem
-                Ipsum is a dummy or placeholder text commonly used in graphic design
-              </div>
-            </div>
-            <div className="justify-start items-center gap-2.5 inline-flex">
-              <div className="text-[#414141] text-xsm font-bold leading-tight">Read More</div>
-              <span className="font-bold"><MdOutlineArrowOutward width={12}/></span>
-            </div>
+            <ReadMoreLink href='/services'/>
           </div>
         </div>
       </div>

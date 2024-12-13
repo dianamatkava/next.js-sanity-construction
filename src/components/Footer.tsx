@@ -3,6 +3,8 @@ import {FaFacebookF} from "react-icons/fa";
 import {MdOutlineAlternateEmail} from "react-icons/md";
 import { LuSend } from "react-icons/lu";
 import Link from "next/link";
+import InputField from "@/components/InputField";
+import CheckBoxField from "@/components/CheckBoxField";
 
 
 function AppFooter () {
@@ -12,7 +14,7 @@ function AppFooter () {
       <div
         className="self-stretch grow shrink basis-0 pt-2.5 pb-10 border-b border-black justify-between items-start inline-flex flex-wrap">
         <div className="justify-start items-center gap-12 flex flex-wrap">
-          <div className="flex-col w-1/3 justify-start items-start gap-8 inline-flex">
+          <div className="flex-col w-[300px] justify-start items-start gap-8 inline-flex">
             <div className="flex-col justify-start items-statext-[#828181]  font-semibold rt gap-4 inline-flex">
               <div
                 className="justify-start items-center gap-3 inline-flex">
@@ -71,17 +73,16 @@ function AppFooter () {
         </div>
         <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-10 inline-flex">
           <div className="text-white text-md font-bold">Lets get Started</div>
-          <div className="self-stretch h-[86.50px] flex-col justify-start items-start gap-[30px] flex">
+          <div className="self-stretch h-[86.50px] flex-col justify-start items-start gap-[30px] flex  w-[250px]">
             <div className="self-stretch justify-between items-center inline-flex">
-              <div className="text-[#828181] text-xsm font-normal">Your Email</div>
-              <div className="justify-start items-center gap-2 flex">
+              <InputField label={'Email'} placeholder={"example@example.com"}/>
+              <div className="z-0 justify-start items-center gap-2 flex ml-[-55px] cursor-pointer">
                 <span className="text-[#e2e2e2]"><LuSend width={18}/></span>
-                <div className="text-[#e2e2e2] font-semibold">Send</div>
+                <span className="text-[#e2e2e2] font-semibold hover:text-white hover:font-bold">Send</span>
               </div>
             </div>
-            <div className="self-stretch h-[0px] border border-[#828181]"></div>
             <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
-              <div className="justify-start items-start gap-[5px] flex"/>
+              <CheckBoxField />
               <div className="text-[#828181] text-xsm font-normal">I agree to the Privacy Policy
               </div>
             </div>

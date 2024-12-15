@@ -1,5 +1,6 @@
 import { FiCalendar } from "react-icons/fi";
 import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
+import ScrollableWrapper from "@/components/wrappers/ScrollableWrapper";
 
 
 function News () {
@@ -13,9 +14,14 @@ function News () {
           className="self-stretch grow shrink basis-0 text-[#424242] text-lg font-medium font-playfair">Latest
           News and Articles
         </div>
+        <div className="rv-1-slider-nav" id="rv-14-blogs__slider-nav">
+          <button className="prev"><i className="fa-regular fa-arrow-left"></i></button>
+          <button className="next"><i className="fa-regular fa-arrow-right"></i></button>
+        </div>
       </div>
       <div className="self-stretch justify-start items-center gap-8 inline-flex">
-        <div className="border border-[#e2e2e2] justify-start items-center flex hover:shadow-lg">
+        <ScrollableWrapper>
+          <div className="max-w-96 border border-[#e2e2e2] justify-start items-center flex hover:shadow-lg">
           <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2 p-4">
             <div className="flex-col justify-start items-start gap-4 flex">
               <div className="justify-start items-center gap-1 inline-flex">
@@ -39,7 +45,7 @@ function News () {
             <img className="grow shrink basis-0 self-stretch" src="https://via.placeholder.com/299x310"/>
           </div>
         </div>
-        <div className="border border-[#e2e2e2] justify-start items-center flex hover:shadow-lg">
+        <div className="max-w-96 border border-[#e2e2e2] justify-start items-center flex hover:shadow-lg">
           <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2 p-4">
             <div className="flex-col justify-start items-start gap-4 flex">
               <div className="justify-start items-center gap-1 inline-flex">
@@ -63,6 +69,7 @@ function News () {
             <img className="grow shrink basis-0 self-stretch" src="https://via.placeholder.com/299x310"/>
           </div>
         </div>
+          </ScrollableWrapper>
       </div>
     </div>
   )

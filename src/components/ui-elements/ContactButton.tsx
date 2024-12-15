@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 
-function ContactButton ({name}) {
+function ContactButton ({name, className=""}) {
   return (
-    <div className="flex-col justify-center items-center gap-2 inline-flex text-nowrap flex-nowrap">
+    <div className={`min-w-[250px] flex-col justify-center items-center gap-2 inline-flex text-nowrap flex-nowrap ${className}`}>
       <Link href='/contact#Contact'
             className="self-stretch px-4 py-3 bg-[#6f1d1b] rounded-[50px] justify-center items-center gap-1 inline-flex hover:bg-[#5C1312] hover:text-white">
         <div

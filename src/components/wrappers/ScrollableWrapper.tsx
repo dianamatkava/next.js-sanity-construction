@@ -20,7 +20,7 @@ const ScrollableWrapper = ({children}) => {
       <div
         ref={containerRef}
         onWheel={handleWheel}
-        className="overflow-x-auto w-full h-full scroll-container relative overflow-x-auto overflow-y-auto"
+        className="overflow-x-auto w-full h-full scroll-container relative overflow-y-auto"
       >
         <div className="flex space-x-4 w-max">
           {children}

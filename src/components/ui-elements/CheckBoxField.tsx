@@ -1,10 +1,11 @@
 import React from 'react';
 
-const CheckBoxField = () => {
+const CheckBoxField = ({label, width}) => {
   return (
-    <label>
-      <input type="checkbox" className="input"/>
+    <label className={`inline-flex gap-3 items-center justify-start`}>
+      <input type="checkbox" className={`input w-${width}`}/>
       <span className="custom-checkbox"></span>
+      {label}
     </label>
   );
 }

@@ -45,6 +45,11 @@ html {
   transition: border-color 0.2s;
 }
 
+.form__light_field {
+  border-bottom: 1.5px solid #3b3a3a;
+  color: #424242;
+}
+
 .form__field::placeholder {
   color: transparent;
 }
@@ -54,6 +59,7 @@ html {
   cursor: text;
   top: 20px;
 }
+
 
 .form__label {
   position: absolute;
@@ -65,11 +71,21 @@ html {
   pointer-events: none;
 }
 
+.form__light_label {
+  color: #262525;
+}
+
 .form__field:focus {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
   border-image: linear-gradient(to right, #e8dddd, #f5efe7);
+  border-image-slice: 1;
+}
+
+.form__light_field:focus {
+  border-width: 2px;
+  border-image: linear-gradient(to right, #1e1c1c, #000000);
   border-image-slice: 1;
 }
 
@@ -79,6 +95,10 @@ html {
   display: block;
   transition: 0.2s;
   color: #e8dddd;
+}
+
+.form__light_field:focus ~ .form__label {
+  color: #757474;
 }
 
 /* reset input */

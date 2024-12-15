@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function ServicePreview({ name, description, img }) {
   return (
-    <div className="self-stretch bg-[#f5efe7] justify-between items-start block mx-[-60px] sm:flex">
+    <div className="self-stretch bg-[#f5efe7] justify-between items-start block mx-[-30px] ms:mx-[-60px] sm:flex">
       <div
         className="grow shrink basis-0 self-stretch px-2 justify-start items-center flex min-h-64 w-full relative bg-cover bg-center sm:w-1/2"
         style={{

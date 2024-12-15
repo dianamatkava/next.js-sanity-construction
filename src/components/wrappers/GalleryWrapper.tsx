@@ -25,7 +25,7 @@ const GalleryWrapper = ({ content, className = "", children }) => {
     <div className={`relative ${className}`}>
       <div className="w-full">{React.cloneElement(children, { ...activeContent })}</div>
 
-      <div className="z-1 absolute top-56 left-1/2 transform -translate-x-1/2 flex gap-4 sm:bottom-6 sm:left-[22%] sm:gap-2">
+      <div className="z-1 absolute top-56 left-1/2 transform -translate-x-1/2 flex gap-4 sm:bottom-6 sm:left-[22%] sm:gap-2 sm:bottom-4">
         {content.map((_, index) => (
           <button
             key={index}

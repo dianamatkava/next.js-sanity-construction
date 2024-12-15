@@ -3,22 +3,22 @@ import {FiInstagram, FiPhone} from "react-icons/fi";
 import {HiOutlineOfficeBuilding} from "react-icons/hi";
 import {FaFacebookF} from "react-icons/fa";
 
-function ContactInfo () {
+function ContactInfo ({className}) {
   return (
-    <div className="flex flex-col gap-6">
+    <div className={`flex flex-col gap-6 ${className}`}>
       <div
         className="justify-start items-start gap-4 inline-flex">
         <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-2">
           <MdOutlineAlternateEmail width={24}/></div>
         <div className="flex-col justify-start items-start inline-flex gap-2">
-          <div className="self-stretch text-[#424242] text-sm font-bold leading-1">Chat
+          <div className="self-stretch text-[#424242] text-[14px] font-bold leading-1">Chat
             to us
           </div>
-          <div className="self-stretch text-[#595959] text-sm font-normal leading-1">Our
+          <div className="self-stretch text-[#595959] text-[14px] font-normal leading-1">Our
             friendly team is here to help.
           </div>
           <div
-            className="self-stretch text-black text-sm font-semibold leading-1">info@amesc.us
+            className="self-stretch text-black text-[14px] font-semibold leading-1">info@amesc.us
           </div>
         </div>
       </div>
@@ -27,12 +27,12 @@ function ContactInfo () {
         <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-2">
           <FiPhone width={24}/></div>
         <div className="flex-col justify-start items-start inline-flex gap-2">
-          <div className="self-stretch text-[#424242] text-sm font-bold leading-1">Visit us
+          <div className="self-stretch text-[#424242] text-[14px] font-bold leading-1">Visit us
           </div>
-          <div className="self-stretch text-[#595959] text-sm font-normal leading-1">Come to say hello at our office.
+          <div className="self-stretch text-[#595959] text-[14px] font-normal leading-1">Come to say hello at our office.
           </div>
           <div
-            className="self-stretch text-black text-sm font-semibold leading-1">282 West Dryden Street, Glendale, <br/> California 91202, United States
+            className="self-stretch text-black text-[14px] font-semibold leading-1">282 West Dryden Street, Glendale, <br/> California 91202, United States
           </div>
         </div>
       </div>
@@ -41,12 +41,12 @@ function ContactInfo () {
         <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-2">
           <HiOutlineOfficeBuilding width={24}/></div>
         <div className="flex-col justify-start items-start inline-flex gap-2">
-          <div className="self-stretch text-[#424242] text-sm font-bold leading-1">Call us
+          <div className="self-stretch text-[#424242] text-[14px] font-bold leading-1">Call us
           </div>
-          <div className="self-stretch text-[#595959] text-sm font-normal leading-1">Mon-Fri from 8am to 5pm
+          <div className="self-stretch text-[#595959] text-[14px] font-normal leading-1">Mon-Fri from 8am to 5pm
           </div>
           <div
-            className="self-stretch text-black text-sm font-semibold leading-1">747 295-5409
+            className="self-stretch text-black text-[14px] font-semibold leading-1">747 295-5409
           </div>
         </div>
       </div>

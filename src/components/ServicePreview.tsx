@@ -1,32 +1,35 @@
-import ReadMoreLink from "@/components/ReadMoreLink";
-import ContactButton from "@/components/ContactButton";
+"use client";
+import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
+import ContactButton from "@/components/ui-elements/ContactButton";
+import Image from "next/image";
 
-function ServicePreview () {
+function ServicePreview({ name, description, img }) {
   return (
-    <div className="self-stretch bg-[#f5efe7] justify-between items-start flex mx-[-60px]">
-      <div className="flex-col justify-start items-start gap-2.5 inline-flex w-1/2">
-        <img className="self-stretch grow shrink basis-0" src="https://via.placeholder.com/819x632"/>
+    <div className="self-stretch bg-[#f5efe7] justify-between items-start block mx-[-60px] sm:flex">
+      <div
+        className="grow shrink basis-0 self-stretch px-2 justify-start items-center flex min-h-64 w-full relative bg-cover bg-center sm:w-1/2"
+        style={{
+          backgroundImage: `url("${img}")`
+        }}
+      >
       </div>
-      <div className="grow shrink basis-0 self-stretch px-2 justify-start items-center flex w-1/2">
-        <div className="w-px self-stretch justify-between items-center flex">
-          <div className="w-[178.77px] h-[1px] origin-top-left rotate-90 border-2 border-[#414141]"></div>
-        </div>
-        <div className="flex flex-col justify-between items-start gap-2 my-auto h-full px-4 pl-8 py-8">
-          <div className="flex-col justify-start items-start gap-8 flex">
-            <div
-              className="text-[#424242] text-lg font-semibold font-playfair leading-[45px]">Water
-              Damage Restoration
+      <div className="grow shrink basis-0 self-stretch px-2 justify-start items-start flex w-full sm:items-center sm:w-1/2">
+        <div className="m-12 flex flex-col justify -between items-center gap-4 my-auto h-full py-8 px-4 sm:items-start sm:pl-6 sm:m-0">
+          <div className="h-72 flex-col justify-start items-start gap-4 flex">
+            <div className="text-[#424242] text-lg font-semibold font-playfair leading-[45px]">
+              {name}
             </div>
-            <div className="leading-2 w-4/5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Morbi venenatis ante eu tempor fringilla. Integer id venenatis justo. Donec egestas scelerisque lectus quis consequat. Nam eleifend est non cursus semper, rutrum ornare sapien volutpat ut.</div>
+            <div className="leading-2 w-4/5">{description}</div>
+            <ReadMoreLink href="/services" name={"Read More"} className='flex sm:hidden'/>
           </div>
           <div className="justify-start items-center gap-4 inline-flex">
-            <ContactButton/>
-            <ReadMoreLink href='/services'/>
+            <ContactButton name={"Schedule Appointment"} />
+            <ReadMoreLink href="/services" name={"Read More"} className='hidden sm:flex'/>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default ServicePreview;

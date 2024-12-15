@@ -1,5 +1,4 @@
-import {MdOutlineArrowOutward} from "react-icons/md";
-import ReadMoreLink from "@/components/ReadMoreLink";
+import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
 
 function AboutUs () {
 
@@ -33,7 +32,7 @@ function AboutUs () {
               className="text-[#414040] text-sm font-bold leading-1">AMESC Group</span><span
               className="text-[#414040] text-sm font-normal leading-1">) was founded as a group of water restoration and reconstruction companies in 2023 in California. <br/><br/>Since then, we have grown into one of the most trusted names in leak detection, water damage and reconstruction industries in Southern California. </span>
             </div>
-            <ReadMoreLink href='/aboutus'/>
+            <ReadMoreLink href='/aboutus' name={"Read More"}/>
           </div>
         </div>
       </div>

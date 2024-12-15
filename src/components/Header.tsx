@@ -12,9 +12,9 @@ function AppHeader () {
 
   return (
     <div
-      className="self-stretch px-[60px] py-2 bg-gradient-to-b from-black to-[#290404] flex-col justify-between items-center flex gap-5">
+      className="self-stretch py-2 pb-8 bg-gradient-to-b from-black to-[#290404] flex-col justify-between items-center flex gap-5 px-[30px] sm:px-[60px]">
       <div
-        className="self-stretch py-1 pb-2 border-b border-[#2E2E30] justify-between items-center inline-flex mx-[-40px]">
+        className="self-stretch py-1 pb-2 border-b border-[#2E2E30] justify-between items-center inline-flex mx-[-20px] sm:mx-[-40px]">
         <div className="flex">
           <Link
             key="Home"
@@ -66,7 +66,7 @@ function AppHeader () {
       <div className="w-full self-stretch flex-col justify-between items-center flex">
         <div className="m-auto max-w-[800px] self-stretch flex-col justify-center items-center gap-[38px] flex">
           <div
-            className="self-stretch text-center text-[#f5efe7] text-xlg font-semibold font-playfair leading-[70px]">Comprehensive
+            className="self-stretch text-center text-[#f5efe7] text-lg font-semibold font-playfair leading-[45px] sm:text-xlg sm:leading-[70px]">Comprehensive
             Solution for Repair Services
           </div>
           <div
@@ -82,7 +82,7 @@ function AppHeader () {
             </div>
           </Link>
         </div>
-        <div className="self-stretch justify-between items-start inline-flex">
+        <div className="self-stretch justify-between items-start hidden sm:inline-flex">
           {/*<div className="w-[804px] text-xsm"><span*/}
           {/*  className="text-[#f5efe7] font-bold  leading-[76px]">Home</span><span*/}
           {/*  className="text-[#f5efe7] font-medium leading-[76px]"> </span><span*/}

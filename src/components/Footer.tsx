@@ -3,8 +3,8 @@ import {FaFacebookF} from "react-icons/fa";
 import {MdOutlineAlternateEmail} from "react-icons/md";
 import { LuSend } from "react-icons/lu";
 import Link from "next/link";
-import InputField from "@/components/InputField";
-import CheckBoxField from "@/components/CheckBoxField";
+import InputField from "@/components/ui-elements/InputField";
+import CheckBoxField from "@/components/ui-elements/CheckBoxField";
 
 
 function AppFooter () {

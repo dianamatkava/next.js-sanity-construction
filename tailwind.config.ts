@@ -23,7 +23,7 @@ export default {
         'xsm': '12px',
         'sm': '1rem', // 18px
         'md': '1.125rem',   // 24px
-        'lg': '3rem',     // 64px
+        'lg': '2.25rem',     // 64px
         'xlg': '4rem',     // 80px
       },
     },

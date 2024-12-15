@@ -1,6 +1,5 @@
-import {MdOutlineArrowOutward} from "react-icons/md";
 import { FiCalendar } from "react-icons/fi";
-import ReadMoreLink from "@/components/ReadMoreLink";
+import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
 
 
 function News () {
@@ -34,7 +33,7 @@ function News () {
                 Companies providing Repair Services
               </div>
             </div>
-            <ReadMoreLink href='/news'/>
+            <ReadMoreLink href='/news' name={"Read More"}/>
           </div>
           <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2">
             <img className="grow shrink basis-0 self-stretch" src="https://via.placeholder.com/299x310"/>
@@ -58,7 +57,7 @@ function News () {
                 Companies providing Repair Services
               </div>
             </div>
-            <ReadMoreLink href='/news'/>
+            <ReadMoreLink href='/news' name={"Read More"}/>
           </div>
           <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2">
             <img className="grow shrink basis-0 self-stretch" src="https://via.placeholder.com/299x310"/>

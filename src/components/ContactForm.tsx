@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
 import {Form, Input, Select, SelectItem, Checkbox, Button} from "@nextui-org/react";
-import InputField from "@/components/InputField";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = React.useState(null);

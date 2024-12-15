@@ -38,7 +38,7 @@ export default function RootLayout({
         <header>
           <AppHeader/>
         </header>
-        <div className="w-full flex flex-col justify-between gap-12 p-[60px]">
+        <div className="w-full flex flex-col justify-between gap-12 p-[30px] sm:p-[60px]">
           {children}
         </div>
 

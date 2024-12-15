@@ -20,11 +20,11 @@ function ServicePreview({ name, description, img }) {
               {name}
             </div>
             <div className="leading-2 w-4/5">{description}</div>
-            <ReadMoreLink href="/services" name={"Read More"} className='flex sm:hidden'/>
+            <ReadMoreLink href="/services" name={"Read More"} className='flex md:hidden'/>
           </div>
           <div className="justify-start items-center gap-4 inline-flex">
             <ContactButton name={"Schedule Appointment"} />
-            <ReadMoreLink href="/services" name={"Read More"} className='hidden sm:flex'/>
+            <ReadMoreLink href="/services" name={"Read More"} className='hidden md:flex'/>
           </div>
         </div>
       </div>

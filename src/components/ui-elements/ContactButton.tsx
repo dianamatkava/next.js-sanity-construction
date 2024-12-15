@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {MdOutlineArrowOutward} from "react-icons/md";
 
 
 function ContactButton ({name, className=""}) {
@@ -9,6 +10,7 @@ function ContactButton ({name, className=""}) {
         <div
           className="min-w-fit text-center text-[#f5efe7] text-sm font-semibold leading-1 tracking-tight">{name}
         </div>
+        <span className="font-bold text-white"><MdOutlineArrowOutward width={28}/></span>
       </Link>
     </div>
   );

@@ -8,7 +8,7 @@ function AboutUs () {
         className="font-extrabold">Repair Services</span>
       </div>
       <div className="block gap-8 justify-start items-start sm:flex">
-        <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full sm:w-1/2">
+        <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full md:w-1/2">
           <div
             className="self-stretch text-[#424242] text-sm font-bold leading-1">About
             Us
@@ -21,7 +21,7 @@ function AboutUs () {
           <img className="self-stretch h-full sm:min-h-72" src="https://via.placeholder.com/757x410"/>
         </div>
         <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex h-full w-full sm:w-1/2">
-          <div className="text-[#424242] text-sm font-bold leading-[76px]">Our
+          <div className="text-[#424242] text-sm font-bold leading-1">Our
             History
           </div>
           <div className="flex flex-col justify-between items-start gap-2 my-auto h-full">

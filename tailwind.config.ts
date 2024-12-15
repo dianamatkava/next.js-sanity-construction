@@ -26,6 +26,15 @@ export default {
         'lg': '2.25rem',     // 64px
         'xlg': '4rem',     // 80px
       },
+      keyframes: {
+        wave: {
+          '0%': { marginLeft: '0' },
+          '100%': { marginLeft: '-1600px' },
+        },
+      },
+      animation: {
+        wave: 'wave 7s cubic-bezier(.36,.45,.63,.53) infinite',
+      },
     },
   },
   darkMode: "class",

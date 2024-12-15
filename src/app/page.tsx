@@ -4,7 +4,6 @@ import AboutUs from "@/components/AboutUs";
 import News from "@/components/News";
 import Contact from "@/components/Contact";
 import GalleryWrapper from "@/components/wrappers/GalleryWrapper";
-import ScrollableWrapper from "@/components/wrappers/ScrollableWrapper";
 
 export default function Home() {
   const content = [

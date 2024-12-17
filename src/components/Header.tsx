@@ -1,5 +1,6 @@
 "use client"
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import { usePathname } from "next/navigation";
 import {
   Link,
 } from "@nextui-org/react";
@@ -9,10 +10,11 @@ import {MdOutlineAlternateEmail} from "react-icons/md";
 
 function AppHeader () {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div
-      className="relative overflow-hidden self-stretch py-2 bg-gradient-to-b from-black to-[#290404] flex-col justify-between items-center flex gap-5 pb-[140px] px-[30px] sm:px-[60px]">
+      className={`overflow-hidden self-stretch py-2 bg-gradient-to-b from-black to-[#290404] flex-col justify-between items-center flex gap-5 px-[30px] sm:px-[60px] ${pathname === "/" ? "relative pb-[140px]" : "sticky top-0 z-50 shadow-md"}`}>
       <div
         className="self-stretch py-1 pb-2 border-b border-[#2E2E30] justify-between items-center inline-flex mx-[-20px] sm:mx-[-40px]">
         <div className="flex">
@@ -54,7 +56,7 @@ function AppHeader () {
 
         <div className="inline-flex md:hidden">
           <label className="hamburger">
-            <input type="checkbox" checked={isNavOpen} onClick={() => setIsNavOpen(!isNavOpen)} id="navbar-checkbox" />
+            <input type="checkbox" checked={isNavOpen} onClick={() => setIsNavOpen(!isNavOpen)} id="navbar-checkbox"/>
             <svg viewBox="0 0 32 32">
               <path className="line line-top-bottom"
                     d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
@@ -62,53 +64,58 @@ function AppHeader () {
             </svg>
           </label>
         </div>
-        <div
-          className="absolute bottom-[-77px] left-0 h-[198px] w-[6400px] bg-repeat-x z-2 animate-wave"
-          style={{
-            backgroundImage: "url('/wave-2.svg')",
-          }}
-        />
+        {pathname === '/' ? (
+          <div
+            className="absolute bottom-[-77px] left-0 h-[198px] w-[6400px] bg-repeat-x z-2 animate-wave"
+            style={{
+              backgroundImage: "url('/wave-2.svg')",
+            }}
+          />
+        ) : null}
       </div>
-      <div className="w-full self-stretch flex-col justify-between items-center flex">
-        <div className="m-auto max-w-[800px] self-stretch flex-col justify-center items-center gap-[38px] flex">
-          <div
-            className="self-stretch text-center text-[#f5efe7] text-lg font-semibold font-playfair leading-[45px] sm:text-xlg sm:leading-[70px]">Comprehensive
-            Solution for Repair Services
-          </div>
-          <div
-            className="m-auto self-stretch max-w-[500px] text-center text-[#d4d3d3] font-normal">As
-            a group of companies, we offer a wide range of water restoration, leak detection, mold remediation and
-            reconstruction services, including residential and commercial reconstruction, remodeling, and renovations.
-          </div>
-          <Link href='contact/#Contact'
-                className="px-5 py-4 bg-[#f5efe7] rounded-[50px] justify-center items-center gap-2.5 inline-flex hover:bg-[#FFFFFF]">
+
+      {pathname === '/' ? (
+        <div className="w-full self-stretch flex-col justify-between items-center flex">
+          <div className="m-auto max-w-[800px] self-stretch flex-col justify-center items-center gap-[38px] flex">
             <div
-              className="text-center text-[#6f1d1b] font-semibold leading-tight tracking-tight">Schedule
-              Appointment
+              className="self-stretch text-center text-[#f5efe7] text-lg font-semibold font-playfair leading-[45px] sm:text-xlg sm:leading-[70px]">Comprehensive
+              Solution for Repair Services
             </div>
-          </Link>
-        </div>
-        <div className="self-stretch justify-between items-start hidden sm:inline-flex">
-          {/*<div className="w-[804px] text-xsm"><span*/}
-          {/*  className="text-[#f5efe7] font-bold  leading-[76px]">Home</span><span*/}
-          {/*  className="text-[#f5efe7] font-medium leading-[76px]"> </span><span*/}
-          {/*  className="text-[#f5efe7] font-medium leading-[76px] tracking-tight">¬ </span><span*/}
-          {/*  className="text-[#f5efe7] font-medium leading-[76px]">About</span></div>*/}
-          <div className="grow shrink basis-0 h-[78px] justify-end items-center flex">
-            <div className="flex-col justify-center items-end inline-flex">
-              <div className="text-right"><span
-                className="text-[#dedddd] font-normal">+(123) </span><span
-                className="text-[#dedddd] font-normal underline">747 295-5409</span></div>
-              <div className="w-[381px] h-[54px] justify-start items-center gap-1.5 inline-flex">
+            <div
+              className="m-auto self-stretch max-w-[500px] text-center text-[#d4d3d3] font-normal">As
+              a group of companies, we offer a wide range of water restoration, leak detection, mold remediation and
+              reconstruction services, including residential and commercial reconstruction, remodeling, and renovations.
+            </div>
+            <Link href='contact/#Contact'
+                  className="px-5 py-4 bg-[#f5efe7] rounded-[50px] justify-center items-center gap-2.5 inline-flex hover:bg-[#FFFFFF]">
+              <div
+                className="text-center text-[#6f1d1b] font-semibold leading-tight tracking-tight">Schedule
+                Appointment
+              </div>
+            </Link>
+          </div>
+          <div className="self-stretch justify-between items-start hidden sm:inline-flex">
+            {/*<div className="w-[804px] text-xsm"><span*/}
+            {/*  className="text-[#f5efe7] font-bold  leading-[76px]">Home</span><span*/}
+            {/*  className="text-[#f5efe7] font-medium leading-[76px]"> </span><span*/}
+            {/*  className="text-[#f5efe7] font-medium leading-[76px] tracking-tight">¬ </span><span*/}
+            {/*  className="text-[#f5efe7] font-medium leading-[76px]">About</span></div>*/}
+            <div className="grow shrink basis-0 h-[78px] justify-end items-center flex">
+              <div className="flex-col justify-center items-end inline-flex">
                 <div className="text-right"><span
-                  className="text-[#b6b6b6] font-normal ">               </span><span
-                  className="text-[#f5efe7] font-medium ">282 West Dryden Street, Glendale, California 91202, United States<br/></span>
+                  className="text-[#dedddd] font-normal">+(123) </span><span
+                  className="text-[#dedddd] font-normal underline">747 295-5409</span></div>
+                <div className="w-[381px] h-[54px] justify-start items-center gap-1.5 inline-flex">
+                  <div className="text-right"><span
+                    className="text-[#b6b6b6] font-normal ">               </span><span
+                    className="text-[#f5efe7] font-medium ">282 West Dryden Street, Glendale, California 91202, United States<br/></span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      ): null}
 
       {isNavOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex lg:hidden">

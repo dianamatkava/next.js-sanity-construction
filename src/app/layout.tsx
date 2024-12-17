@@ -28,14 +28,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
     <body
-      className={`${playfair.variable} ${openSans.variable} antialiased`}
+      className={`${playfair.variable} ${openSans.variable} antialiased h-auto`}
     >
     <div className="w-full flex flex-col justify-between gap-6">
-      <main className="">
-        <header>
+      <main className="w-full">
+        <header className='w-full'>
           <AppHeader/>
         </header>
         <div className="w-full flex flex-col justify-between gap-12 p-[30px] sm:px-[60px]">
@@ -49,5 +50,5 @@ export default function RootLayout({
     </div>
     </body>
     </html>
-);
+  );
 }

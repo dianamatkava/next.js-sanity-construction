@@ -22,19 +22,19 @@ function ServicePreview({ name, description, img }) {
             <div className="leading-2 w-4/5">{description}</div>
             <ul className="space-y-2 text-gray-600 text-xs">
               <li className="flex items-center">
-                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                <MdOutlineDone className="text-green-500 mr-2" size={18}/>
                 Durable materials
               </li>
               <li className="flex items-center">
-                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                <MdOutlineDone className="text-green-500 mr-2" size={18}/>
                 Modern designs
               </li>
               <li className="flex items-center">
-                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                <MdOutlineDone className="text-green-500 mr-2" size={18}/>
                 Efficient processes
               </li>
               <li className="flex items-center">
-                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                <MdOutlineDone className="text-green-500 mr-2" size={18}/>
                 Safety focus
               </li>
             </ul>

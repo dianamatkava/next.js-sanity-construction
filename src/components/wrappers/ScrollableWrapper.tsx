@@ -1,8 +1,7 @@
 "use client"
 import React, { useRef } from "react";
-import ReadMoreLink from "@/components/ReadMoreLink";
 
-const ScrollableWrapper = ({children}) => {
+const ScrollableWrapper = ({children, className='', style={}}, shouldHandleWheel=true) => {
   const containerRef = useRef(null);
 
   const handleWheel = (e) => {
@@ -19,8 +18,8 @@ const ScrollableWrapper = ({children}) => {
   return (
       <div
         ref={containerRef}
-        onWheel={handleWheel}
-        className="overflow-x-auto w-full h-full scroll-container relative overflow-y-auto"
+        onWheel={shouldHandleWheel ? handleWheel : null}
+        className={`overflow-x-auto w-full h-full scroll-container relative overflow-y-auto ${className}`}
       >
         <div className="flex space-x-4 w-max">
           {children}

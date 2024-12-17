@@ -1,7 +1,7 @@
 "use client";
 import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
 import ContactButton from "@/components/ui-elements/ContactButton";
-import Image from "next/image";
+import {MdOutlineDone} from "react-icons/md";
 
 function ServicePreview({ name, description, img }) {
   return (
@@ -20,10 +20,28 @@ function ServicePreview({ name, description, img }) {
               {name}
             </div>
             <div className="leading-2 w-4/5">{description}</div>
+            <ul className="space-y-2 text-gray-600 text-xs">
+              <li className="flex items-center">
+                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                Durable materials
+              </li>
+              <li className="flex items-center">
+                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                Modern designs
+              </li>
+              <li className="flex items-center">
+                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                Efficient processes
+              </li>
+              <li className="flex items-center">
+                <MdOutlineDone class="text-green-500 mr-2" size={18}/>
+                Safety focus
+              </li>
+            </ul>
             <ReadMoreLink href="/services" name={"Read More"} className='flex md:hidden'/>
           </div>
           <div className="justify-start items-center gap-4 inline-flex">
-            <ContactButton name={"Schedule Appointment"} />
+            <ContactButton name={"Schedule Appointment"}/>
             <ReadMoreLink href="/services" name={"Read More"} className='hidden md:flex'/>
           </div>
         </div>

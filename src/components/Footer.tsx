@@ -44,7 +44,7 @@ function AppFooter () {
               </div>
             </div>
           </div>
-          <div className="flex justify-start items-start gap-8 w-full">
+          <div className="flex justify-start items-start gap-8 w-fit">
             <div className="py-[25px] flex-col justify-start items-start gap-4 sm:gap-10 inline-flex">
               <div className="self-stretch text-white text-md font-bold text-nowrap">Services</div>
               <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
@@ -72,8 +72,8 @@ function AppFooter () {
             </div>
           </div>
         </div>
-        <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-10 inline-flex">
-          <div className="text-white text-md font-bold">Lets get Started</div>
+        <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-8 inline-flex">
+          <div className="text-white text-md font-bold text-nowrap">Lets get Started</div>
           <div className="self-stretch h-[86.50px] flex-col justify-start items-start gap-4 flex w-[250px]">
             <div className="self-stretch justify-between items-center inline-flex w-full">
               <InputField label={'Email'} placeholder={"example@example.com"}>

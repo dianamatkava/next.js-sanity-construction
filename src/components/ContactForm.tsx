@@ -5,13 +5,13 @@ import TextAreaField from "@/components/ui-elements/TextAreaField";
 import CheckBoxField from "@/components/ui-elements/CheckBoxField";
 import ContactButton from "@/components/ui-elements/ContactButton";
 
-export default function ContactForm() {
+export default function ContactForm({className=''}) {
 
   return (
     <div
-      className="self-stretch flex-col justify-start items-center inline-flex w-full h-full">
+      className={`self-stretch flex-col justify-start items-center inline-flex w-full h-full gap-4 max-w-[450px] ${className}`}>
       <div className="self-stretch grow shrink basis-0 h-full">
-        <form className="flex flex-col items-start justify-between w-full h-full">
+        <form className="flex flex-col items-start justify-between w-full gap-8">
           <div className="flex flex-col gap-6 w-full">
             <InputField label={"Enter your Name *"} placeholder={"John Doe"} inputClassName='form__light_field' labelClassName={"form__light_label"}/>
             <InputField label={"Enter your Email *"} placeholder={"example@example.com"} inputClassName='form__light_field' labelClassName={"form__light_label"}/>

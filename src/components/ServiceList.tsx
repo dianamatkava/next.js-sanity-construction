@@ -28,21 +28,21 @@ function ServiceList ({view="scroll"}) {
 
       {view === "scroll" ? (
         <ScrollableWrapper>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
         </ScrollableWrapper>
       ) : (
         <GridWrapper>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
-          <ServiceItem/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
+          <ServiceItem serviceId={1}/>
         </GridWrapper>
       )}
 

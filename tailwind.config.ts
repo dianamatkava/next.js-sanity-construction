@@ -35,6 +35,9 @@ export default {
       animation: {
         wave: 'wave 7s cubic-bezier(.36,.45,.63,.53) infinite',
       },
+      screens: {
+        'custom-lg': '1250px', // Add custom breakpoint
+      },
     },
   },
   darkMode: "class",

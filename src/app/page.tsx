@@ -12,21 +12,21 @@ export default function Home() {
       img: "/water-damage.png",
       name: "Water Damage Restoration",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas.\n",
     },
     {
       id: 1,
       img: "/roofing.png",
       name: "Roofing",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Curabitur ornare ex et libero sollicitudin, id congue mi egestas.\n",
     },
     {
       id: 2,
       img: "/house-modeling.png",
       name: "Mold Remediation",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ];
   return (

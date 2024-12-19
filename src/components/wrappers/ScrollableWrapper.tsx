@@ -5,7 +5,6 @@ const ScrollableWrapper = ({children, className='', style={}}, shouldHandleWheel
   const containerRef = useRef(null);
 
   const handleWheel = (e) => {
-    e.preventDefault();
     const container = containerRef.current;
 
     if (e.deltaY > 0) {

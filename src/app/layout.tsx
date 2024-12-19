@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { SanityLive } from "@/sanity/live";
 import { Playfair_Display, Open_Sans } from 'next/font/google';
 import AppHeader from "@/components/Header";
 import AppFooter from "@/components/Footer";
@@ -47,6 +48,7 @@ export default function RootLayout({
       <footer className="w-full gap-6 flex-wrap items-center justify-center">
         <AppFooter/>
       </footer>
+      <SanityLive />
     </div>
     </body>
     </html>

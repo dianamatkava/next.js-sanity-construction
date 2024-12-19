@@ -1,12 +1,14 @@
+"use client";
 import ReadMoreLink from  '@/components/ui-elements/ReadMoreLink'
 import ContactButton from "@/components/ui-elements/ContactButton";
 import ScrollableWrapper from "@/components/wrappers/ScrollableWrapper";
 import GridWrapper from "@/components/wrappers/GridWrapper";
-import ServiceItem from "@/components/ServiceItem";
+import ServiceCard from "@/components/ServiceCard";
+import {PortableText} from "next-sanity";
 
-function ServiceList ({view="scroll"}) {
+function ServiceList ({view="scroll", services}) {
   return (
-    <div className="self-stretch flex-col justify-start items-start flex gap-5">
+    <div className="self-stretch flex-col justify-start items-start flex gap-12">
       <div
         className="self-stretch justify-center text-center items-center gap-6 inline-flex sm:justify-between sm:text-start sm:flex-nowrap flex-wrap">
         <div className="flex flex-col gap-6 max-w-[550px] sm:justify-between sm:text-start sm:flex-nowrap flex-wrap">
@@ -28,21 +30,25 @@ function ServiceList ({view="scroll"}) {
 
       {view === "scroll" ? (
         <ScrollableWrapper>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
+          {services?.map((service) => (
+            <ServiceCard
+              key={service._id}
+              data={service}
+              renderContent={(content) => (
+                <PortableText value={content} />
+              )}/>
+          ))}
         </ScrollableWrapper>
       ) : (
         <GridWrapper>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
-          <ServiceItem serviceId={1}/>
+          {services?.map((service) => (
+            <ServiceCard
+              key={service._id}
+              data={service}
+              renderContent={(content) => (
+                <PortableText value={content} />
+            )}/>
+          ))}
         </GridWrapper>
       )}
 

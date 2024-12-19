@@ -1,7 +1,12 @@
 import AboutUs from "@/components/AboutUs";
-export default function AboutUsPage() {
+import News from "@/components/News";
+
+export default async function AboutUsPage() {
 
   return (
-    <AboutUs/>
+    <div className="">
+      <AboutUs/>
+      <News/>
+    </div>
   );
 }

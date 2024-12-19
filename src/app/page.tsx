@@ -4,35 +4,22 @@ import AboutUs from "@/components/AboutUs";
 import News from "@/components/News";
 import Contact from "@/components/Contact";
 import GalleryWrapper from "@/components/wrappers/GalleryWrapper";
+import {defineQuery} from "next-sanity";
+import {sanityFetch} from "@/sanity/live";
 
-export default function Home() {
-  const content = [
-    {
-      id: 0,
-      img: "/water-damage.png",
-      name: "Water Damage Restoration",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas.\n",
-    },
-    {
-      id: 1,
-      img: "/roofing.png",
-      name: "Roofing",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Curabitur ornare ex et libero sollicitudin, id congue mi egestas.\n",
-    },
-    {
-      id: 2,
-      img: "/house-modeling.png",
-      name: "Mold Remediation",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare ex et libero sollicitudin, id congue mi egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-  ];
+
+const EVENTS_QUERY = defineQuery(`*[
+  _type == "service"
+  && defined(slug.current)
+]{_id, name, smDesc, mdDesc, slug, image}|order(date desc)`);
+
+export default async function Home() {
+    const { data: services } = await sanityFetch({ query: EVENTS_QUERY });
+
   return (
     <>
-      <ServiceList/>
-      <GalleryWrapper content={content}>
+      <ServiceList services={services}/>
+      <GalleryWrapper content={services}>
         <ServicePreview/>
       </GalleryWrapper>
       <AboutUs/>

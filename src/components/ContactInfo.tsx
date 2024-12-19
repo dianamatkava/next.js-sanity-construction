@@ -52,17 +52,17 @@ function ContactInfo ({className}) {
         </div>
       </div>
 
-      {/*<div className="flex inline-flex justify-start items-center gap-4">*/}
-      {/*  <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">*/}
-      {/*    <FiInstagram width={24} className='hover:border-[#757171]'/></div>*/}
-      {/*  <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">*/}
-      {/*    <FaFacebookF width={24} className='hover:border-[#757171]'/></div>*/}
-      {/*  <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">*/}
-      {/*    <MdOutlineAlternateEmail width={24} className='hover:border-[#757171]'/></div>*/}
-      {/*  <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">*/}
-      {/*    <FiPhone width={24} className='hover:border-[#757171]'/></div>*/}
-      {/*</div>*/}
-      <GoogleMap className={"h-full custom-lg:hidden"}/>
+      <div className="flex inline-flex justify-start items-center gap-4">
+        <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
+          <FiInstagram width={24} className='hover:border-[#757171]'/></div>
+        <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
+          <FaFacebookF width={24} className='hover:border-[#757171]'/></div>
+        <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
+          <MdOutlineAlternateEmail width={24} className='hover:border-[#757171]'/></div>
+        <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
+          <FiPhone width={24} className='hover:border-[#757171]'/></div>
+      </div>
+      <GoogleMap className={"h-full"}/>
     </div>
   );
 }

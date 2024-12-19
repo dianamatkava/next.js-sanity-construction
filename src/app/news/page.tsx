@@ -4,6 +4,7 @@ import ScrollableWrapper from "@/components/wrappers/ScrollableWrapper";
 import {FiCalendar} from "react-icons/fi";
 import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
 import {useState} from "react";
+import GridWrapper from "@/components/wrappers/GridWrapper";
 
 export default function NewsPage() {
   const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"];
@@ -18,7 +19,7 @@ export default function NewsPage() {
     }
   };
   return (
-    <div className="self-stretch flex-col justify-start items-end gap-4 flex" id="News">
+    <div className="self-stretch flex-col justify-start items-end gap-12 flex" id="News">
       <div className="self-stretch flex justify-between items-end">
         <div className="self-stretch flex-col justify-start items-start flex">
           <div className="self-stretch text-[#424242] text-sm font-bold leading-1">Blog and
@@ -29,36 +30,23 @@ export default function NewsPage() {
             News and Articles
           </div>
         </div>
-        <div className="flex justify-between items-center gap-2">
-          <button
-            onClick={() => scrollItems(-1)}
-            className="border-1 border-gray-200 p-3 rounded-3xl hover:border-gray-300 hover:text-gray-800"><FaAngleLeft
-            size={20} className='text-gray-600'/></button>
-          <button
-            onClick={() => scrollItems(+1)}
-            className="border-1 border-gray-200 p-3 rounded-3xl hover:border-gray-300 hover:text-gray-800"><FaAngleRight
-            size={20} className='text-gray-600'/></button>
-        </div>
       </div>
-      <div className="self-stretch justify-start items-center gap-6 inline-flex">
-        <ScrollableWrapper
-          className="overscroll-none overflow-x-hidden"
-          shouldHandleWheel={false}
-        >
-          {items.map((index) => (
+      <div className="self-stretch justify-start flex-col items-start gap-12 sm:gap-6 inline-flex w-full">
+        {items.map((index) => (
             <div
               key={index}
-              className="max-w-96 border border-[#e2e2e2] justify-start items-center flex hover:shadow-lg"
-              style={{
-                display: 'flex',
-                transform: `translateX(-${scrollIndex * 100}%)`, // Move items horizontally
-                transition: 'transform 0.3s ease', // Smooth transition
-              }}
+              className="w-full justify-start items-center flex"
             >
-              <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2 p-4">
+              <div
+                className="self-stretch flex-col justify-between items-start inline-flex sm:min-w-64"
+                style={{
+                  backgroundImage: `url("https://via.placeholder.com/299x310")`
+                }}>
+              </div>
+              <div className="self-stretch grow shrink flex-col justify-between items-start inline-flex gap-4 sm:p-4 max-w-[800px]">
                 <div className="flex-col justify-start items-start gap-4 flex">
-                  <div className="justify-start items-center gap-1 inline-flex">
-                    <div className="px-2 bg-[#6f1d1b] justify-center items-center gap-1 flex">
+                  <div className="justify-start items-center gap-3 inline-flex">
+                    <div className="px-2 bg-[#6f1d1b] justify-center items-center gap-3 flex">
                       <div className="text-[#f5efe7] text-xsm font-bold leading-1">Articles</div>
                     </div>
                     <div className="justify-between items-center gap-1 flex">
@@ -68,18 +56,21 @@ export default function NewsPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-[#424242] text-md font-bold leading-1">A Group of
+                  <div className="text-[#424242] text-md font-bold leading-1 hover:text-[#8E8E8E]">A Group of
                     Companies providing Repair Services
+                  </div>
+                  <div
+                    className="self-stretch text-[#414040] text-sm font-normal leading-1">As
+                    a group of companies, we offer a wide range of water restoration, leak detection, mold remediation
+                    and reconstruction services, including residential and commercial reconstruction, remodeling, and
+                    renovations services ...
                   </div>
                 </div>
                 <ReadMoreLink href='/news' name={"Read More"}/>
               </div>
-              <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2">
-                <img className="grow shrink basis-0 self-stretch" src="https://via.placeholder.com/299x310"/>
-              </div>
+
             </div>
           ))}
-        </ScrollableWrapper>
       </div>
     </div>
   );

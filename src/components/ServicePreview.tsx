@@ -27,7 +27,7 @@ function ServicePreview({ children, name, mdDesc, slug, image}) {
       </div>
       <div className="grow shrink basis-0 self-stretch px-2 justify-start items-start flex w-full h-auto sm:items-center sm:w-1/2">
         <div className="flex flex-col justify-between items-center gap-4 my-auto h-full py-8 px-4 sm:items-start sm:pl-6 m-4">
-          <div className="h-96 flex-col justify-start items-start gap-4 flex">
+          <div className="h-80 flex-col justify-start items-start gap-4 flex">
             <div className="text-[#424242] text-lg font-semibold font-playfair leading-[45px]">
               {name}
             </div>

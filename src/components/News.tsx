@@ -24,7 +24,7 @@ function News () {
   return (
     <div className="self-stretch flex-col justify-start items-end gap-4 flex" id="News">
       <div className="self-stretch flex justify-between items-end">
-        <div className="self-stretch flex-col justify-start items-start flex">
+        <div className="self-stretch flex-col justify-start items-start flex gap-2">
           <div className="self-stretch text-[#424242] text-sm font-bold leading-1">Blog and
             News
           </div>
@@ -32,6 +32,7 @@ function News () {
             className="self-stretch grow shrink basis-0 text-[#424242] text-lg font-medium font-playfair">Latest
             News and Articles
           </div>
+          <ReadMoreLink href={"/news"} name={"See More"}/>
         </div>
         <div className="flex justify-between items-center gap-2">
           <button
@@ -44,7 +45,7 @@ function News () {
       </div>
       <div className="self-stretch justify-start items-center gap-6 inline-flex">
         <ScrollableWrapper
-          className="overscroll-none overflow-x-hidden"
+          className="overflow-x-hidden"
           shouldHandleWheel={false}
         >
           {items.map((index) => (

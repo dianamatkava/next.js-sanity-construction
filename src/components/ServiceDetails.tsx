@@ -13,12 +13,12 @@ function ServiceDetails ({data}) {
   const imageUrl = urlFor(data.image).url();
 
   return (
-    <div className="self-stretch px-4 py-5 flex flex-col justify-start items-start gap-4">
+    <div className="h-auto self-stretch px-4 py-5 flex flex-col justify-start items-start gap-4">
       <div className="leading-[50px] text-[#424242] text-lg font-medium font-playfair">
         <span className="font-extrabold">{data.name}</span>
       </div>
-      <div className="gap-8 justify-start items-start flex flex-col">
-        <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full">
+      <div className="gap-8 justify-start items-start flex flex-col h-full">
+        <div className="flex-grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full">
           <div className="self-stretch text-[#424242] text-sm font-bold leading-1">About the Service</div>
           <div
             className="self-stretch text-[#414040] text-sm font-normal leading-1">

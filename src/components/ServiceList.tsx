@@ -23,7 +23,7 @@ function ServiceList ({view="scroll", services}) {
             ensure a comprehensive assessment of damages, followed by repair, restoration, and any necessary
             remediation measures.
           </div>
-          <ReadMoreLink href={"/services#ServiceList"} name={"View all Services"} className={"sm:justify-start"}/>
+          {view !== "grid" ? <ReadMoreLink href={"/services#ServiceList"} name={"View all Services"} className={"justify-center sm:justify-start"}/> : null}
         </div>
         <ContactButton name={"Schedule Appointment"}/>
       </div>

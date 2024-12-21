@@ -1,7 +1,5 @@
 import ContactInfo from "@/components/ContactInfo";
 import ContactForm from "@/components/ContactForm";
-import GoogleMap from "@/components/ui-elements/GoogleMap";
-import {HiOutlineOfficeBuilding} from "react-icons/hi";
 
 
 

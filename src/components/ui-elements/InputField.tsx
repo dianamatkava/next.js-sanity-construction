@@ -1,5 +1,4 @@
 import React from 'react';
-import {LuSend} from "react-icons/lu";
 
 const InputField = ({label, placeholder, required=true, inputClassName="", labelClassName="", children=null}: {label: string, placeholder: string, required?: boolean}) => {
   return (

@@ -1,7 +1,6 @@
 "use client"
 import {FiCalendar} from "react-icons/fi";
 import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
-import {useState} from "react";
 import {useAppContext} from "@/context/AppContext";
 import {urlFor} from "@/app/ui/urlFor";
 import {PortableText} from "next-sanity";
@@ -10,15 +9,6 @@ import Link from "next/link";
 export default function NewsPage() {
 
   const {sharedState: data} = useAppContext();
-  const [scrollIndex, setScrollIndex] = useState(0);
-
-  const scrollItems = (direction) => {
-    const newIndex = scrollIndex + direction;
-    // Ensure you don't scroll out of bounds
-    if (newIndex >= 0 && newIndex < data.serviceData?.length) {
-      setScrollIndex(newIndex);
-    }
-  };
 
   return (
     <div className="self-stretch flex-col justify-start items-end gap-12 flex" id="News">

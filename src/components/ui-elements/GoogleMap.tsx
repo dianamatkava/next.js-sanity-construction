@@ -1,4 +1,4 @@
-const GoogleMap = ({addressUrl= '', className='', width="250", height="200", allowFullScreen=false}) => {
+const GoogleMap = ({addressUrl= '', className='', allowFullScreen=false}) => {
   return (
     <iframe
       src={`${addressUrl}`}

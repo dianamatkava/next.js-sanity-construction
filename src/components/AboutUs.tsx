@@ -1,4 +1,5 @@
 import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
+import Image from "next/image";
 
 function AboutUs ({showReadMoreLink=true}) {
 
@@ -18,7 +19,7 @@ function AboutUs ({showReadMoreLink=true}) {
             a group of companies, we offer a wide range of water restoration, leak detection, mold remediation and
             reconstruction services, including residential and commercial reconstruction, remodeling, and renovations.
           </div>
-          <img className="self-stretch h-full sm:min-h-72" src="https://via.placeholder.com/757x410"/>
+          <Image width={757} height={410} className="self-stretch h-full sm:min-h-72" src="https://via.placeholder.com/757x410" alt={"Our Office"}/>
         </div>
         <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex h-full w-full sm:w-1/2">
           <div className="text-[#424242] text-sm font-bold leading-1">Our

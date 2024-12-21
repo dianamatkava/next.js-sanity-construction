@@ -1,16 +1,16 @@
 "use client"
 import React, { useRef } from "react";
 
-const ScrollableWrapper = ({children, className='', style={}}, shouldHandleWheel=true) => {
+const ScrollableWrapper = ({children, className=''}, shouldHandleWheel=true) => {
   const containerRef = useRef(null);
 
   const handleWheel = (e) => {
     const container = containerRef.current;
 
     if (e.deltaY > 0) {
-      container.scrollLeft += 20; // Scroll right (positive scroll)
+      container.scrollLeft += 20;
     } else {
-      container.scrollLeft -= 20; // Scroll left (negative scroll)
+      container.scrollLeft -= 20;
     }
   };
 

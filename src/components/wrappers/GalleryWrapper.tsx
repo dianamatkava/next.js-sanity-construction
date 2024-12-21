@@ -15,10 +15,10 @@ const GalleryWrapper = ({ content, className = "", children }) => {
     return () => clearInterval(timer);
   }, [content.length, timeout]);
 
-  function handleActiveItem(index) {
-    setActiveIndex(index);
-    setTimeout(18000);
-  }
+  // function handleActiveItem(index) {
+  //   setActiveIndex(index);
+  //   setTimeout(18000);
+  // }
 
   const activeContent = content[activeIndex];
 
@@ -34,11 +34,11 @@ const GalleryWrapper = ({ content, className = "", children }) => {
 
   const GalleryButtons = () => {
     // Calculate indices for the 3 buttons to show
-    const indicesToShow = [
-      (activeIndex - 1 + content.length) % content.length, // previous index, handles wrap around
-      activeIndex,
-      (activeIndex + 1) % content.length, // next index, handles wrap around
-    ];
+    // const indicesToShow = [
+    //   (activeIndex - 1 + content.length) % content.length, // previous index, handles wrap around
+    //   activeIndex,
+    //   (activeIndex + 1) % content.length, // next index, handles wrap around
+    // ];
 
     return (
       <div className="w-full flex flex-col justify-between items-center gap-6 py-4">

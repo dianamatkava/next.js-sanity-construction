@@ -12,11 +12,8 @@ const SANITY_QUERY = defineQuery(`*[
   && defined(slug.current)
 ]{_id, name, smDesc, lgDesc, slug, image}|order(date desc)`);
 
-interface ServicePageProps {
-  params: { slug: string };
-}
 
-export default async function ServicePage({ params }: ServicePageProps) {
+export default async function ServicePage({ params }) {
   const { slug } = await params;
 
   const {data: items} = await sanityFetch({ query: SANITY_QUERY });

@@ -40,7 +40,7 @@ export default async function RootLayout({
 }>) {
 
   const siteData = await sanityFetch({ query: siteQuery });
-  const serviceData = await sanityFetch({ query: serviceQuery });
+  const serviceData: object | null = await sanityFetch({ query: serviceQuery });
 
   const initialData = { ...siteData, serviceData };
 

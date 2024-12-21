@@ -1,5 +1,5 @@
 "use client"
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import { usePathname } from "next/navigation";
 import {
   Link,
@@ -7,10 +7,14 @@ import {
 import {FiInstagram, FiPhone} from "react-icons/fi";
 import {FaFacebookF} from "react-icons/fa";
 import {MdOutlineAlternateEmail} from "react-icons/md";
+import {useAppContext} from "@/context/AppContext";
 
 function AppHeader () {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
+  const {sharedState: data} = useAppContext();
+
+  console.log(data)
 
   return (
     <div
@@ -25,8 +29,8 @@ function AppHeader () {
             <div className="justify-start items-center gap-2 flex">
               <img className="w-[45px] h-[45px] rounded-full" src="https://via.placeholder.com/65x69"/>
               <div
-                className="max-w-[200px] text-[#f5efe7] text-sm font-playfair hover:text-[#FDFAF7] text-nowrap sm:text-[]">
-                AMERICAN ESSENTIAL<br/>CONSTRUCTION GROUP
+                className="max-w-[200px] text-[#f5efe7] text-xsm font-playfair hover:text-[#FDFAF7] text-wrap sm:text-sm leading-[20px]">
+                {data.logoText}
               </div>
             </div>
           </Link>
@@ -78,13 +82,11 @@ function AppHeader () {
         <div className="w-full self-stretch flex-col justify-between items-center flex">
           <div className="m-auto max-w-[800px] self-stretch flex-col justify-center items-center gap-[38px] flex">
             <div
-              className="self-stretch text-center text-[#f5efe7] text-lg font-semibold font-playfair leading-[45px] sm:text-xlg sm:leading-[70px]">Comprehensive
-              Solution for Repair Services
+              className="self-stretch text-center text-[#f5efe7] text-lg font-semibold font-playfair leading-[45px] sm:text-xlg sm:leading-[70px]">
+              {data.headerTitle}
             </div>
             <div
-              className="m-auto self-stretch max-w-[500px] text-center text-[#d4d3d3] font-normal">As
-              a group of companies, we offer a wide range of water restoration, leak detection, mold remediation and
-              reconstruction services, including residential and commercial reconstruction, remodeling, and renovations.
+              className="m-auto self-stretch max-w-[500px] text-center text-[#d4d3d3] font-normal">{data.headerDescription}
             </div>
             <Link href='contact/#Contact'
                   className="px-5 py-4 bg-[#f5efe7] rounded-[50px] justify-center items-center gap-2.5 inline-flex hover:bg-[#FFFFFF]">
@@ -100,19 +102,19 @@ function AppHeader () {
             {/*  className="text-[#f5efe7] font-medium leading-[76px]"> </span><span*/}
             {/*  className="text-[#f5efe7] font-medium leading-[76px] tracking-tight">¬ </span><span*/}
             {/*  className="text-[#f5efe7] font-medium leading-[76px]">About</span></div>*/}
-            <div className="grow shrink basis-0 h-[78px] justify-end items-center flex">
-              <div className="flex-col justify-center items-end inline-flex">
-                <div className="text-right"><span
-                  className="text-[#dedddd] font-normal">+(123) </span><span
-                  className="text-[#dedddd] font-normal underline">747 295-5409</span></div>
-                <div className="w-[381px] h-[54px] justify-start items-center gap-1.5 inline-flex">
-                  <div className="text-right"><span
-                    className="text-[#b6b6b6] font-normal ">               </span><span
-                    className="text-[#f5efe7] font-medium ">282 West Dryden Street, Glendale, California 91202, United States<br/></span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/*<div className="grow shrink basis-0 h-[78px] justify-end items-center flex">*/}
+            {/*  <div className="flex-col justify-center items-end inline-flex">*/}
+            {/*    <div className="text-right"><span*/}
+            {/*      className="text-[#dedddd] font-normal">+(123) </span><span*/}
+            {/*      className="text-[#dedddd] font-normal underline">747 295-5409</span></div>*/}
+            {/*    <div className="w-[381px] h-[54px] justify-start items-center gap-1.5 inline-flex">*/}
+            {/*      <div className="text-right"><span*/}
+            {/*        className="text-[#b6b6b6] font-normal ">               </span><span*/}
+            {/*        className="text-[#f5efe7] font-medium ">282 West Dryden Street, Glendale, California 91202, United States<br/></span>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         </div>
       ): null}
@@ -130,16 +132,14 @@ function AppHeader () {
                   <div className="justify-start items-center gap-2 flex">
                     <img className="w-[45px] h-[45px] rounded-full" src="https://via.placeholder.com/65x69"/>
                     <div
-                      className="max-w-[200px] text-[#f5efe7] text-sm font-playfair hover:text-[#FDFAF7] text-nowrap sm:text-[]">
-                      AMERICAN ESSENTIAL<br/>CONSTRUCTION GROUP
+                      className="max-w-[200px] text-[#f5efe7] text-xsm font-playfair hover:text-[#FDFAF7] text-wrap sm:text-sm leading-[20px]">
+                      {data.logoText}
                     </div>
                   </div>
                 </Link>
               </div>
               <div
-                className="text-[#828181] font-semibold ">We
-                ensure a comprehensive assessment of damages, followed by repair, restoration and any necessary
-                remediation measure
+                className="text-[#828181] font-semibold ">{data.siteSlogan}
               </div>
               <div className="flex-col justify-start items-start gap-8 px-6">
                 <div className="py-[25px] flex-col justify-start items-start gap-5 inline-flex">

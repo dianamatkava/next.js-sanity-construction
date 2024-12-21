@@ -6,7 +6,7 @@ import GridWrapper from "@/components/wrappers/GridWrapper";
 import ServiceCard from "@/components/ServiceCard";
 import {PortableText} from "next-sanity";
 
-function ServiceList ({view="scroll", services}) {
+function ItemsList ({view="scroll", items}) {
   return (
     <div className="self-stretch flex-col justify-start items-start flex gap-12">
       <div
@@ -30,7 +30,7 @@ function ServiceList ({view="scroll", services}) {
 
       {view === "scroll" ? (
         <ScrollableWrapper>
-          {services?.map((service) => (
+          {items?.map((service) => (
             <ServiceCard
               key={service._id}
               data={service}
@@ -41,7 +41,7 @@ function ServiceList ({view="scroll", services}) {
         </ScrollableWrapper>
       ) : (
         <GridWrapper>
-          {services?.map((service) => (
+          {items?.map((service) => (
             <ServiceCard
               key={service._id}
               data={service}
@@ -56,4 +56,4 @@ function ServiceList ({view="scroll", services}) {
   )
 }
 
-export default ServiceList;
+export default ItemsList;

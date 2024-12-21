@@ -1,13 +1,13 @@
-import ServiceDetails from "@/components/ServiceDetails";
+import ItemDetails from "@/components/ItemDetails";
 import ContactForm from "@/components/ContactForm";
-import ServiceList from "@/components/ServiceList";
+import ItemsList from "@/components/ItemsList";
 import AboutUs from "@/components/AboutUs";
 import ContactInfo from "@/components/ContactInfo";
 import {defineQuery} from "next-sanity";
 import {sanityFetch} from "@/sanity/live";
 import { notFound } from 'next/navigation';
 
-const EVENTS_QUERY = defineQuery(`*[
+const SANITY_QUERY = defineQuery(`*[
   _type == "service"
   && defined(slug.current)
 ]{_id, name, smDesc, lgDesc, slug, image}|order(date desc)`);
@@ -19,16 +19,17 @@ interface ServicePageProps {
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
 
-  const {data: services} = await sanityFetch({ query: EVENTS_QUERY });
-  const service = services.find((service) => service.slug.current === slug);
-  if (!service) {
+  const {data: items} = await sanityFetch({ query: SANITY_QUERY });
+  const item = items.find((service) => service.slug.current === slug);
+
+  if (!item) {
     notFound();
   }
 
   return (
     <div className="flex flex-col w-full h-full gap-16">
       <div className="lg:flex justify-between items-start gap-12 w-full h-auto">
-        <ServiceDetails data={service}/>
+        <ItemDetails name={item.name} image={item.image} content={item.lgDesc} introTxt={item.smDesc}/>
         <div className="flex flex-col justify-between items-stretch lg:items-start gap-24 w-full lg:h-full pt-12 sm:pt-4">
           <div className="self-stretch flex-col justify-start items-start flex my-4">
             <div className="self-stretch text-[#424242] text-lg font-bold font-playfair leading-1 h-full">Lets
@@ -43,7 +44,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </div>
-      <ServiceList services={services}/>
+      <ItemsList items={items}/>
       <AboutUs/>
     </div>
   );

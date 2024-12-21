@@ -46,11 +46,11 @@ const GalleryWrapper = ({ content, className = "", children }) => {
           <button
             onClick={() => handlePrevClick()}
             className=""><FaAngleLeft
-            size={20} className='text-gray-300 hover:text-gray-300'/></button>
+            size={20} className='text-gray-300 cursor-pointer hover:text-gray-300'/></button>
           <button
             onClick={() => handleNextClick()}
             className=""><FaAngleRight
-            size={20} className='text-gray-300 hover:text-gray-400'/></button>
+            size={20} className='text-gray-300 cursor-pointer hover:text-gray-400'/></button>
         </div>
 
         {/*<div className="flex gap-4">*/}

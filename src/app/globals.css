@@ -27,6 +27,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.portable-text > ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.portable-text > ul > li {
+  list-style-type: circle;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+
 .form__group {
   position: relative;
   padding: 20px 0 0;

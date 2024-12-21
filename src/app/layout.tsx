@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 };
 
 
-const EVENTS_QUERY = `*[_type == "site"] | order(date desc)[0]`;
+const siteQuery = `*[_type == "site"] | order(date desc)[0]`;
+const serviceQuery = `*[
+_type == "service" && defined(slug.current) 
+] {_id, name, slug, image, smDesc} | 
+order(order desc) `;
 
 
 export default async function RootLayout({
@@ -35,14 +39,17 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const siteData = await sanityFetch({ query: EVENTS_QUERY });
+  const siteData = await sanityFetch({ query: siteQuery });
+  const serviceData = await sanityFetch({ query: serviceQuery });
+
+  const initialData = { ...siteData, serviceData };
 
   return (
     <html lang="en">
     <body
       className={`${playfair.variable} ${openSans.variable} antialiased h-auto`}
     >
-      <AppProvider initialData={siteData}>
+      <AppProvider initialData={initialData}>
         <div className="w-full flex flex-col justify-between gap-6">
           <main className="w-full">
             <header className='w-full'>

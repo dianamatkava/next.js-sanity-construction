@@ -24,7 +24,7 @@ function Contact () {
               <ContactForm/>
             </div>
           </div>
-          <ContactInfo className="hidden sm:flex"/>
+          <ContactInfo className="hidden md:flex"/>
           {/*<div className="self-stretch hidden flex-col justify-center items-center w-full max-h-[500px] custom-lg:flex gap-4">*/}
           {/*  <GoogleMap className={"rounded-1 w-full h-full"} height={'100%'} width={'100%'} allowFullScreen={true}/>*/}
           {/*  <div className="self-stretch inline-flex justify-start items-center gap-3">*/}

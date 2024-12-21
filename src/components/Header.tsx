@@ -8,42 +8,40 @@ import {FiInstagram, FiPhone} from "react-icons/fi";
 import {FaFacebookF} from "react-icons/fa";
 import {MdOutlineAlternateEmail} from "react-icons/md";
 import {useAppContext} from "@/context/AppContext";
+import {urlFor} from "@/app/ui/urlFor";
+import Logo from "@/components/ui-elements/Logo";
 
 function AppHeader () {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
   const {sharedState: data} = useAppContext();
-
-  console.log(data)
+  const bgUrl = urlFor(data.headerBg);
 
   return (
     <div
-      className={`overflow-hidden self-stretch py-2 bg-gradient-to-b from-black to-[#290404] flex-col justify-between items-center flex gap-5 px-[30px] sm:px-[60px] ${pathname === "/" ? "relative pb-[140px]" : "sticky top-0 z-50 shadow-md"}`}>
+      className={`
+        overflow-hidden self-stretch py-2 
+        flex-col justify-between items-center flex gap-5 px-[30px] sm:px-[60px] 
+        ${pathname === "/" ? "relative pb-[140px]" : "sticky top-0 z-50 shadow-md"}
+      `}
+      style={{
+        background: `linear-gradient(180deg, rgba(27, 4, 4, 0.60) 0%, rgba(29, 22, 22, 0.51) 17%, rgba(9, 6, 6, 0.49) 40.5%, rgba(0, 0, 0, 0.60) 74%), 
+         url("${bgUrl}") lightgray 60% / cover no-repeat`
+      }}>
       <div
         className="self-stretch py-1 pb-2 border-b border-[#2E2E30] justify-between items-center inline-flex mx-[-20px] sm:mx-[-40px]">
         <div className="flex">
-          <Link
-            key="Home"
-            href='/'
-            className="flex">
-            <div className="justify-start items-center gap-2 flex">
-              <img className="w-[45px] h-[45px] rounded-full" src="https://via.placeholder.com/65x69"/>
-              <div
-                className="max-w-[200px] text-[#f5efe7] text-xsm font-playfair hover:text-[#FDFAF7] text-wrap sm:text-sm leading-[20px]">
-                {data.logoText}
-              </div>
-            </div>
-          </Link>
+          <Logo/>
         </div>
         <div className="justify-start items-start gap-5 hidden md:flex">
-          <Link key='Home' href='/' className="text-[#f5efe7] font-bold hover:text-[#FFFFFF]">Home</Link>
+          <Link key='Home' href='/' className="text-[#f5efe7] font-bold cursor-pointer hover:text-[#FFFFFF]">Home</Link>
           <Link key='About' href='/aboutus#About'
-                className="text-[#f5efe7] font-normal hover:text-[#FFFFFF]">About</Link>
+                className="text-[#f5efe7] font-normal cursor-pointer hover:text-[#FFFFFF]">About</Link>
           <Link key='Services' href='/services#ServiceList'
-                className="text-[#f5efe7] font-normal hover:text-[#FFFFFF]">Services</Link>
+                className="text-[#f5efe7] font-normal cursor-pointer hover:text-[#FFFFFF]">Services</Link>
           <Link key='Contact' href='/contact#Contact'
-                className="text-[#f5efe7] font-normal hover:text-[#FFFFFF]">Contact</Link>
-          <Link key='News' href='/news#News' className="text-[#f5efe7] font-normal hover:text-[#FFFFFF]">News</Link>
+                className="text-[#f5efe7] font-normal cursor-pointer hover:text-[#FFFFFF]">Contact</Link>
+          <Link key='News' href='/news#News' className="text-[#f5efe7] font-normal cursor-pointer hover:text-[#FFFFFF]">News</Link>
         </div>
         <div className="justify-start items-start gap-[35px] flex hidden md:flex">
           <div
@@ -86,7 +84,7 @@ function AppHeader () {
               {data.headerTitle}
             </div>
             <div
-              className="m-auto self-stretch max-w-[500px] text-center text-[#d4d3d3] font-normal">{data.headerDescription}
+              className="m-auto self-stretch max-w-[500px] text-center text-[#d4d3d3] font-normal">{data.siteDescription}
             </div>
             <Link href='contact/#Contact'
                   className="px-5 py-4 bg-[#f5efe7] rounded-[50px] justify-center items-center gap-2.5 inline-flex hover:bg-[#FFFFFF]">
@@ -125,18 +123,7 @@ function AppHeader () {
           <div className="bg-black w-3/4 h-screen shadow-md">
             <div className="flex flex-col p-4 text-white justify-between gap-6">
               <div className="flex flex-col ">
-                <Link
-                  key="Home"
-                  href='/'
-                  className="flex">
-                  <div className="justify-start items-center gap-2 flex">
-                    <img className="w-[45px] h-[45px] rounded-full" src="https://via.placeholder.com/65x69"/>
-                    <div
-                      className="max-w-[200px] text-[#f5efe7] text-xsm font-playfair hover:text-[#FDFAF7] text-wrap sm:text-sm leading-[20px]">
-                      {data.logoText}
-                    </div>
-                  </div>
-                </Link>
+                <Logo/>
               </div>
               <div
                 className="text-[#828181] font-semibold ">{data.siteSlogan}
@@ -145,48 +132,48 @@ function AppHeader () {
                 <div className="py-[25px] flex-col justify-start items-start gap-5 inline-flex">
                   <div className="self-stretch text-white text-md font-bold">Services</div>
                   <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
-                    <Link href='services' className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">General
+                    <Link href='services' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">General
                       Construction
                     </Link>
-                    <div className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">House Remodeling
+                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">House Remodeling
                     </div>
-                    <div className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">Water Damage
+                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Water Damage
                       Restoration
                     </div>
-                    <div className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">Roofing</div>
-                    <div className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">Plumbing</div>
-                    <div className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">Public Adjusting
+                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Roofing</div>
+                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Plumbing</div>
+                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Public Adjusting
                     </div>
                   </div>
                 </div>
                 <div className="py-[25px] flex-col justify-start items-start inline-flex gap-5">
                   <div className="self-stretch text-white text-md font-bold">Links<br/></div>
                   <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
-                    <Link key='Home' href='/' className="text-[#f5efe7] font-bold hover:text-[#FFFFFF]">Home</Link>
+                    <Link key='Home' href='/' className="text-[#f5efe7] font-bold cursor-pointer hover:text-[#FFFFFF]">Home</Link>
                     <Link key='Services' href='/services#ServiceList'
-                          className="text-[#f5efe7] font-normal hover:text-[#FFFFFF]">Services</Link>
-                    <Link href='/aboutus#About' className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">About
+                          className="text-[#f5efe7] font-normal cursor-pointer hover:text-[#FFFFFF]">Services</Link>
+                    <Link href='/aboutus#About' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">About
                       Us</Link>
-                    <Link href='/news#News' className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">Articles
+                    <Link href='/news#News' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Articles
                       & News</Link>
                     <Link href='/contact#Contact'
-                          className="w-[242px] text-[#828181] font-semibold hover:text-[#f5efe7]">Contact Us</Link>
+                          className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Contact Us</Link>
                   </div>
                 </div>
               </div>
               <div className="self-stretch h-[58px] justify-center items-center gap-5 inline-flex">
                 <div className="flex inline-flex justify-center items-center gap-4">
                   <div
-                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] hover:text-[#f5efe7] hover:border-[#A4A2A0]">
+                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
                     <FiInstagram width={24}/></div>
                   <div
-                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] hover:text-[#f5efe7] hover:border-[#A4A2A0]">
+                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
                     <FaFacebookF width={24}/></div>
                   <div
-                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] hover:text-[#f5efe7] hover:border-[#A4A2A0]">
+                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
                     <MdOutlineAlternateEmail width={24}/></div>
                   <div
-                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] hover:text-[#f5efe7] hover:border-[#A4A2A0]">
+                    className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
                     <FiPhone width={24}/></div>
                 </div>
               </div>

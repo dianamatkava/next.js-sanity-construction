@@ -9,6 +9,7 @@ import CheckBoxField from "@/components/ui-elements/CheckBoxField";
 import React from "react";
 import Logo from "@/components/ui-elements/Logo";
 import {useAppContext} from "@/context/AppContext";
+import SubscribeForm from "@/components/SubscribeForm";
 
 
 function AppFooter () {
@@ -66,28 +67,7 @@ function AppFooter () {
         </div>
         <div className="self-stretch w-1/4 py-[25px] flex-col justify-start items-start gap-4 sm:gap-8 inline-flex">
           <div className="text-white text-md font-bold text-nowrap">Lets get Started</div>
-          <div className="self-stretch h-[86.50px] flex-col justify-start items-start gap-4 flex w-[250px]">
-            <div className="self-stretch justify-between items-center inline-flex w-full">
-              <InputField label={'Email'} placeholder={"example@example.com"}>
-                <div className="z-0 absolute top-5 right-1 justify-start items-center gap-2 flex ml-[-55px] cursor-pointer">
-                  <span className="text-[#e2e2e2]"><LuSend width={18}/></span>
-                  <span className="text-[#e2e2e2] font-semibold cursor-pointer hover:text-white hover:font-bold">Send</span>
-                </div>
-              </InputField>
-
-            </div>
-            <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
-               <CheckBoxField
-                name={"agreements"}
-              >
-                <label htmlFor={"agreements"} className="cursor-pointer text-[#828181] text-xsm font-normal flex gap-1">
-                  I agree to
-                  <Link href={'/termsofuse'} className={'underline'} target="_blank">Terms Of Use</Link>
-                  <span className={'text-red-600'}>*</span>
-                </label>
-              </CheckBoxField>
-            </div>
-          </div>
+          <SubscribeForm/>
         </div>
       </div>
       <div

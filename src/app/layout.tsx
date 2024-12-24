@@ -7,6 +7,7 @@ import AppHeader from "@/components/Header";
 import AppFooter from "@/components/Footer";
 import {sanityFetch} from "@/sanity/client";
 import {AppProvider} from "@/context/AppContext";
+import Head from "next/head";
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -46,6 +47,10 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+    <head>
+      <link rel="icon" href="/favicon.png" sizes="any"/>
+      <title>{initialData.siteName}</title>
+    </head>
     <body
       className={`${playfair.variable} ${openSans.variable} antialiased h-auto`}
     >

@@ -1,6 +1,7 @@
 import {PortableText} from "next-sanity";
 import Image from "next/image";
 import {urlFor} from "@/app/ui/urlFor";
+import PortableTextStyledComponents from "@/components/wrappers/PortableTextStyledComponents";
 
 
 function ItemDetails ({image, name, introTxt, content}) {
@@ -28,8 +29,8 @@ function ItemDetails ({image, name, introTxt, content}) {
             objectFit="cover"/>
         </div>
         <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex h-full w-full">
-          <div className="flex flex-col justify-between items-start gap-3 my-auto h-full text-sm portable-text">
-            <PortableText value={content}/>
+          <div className="flex flex-col justify-between items-start gap-3 my-auto h-full text-sm">
+            <PortableTextStyledComponents content={content}/>
           </div>
         </div>
       </div>

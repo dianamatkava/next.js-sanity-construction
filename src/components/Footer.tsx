@@ -14,8 +14,6 @@ import {useAppContext} from "@/context/AppContext";
 function AppFooter () {
   const {sharedState: data} = useAppContext();
 
-  console.log(data)
-
   return (
     <div
       className="self-stretch px-[20px] sm:px-[60px] pb-2.5 bg-[#050505] flex-col justify-between items-start flex">

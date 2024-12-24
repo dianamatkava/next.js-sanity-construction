@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import {createClient, SanityClient} from "next-sanity";
 
 export const client: SanityClient = createClient({
-  projectId: "eygd6ehi",
-  dataset: "production",
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATASET,
   apiVersion: "2024-11-01",
   useCdn: false,
 });

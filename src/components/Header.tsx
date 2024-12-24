@@ -132,32 +132,24 @@ function AppHeader () {
                 <div className="py-[25px] flex-col justify-start items-start gap-5 inline-flex">
                   <div className="self-stretch text-white text-md font-bold">Services</div>
                   <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
-                    <Link href='services' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">General
-                      Construction
-                    </Link>
-                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">House Remodeling
-                    </div>
-                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Water Damage
-                      Restoration
-                    </div>
-                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Roofing</div>
-                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Plumbing</div>
-                    <div className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Public Adjusting
-                    </div>
+                    {data.serviceData.map((service) => (
+                      <Link
+                        key={service._id}
+                        href={`/services/${service.slug.current}`}
+                        className="w-fit text-wrap text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">
+                        {service.name}
+                      </Link>
+                    ))}
                   </div>
                 </div>
-                <div className="py-[25px] flex-col justify-start items-start inline-flex gap-5">
+                <div className="pl-4 py-[25px] flex-col justify-start items-start inline-flex gap-5">
                   <div className="self-stretch text-white text-md font-bold">Links<br/></div>
                   <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
-                    <Link key='Home' href='/' className="text-[#f5efe7] font-bold cursor-pointer hover:text-[#FFFFFF]">Home</Link>
-                    <Link key='Services' href='/services#ServiceList'
-                          className="text-[#f5efe7] font-normal cursor-pointer hover:text-[#FFFFFF]">Services</Link>
-                    <Link href='/aboutus#About' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">About
-                      Us</Link>
-                    <Link href='/news#News' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Articles
-                      & News</Link>
-                    <Link href='/contact#Contact'
-                          className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Contact Us</Link>
+                    <Link key='Home' href='/' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Home</Link>
+                    <Link key='Services' href='/services#ServiceList' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Services</Link>
+                    <Link href='/aboutus#About' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">About Us</Link>
+                    <Link href='/news#News' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Articles & News</Link>
+                    <Link href='/contact#Contact' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Contact Us</Link>
                   </div>
                 </div>
               </div>

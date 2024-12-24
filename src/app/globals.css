@@ -58,7 +58,7 @@ html {
 .form__field:placeholder-shown ~ .form__label {
   font-size: 14px;
   cursor: text;
-  top: 20px;
+  top: 8px;
 }
 
 
@@ -111,36 +111,14 @@ html {
   display: none;
 }
 
-
-  /* Style for the custom checkbox */
-.custom-checkbox {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #333;
-  border-radius: 4px;
-  position: relative;
-  cursor: pointer;
+.form__field::placeholder {
+  color: #999; /* or any other color that suits your design */
 }
 
-  /* Style for the custom checkmark */
-.custom-checkbox::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background-color: #333;
-  border-radius: 2px;
-  opacity: 0;
+.form__field:focus::placeholder {
+  color: transparent; /* Makes placeholder disappear when focused */
 }
 
-  /* Show the checkmark when checkbox is checked */
-.input[type="checkbox"]:checked + .custom-checkbox::after {
-  opacity: 1;
-}
 
 .hamburger {
   cursor: pointer;

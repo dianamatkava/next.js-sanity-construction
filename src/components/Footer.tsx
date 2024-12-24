@@ -77,9 +77,15 @@ function AppFooter () {
 
             </div>
             <div className="self-stretch justify-start items-center gap-2.5 inline-flex">
-              <CheckBoxField/>
-              <div className="text-[#828181] text-xsm font-normal">I agree to the Privacy Policy
-              </div>
+               <CheckBoxField
+                name={"agreements"}
+              >
+                <label htmlFor={"agreements"} className="cursor-pointer text-[#828181] text-xsm font-normal flex gap-1">
+                  I agree to
+                  <Link href={'/termsofuse'} className={'underline'} target="_blank">Terms Of Use</Link>
+                  <span className={'text-red-600'}>*</span>
+                </label>
+              </CheckBoxField>
             </div>
           </div>
         </div>

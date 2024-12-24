@@ -75,7 +75,10 @@ function AppFooter () {
         <div className="text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-1/2">© 2025 AMESC Group All Rights Reserved
           by site
         </div>
-        <Link href='/termsofuse' className="text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-1/2 text-end">Privacy Policy | Terms of Service</Link>
+        <div className={'inline-flex gap-1 w-fit'}>
+          <Link href='/privacypolicy' className="text-nowrap text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-1/2 text-end">Privacy Policy</Link><span className="text-[#e2e2e2] font-normal">|</span>
+        <Link href='/termsofuse' className="text-nowrap text-[#e2e2e2] font-normal cursor-pointer hover:text-[#f5efe7] w-1/2 text-end">Terms of Service</Link>
+        </div>
       </div>
     </div>
   )

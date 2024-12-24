@@ -5,6 +5,7 @@ import {HiOutlineOfficeBuilding} from "react-icons/hi";
 import {FaFacebookF} from "react-icons/fa";
 import GoogleMap from "@/components/ui-elements/GoogleMap";
 import {useAppContext} from "@/context/AppContext";
+import React from "react";
 
 function ContactInfo ({className}) {
   const {sharedState: data} = useAppContext();
@@ -24,7 +25,7 @@ function ContactInfo ({className}) {
           </div>
           <div
             className="self-stretch text-black text-[13px] leading-1 font-medium underline">
-            {data.email}
+            <a href={`mailto:${data.email}`} className="text-blue-600">{data.email}</a>
           </div>
         </div>
       </div>

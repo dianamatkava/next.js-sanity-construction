@@ -19,7 +19,9 @@ const ServiceCard = ({data, renderContent}) => {
           alt={data.name}
           width={500}
           height={200}
-          objectFit="cover"
+          style={{
+            objectFit: "cover",
+          }}
         />
       </Link>
         <div className="self-stretch flex-col justify-start items-start gap-4 flex px-4">

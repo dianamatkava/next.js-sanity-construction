@@ -90,7 +90,9 @@ function News () {
                   alt={item.name}
                   width={500}
                   height={200}
-                  objectFit="cover"
+                  style={{
+                    objectFit: "cover",
+                  }}
                 />
               </div>
             </div>

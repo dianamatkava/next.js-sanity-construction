@@ -8,7 +8,7 @@ import React from "react";
 export default function PortableTextStyledComponents ({content}) {
   const myPortableTextStyledComponents = {
     types: {
-      image: ({value}) => <Image width={650} height={300} alt={uuidv4()} src={urlFor(value)}/>,
+      image: ({value}) => <Image width={650} height={300} alt={'image'} src={urlFor(value)}/>,
       callToAction: ({value, isInline}) =>
         isInline ? (
           <a href={value.url}>{value.text}</a>
@@ -31,7 +31,7 @@ export default function PortableTextStyledComponents ({content}) {
       bullet: ({children}) =>
         <ul className="space-y-3 gap-2 py-4 px-2">
           {React.Children.map(children, (child, index) => (
-            <li className="text-body-color dark:text-dark-6 flex text-base items-center">
+            <div className="text-body-color dark:text-dark-6 flex text-base items-center">
               <span className="text-[#6F1D1B] mr-2.5 mt-0.5">
                  <svg
                    width="20"
@@ -47,13 +47,13 @@ export default function PortableTextStyledComponents ({content}) {
                  </svg>
               </span>
               {child}
-            </li>
+            </div>
           ))}
       </ul>,
       number: ({children}) => (
         <ol className="space-y-3 gap-2 py-4 px-2">
           {React.Children.map(children, (child, index) => (
-            <li className="text-body-color dark:text-dark-6 flex text-base gap-3">
+            <div className="text-body-color dark:text-dark-6 flex text-base gap-3">
               <span
                 className="relative z-10 mr-2.5 flex h-[26px] w-full max-w-[26px] items-center justify-center rounded text-base text-white"
               >
@@ -63,7 +63,7 @@ export default function PortableTextStyledComponents ({content}) {
                 {index + 1}
               </span>
               {child}
-            </li>
+            </div>
           ))}
         </ol>
       ),

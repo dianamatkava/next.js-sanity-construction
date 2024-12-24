@@ -26,7 +26,9 @@ function ItemDetails ({image, name, introTxt, content}) {
             src={imageUrl}
             width={800}
             height={400}
-            objectFit="cover"/>
+            style={{
+              objectFit: "cover",
+            }}/>
         </div>
         <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex h-full w-full">
           <div className="flex flex-col justify-between items-start gap-3 my-auto h-full text-sm">

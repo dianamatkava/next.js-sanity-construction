@@ -1,10 +1,6 @@
 "use client"
 import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
-import Image from "next/image";
 import {useAppContext} from "@/context/AppContext";
-import {urlFor} from "@/app/ui/urlFor";
-import {PortableText} from "next-sanity";
-import { v4 as uuidv4 } from 'uuid';
 import PortableTextStyledComponents from "@/components/wrappers/PortableTextStyledComponents";
 
 function AboutUs ({showReadMoreLink=true}) {

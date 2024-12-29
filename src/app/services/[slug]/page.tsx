@@ -26,7 +26,7 @@ export default async function ServicePage({ params }) {
   return (
     <div className="flex flex-col w-full h-full gap-16">
       <div className="lg:flex justify-between items-start gap-12 w-full h-auto">
-        <ItemDetails name={item.name} image={item.image} content={item.lgDesc} introTxt={item.smDesc}/>
+        <ItemDetails name={item.name} image={item.image} content={item.lgDesc} introTxt={item.smDesc} title={"About the Service"}/>
         <div className="flex flex-col justify-between items-stretch lg:items-start gap-24 w-full lg:h-full pt-12 sm:pt-4">
           <div className="self-stretch flex-col justify-start items-start flex my-4">
             <div className="self-stretch text-[#424242] text-lg font-bold font-playfair leading-1 h-full">Lets

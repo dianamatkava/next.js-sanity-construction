@@ -3,8 +3,8 @@ import {FiCalendar} from "react-icons/fi";
 import ReadMoreLink from "@/components/ui-elements/ReadMoreLink";
 import {useAppContext} from "@/context/AppContext";
 import {urlFor} from "@/app/ui/urlFor";
-import {PortableText} from "next-sanity";
 import Link from "next/link";
+import {truncateSanityTextBlock} from "@/app/ui/truncateSanityTextBlock";
 
 export default function NewsPage() {
 
@@ -24,7 +24,7 @@ export default function NewsPage() {
         </div>
       </div>
       <div className="self-stretch justify-start flex-col items-start gap-8 inline-flex w-full">
-        {data.serviceData?.map((item) => (
+        {data.newsData?.map((item) => (
             <div
               key={item._id}
               className="w-full justify-start items-center flex"
@@ -39,20 +39,19 @@ export default function NewsPage() {
                 <div className="flex-col justify-start items-start gap-4 flex">
                   <div className="justify-start items-center gap-3 inline-flex">
                     <div className="px-2 bg-[#6f1d1b] justify-center items-center gap-3 flex">
-                      <div className="text-[#f5efe7] text-xsm font-bold leading-1">Articles</div>
+                      <div className="text-[#f5efe7] text-xsm font-bold leading-1">{item.tag}</div>
                     </div>
                     <div className="justify-between items-center gap-1 flex">
                       <span className="text-[#847474]"><FiCalendar width={12}/></span>
-                      <div className="text-[#747474] text-[11px] font-semibold leading-1">December 04,
-                        2024
+                      <div className="text-[#747474] text-[11px] font-semibold leading-1">{new Date(Date.parse(item.date)).toISOString().split('T')[0]}
                       </div>
                     </div>
                   </div>
-                  <Link key={item._id} href={`/news/${item.slug.current}`} className="text-[#424242] text-md font-bold leading-1 cursor-pointer hover:text-[#8E8E8E]">{item.name}
+                  <Link key={item._id} href={`/news/${item.slug.current}`} className="text-[#424242] text-md font-bold leading-1 cursor-pointer hover:text-[#8E8E8E]">{item.title}
                   </Link>
                   <div
                     className="self-stretch text-[#414040] text-sm font-normal leading-1">
-                    <PortableText key={item._id} value={item.smDesc}/>
+                    {truncateSanityTextBlock(data.newsData[0].smDesc, 25)}
                   </div>
                 </div>
                 <ReadMoreLink key={item._id} href={`/news/${item.slug.current}`} name={"Read More"}/>

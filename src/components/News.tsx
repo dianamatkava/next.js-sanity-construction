@@ -50,33 +50,32 @@ function News () {
       </div>
       <div className="self-stretch justify-start items-center gap-6 inline-flex">
         <ScrollableWrapper
-          className="overflow-x-hidden"
+          className=""
           shouldHandleWheel={false}
         >
-          {data.serviceData.map((item) => (
+          {data.newsData.map((item) => (
             <div
               key={item._id}
-              className="max-w-96 border border-[#e2e2e2] justify-start items-center flex hover:shadow-lg"
+              className="max-w-96 border border-[#e2e2e2] justify-start items-center flex shadow-lg gap-3"
               style={{
                 display: 'flex',
                 transform: `translateX(-${scrollIndex * 100}%)`, // Move items horizontally
                 transition: 'transform 0.3s ease', // Smooth transition
               }}
             >
-              <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2 p-4 gap-2">
-                <div className="flex-col justify-start items-start gap-4 flex">
-                  <div className="justify-start items-center gap-1 inline-flex">
+              <div className="self-stretch flex-col justify-between items-start inline-flex w-1/2 px-4 py-2 gap-4">
+                <div className="flex-col items-start gap-3 flex">
+                  <div className="w-full justify-between items-center gap-1 inline-flex">
                     <div className="px-2 bg-[#6f1d1b] justify-center items-center gap-1 flex">
-                      <div className="text-[#f5efe7] text-xsm font-bold leading-1">Articles</div>
+                      <div className="text-[#f5efe7] text-xsm font-bold leading-1">{item.tag}</div>
                     </div>
                     <div className="justify-between items-center gap-1 flex">
                       <span className="text-[#847474]"><FiCalendar width={12}/></span>
-                      <div className="text-[#747474] text-[11px] font-semibold leading-1">December 04,
-                        2024
+                      <div className="text-[#747474] text-[11px] font-semibold leading-1">{new Date(Date.parse(item.date)).toISOString().split('T')[0]}
                       </div>
                     </div>
                   </div>
-                  <Link href={`/news/${item.slug.current}`} className="text-[#424242] text-md font-bold leading-1 cursor-pointer hover:text-[#949494]">{item.name}
+                  <Link href={`/news/${item.slug.current}`} className="text-[#424242] text-sm font-bold leading-1 cursor-pointer hover:text-[#949494]">{item.title}
                   </Link>
                 </div>
                 <ReadMoreLink href={`/news/${item.slug.current}`} name={"Read More"}/>
@@ -88,8 +87,8 @@ function News () {
                   src={item.image ? urlFor(item.image) : ''}
                   name={item.name}
                   alt={item.name}
-                  width={500}
-                  height={200}
+                  width={200}
+                  height={100}
                   style={{
                     objectFit: "cover",
                   }}

@@ -7,7 +7,6 @@ import AppHeader from "@/components/Header";
 import AppFooter from "@/components/Footer";
 import {sanityFetch} from "@/sanity/client";
 import {AppProvider} from "@/context/AppContext";
-import Head from "next/head";
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -28,6 +27,7 @@ export const metadata: Metadata = {
 
 
 const siteQuery = `*[_type == "site"] | order(date desc)[0]`;
+const newsQuery = `*[_type == "news"] | order(date desc)`;
 const serviceQuery = `*[
 _type == "service" && defined(slug.current) 
 ] {_id, name, slug, image, smDesc} | 
@@ -42,8 +42,9 @@ export default async function RootLayout({
 
   const siteData = await sanityFetch({ query: siteQuery });
   const serviceData: object | null = await sanityFetch({ query: serviceQuery });
+  const newsData: object | null = await sanityFetch({ query: newsQuery });
 
-  const initialData = { ...siteData, serviceData };
+  const initialData = { ...siteData, serviceData, newsData };
 
   return (
     <html lang="en">

@@ -4,7 +4,7 @@ import {urlFor} from "@/app/ui/urlFor";
 import PortableTextStyledComponents from "@/components/wrappers/PortableTextStyledComponents";
 
 
-function ItemDetails ({image, name, introTxt, content}) {
+function ItemDetails ({image, name, introTxt, content, title=''}) {
   const imageUrl = urlFor(image);
 
   return (
@@ -14,7 +14,7 @@ function ItemDetails ({image, name, introTxt, content}) {
       </div>
       <div className="gap-8 justify-start items-start flex flex-col h-full">
         <div className="flex-grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex w-full">
-          <div className="self-stretch text-[#424242] text-sm font-bold leading-1">About the Service</div>
+          <div className="self-stretch text-[#424242] text-sm font-bold leading-1">{title}</div>
           <div
             className="self-stretch text-[#414040] text-sm font-normal leading-1">
              <PortableText value={introTxt} />

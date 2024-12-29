@@ -129,7 +129,7 @@ function AppHeader () {
                 className="text-[#828181] font-semibold ">{data.siteSlogan}
               </div>
               <div className="flex-col justify-start items-start gap-8 px-6">
-                <div className="py-[25px] flex-col justify-start items-start gap-5 inline-flex">
+                <div className="py-[25px] flex-col justify-start items-start gap-5 inline-flex pr-4 ">
                   <div className="self-stretch text-white text-md font-bold">Services</div>
                   <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
                     {data.serviceData.map((service) => (
@@ -142,7 +142,7 @@ function AppHeader () {
                     ))}
                   </div>
                 </div>
-                <div className="pl-4 py-[25px] flex-col justify-start items-start inline-flex gap-5">
+                <div className="py-[25px] flex-col justify-start items-start inline-flex gap-5">
                   <div className="self-stretch text-white text-md font-bold">Links<br/></div>
                   <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 flex">
                     <Link key='Home' href='/' className="w-[242px] text-[#828181] font-semibold cursor-pointer hover:text-[#f5efe7]">Home</Link>

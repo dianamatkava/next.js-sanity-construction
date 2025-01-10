@@ -10,16 +10,41 @@ const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 export default function ContactForm({className=''}) {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-    if (!formData.get('agreements')) {
+    const formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+
+    if (!formObject['agreements']) {
       alert("You must agree to the terms!");
       return;
     }
 
-    setFormSubmitted(true);
+    if (!formObject['message']) {
+      formObject['message'] = 'Hi, I’m interested in your construction services. Please provide more information about how we can proceed. Thank you!'
+    }
+
+    try {
+
+      const response = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formObject),
+      });
+
+      if (response.ok) {
+          setFormSubmitted(true);
+      } else {
+          const errorData = await response.json();
+          console.error(errorData)
+      }
+    } catch (error) {
+        console.error(`Failed to submit form: ${error.message}`);
+    }
   }
 
   return (

@@ -15,16 +15,15 @@ function AboutUs ({showReadMoreLink=true}) {
           <div
             className="flex flex-col self-stretch text-[#414040] text-sm font-normal leading-1 gap-3">
             <PortableTextStyledComponents content={data.aboutCompany}/>
-            {showReadMoreLink
-              ? <ReadMoreLink href='/aboutus' name={"Read More"}/>
-              : <div className="mt-3 flex flex-col self-stretch text-[#414040] text-sm font-normal leading-1 gap-3">
-                  <PortableTextStyledComponents content={data.ourHistory}/>
-                </div>
-            }
+          {!showReadMoreLink ?
+            <div className="mt-3 flex flex-col self-stretch text-[#414040] text-sm font-normal leading-1 gap-3">
+              <PortableTextStyledComponents content={data.ourHistory}/>
+            </div> : null}
           </div>
           <div
-            className="flex flex-col self-stretch text-[#414040] text-sm font-normal leading-1 gap-3">
+            className="mt-5 flex flex-col self-stretch text-[#414040] text-sm font-normal leading-1 gap-3">
             <PortableTextStyledComponents content={data.aboutUs}/>
+            {showReadMoreLink ? <ReadMoreLink href='/aboutus' name={"Read More"}/> : null}
           </div>
         </div>
     </div>

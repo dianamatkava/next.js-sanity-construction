@@ -101,7 +101,7 @@ export default function TermsOfUsePage() {
         <p className="text-gray-600">
           Email: <a href={`mailto:${data.email}`} className="text-blue-600">{data.email}</a>
         </p>
-        <p>Phone: {data.phone}</p>
+        <a href={'tel:+1237472955409'}>Phone: {data.phone}</a>
       </section>
     </div>
   );

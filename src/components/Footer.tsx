@@ -1,11 +1,7 @@
 "use client"
 import {FiInstagram, FiPhone} from "react-icons/fi";
-import {FaFacebookF} from "react-icons/fa";
 import {MdOutlineAlternateEmail} from "react-icons/md";
-import { LuSend } from "react-icons/lu";
 import Link from "next/link";
-import InputField from "@/components/ui-elements/InputField";
-import CheckBoxField from "@/components/ui-elements/CheckBoxField";
 import React from "react";
 import Logo from "@/components/ui-elements/Logo";
 import {useAppContext} from "@/context/AppContext";
@@ -30,8 +26,8 @@ function AppFooter () {
             </div>
             <div className="self-stretch h-[58px] justify-start items-center gap-5 inline-flex">
               <div className="flex inline-flex justify-center items-center gap-4">
-                <div className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
-                  <FiInstagram width={24}/></div>
+                <a  href='https://www.instagram.com/amesc_group' className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
+                  <FiInstagram width={24}/></a>
                 {/*<div className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">*/}
                 {/*  <FaFacebookF width={24}/></div>*/}
                 <a href={`mailto:${data.email}`} className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">

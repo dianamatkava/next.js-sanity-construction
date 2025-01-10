@@ -155,9 +155,9 @@ function AppHeader () {
               </div>
               <div className="self-stretch h-[58px] justify-center items-center gap-5 inline-flex">
                 <div className="flex inline-flex justify-center items-center gap-4">
-                  <div
+                  <a  href='https://www.instagram.com/amesc_group'
                     className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
-                    <FiInstagram width={24}/></div>
+                    <FiInstagram width={24}/></a>
                   {/*<div*/}
                   {/*  className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">*/}
                   {/*  <FaFacebookF width={24}/></div>*/}

@@ -2,7 +2,6 @@
 import {MdOutlineAlternateEmail} from "react-icons/md";
 import {FiInstagram, FiPhone} from "react-icons/fi";
 import {HiOutlineOfficeBuilding} from "react-icons/hi";
-import {FaFacebookF} from "react-icons/fa";
 import GoogleMap from "@/components/ui-elements/GoogleMap";
 import {useAppContext} from "@/context/AppContext";
 import React from "react";
@@ -60,8 +59,8 @@ function ContactInfo ({className}) {
       </div>
 
       <div className="inline-flex justify-start items-center gap-4">
-        <div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
-          <FiInstagram width={24} className='hover:border-[#757171]'/></div>
+        <a href='https://www.instagram.com/amesc_group' className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
+          <FiInstagram width={24} className='hover:border-[#757171]'/></a>
         {/*<div className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">*/}
         {/*  <FaFacebookF width={24} className='hover:border-[#757171]'/></div>*/}
         <a href={`mailto:${data.email}`} className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">

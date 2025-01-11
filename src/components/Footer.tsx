@@ -32,7 +32,7 @@ function AppFooter () {
                 {/*  <FaFacebookF width={24}/></div>*/}
                 <a href={`mailto:${data.email}`} className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
                   <MdOutlineAlternateEmail width={24}/></a>
-                <a href='tel:+1237472955409' className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
+                <a href='tel:+17472955409' className="justify-start items-start rounded-[50px] border border-[#212121] p-3 text-[#828181] cursor-pointer hover:text-[#f5efe7] hover:border-[#A4A2A0]">
                   <FiPhone width={24}/></a>
               </div>
             </div>

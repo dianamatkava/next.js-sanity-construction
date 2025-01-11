@@ -45,14 +45,14 @@ function ContactInfo ({className}) {
       </div>
       <div
         className="justify-start items-start gap-4 inline-flex">
-        <a href='tel:+1237472955409'  className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-2">
+        <a href='tel:+17472955409'  className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-2">
           <FiPhone width={24}/></a>
         <div className="flex-col justify-start items-start inline-flex gap-2">
           <div className="self-stretch text-[#424242] text-[14px] font-bold leading-1">Call us
           </div>
           <div className="self-stretch text-[#595959] text-[14px] font-normal leading-1">Mon-Fri from 8am to 5pm
           </div>
-          <a href={'tel:+1237472955409'}
+          <a href={'tel:+17472955409'}
             className="self-stretch text-black text-[13px] leading-1 font-medium underline">{data.phone}
           </a>
         </div>
@@ -65,7 +65,7 @@ function ContactInfo ({className}) {
         {/*  <FaFacebookF width={24} className='hover:border-[#757171]'/></div>*/}
         <a href={`mailto:${data.email}`} className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
           <MdOutlineAlternateEmail width={24} className='hover:border-[#757171]'/></a>
-        <a href='tel:+1237472955409'  className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
+        <a href='tel:+17472955409'  className="justify-start items-start rounded-[10px] border border-[#d7d3d3] p-3 group hover:border-[#757171]">
           <FiPhone width={24} className='hover:border-[#757171]'/></a>
       </div>
       <GoogleMap className={"h-full"} addressUrl={data.addressGoogle}/>

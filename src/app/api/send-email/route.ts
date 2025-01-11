@@ -67,7 +67,7 @@ export async function POST(request) {
   const responseStatus = sendMail(mailOptionsResponse, transporter)
   const status = sendMail(mailOptionsRequest, transporter)
 
-    if (!responseStatus && !status) {
+    if (!responseStatus || !status) {
       return new Response(
           JSON.stringify({ error: 'Internal Server Error' }),
           { status: 500, headers: { 'Content-Type': 'application/json' } }
